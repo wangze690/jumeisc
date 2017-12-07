@@ -17,8 +17,12 @@ Route::get('/', function () {
 
 Route::get('/admin','AdminController@index');
 
-Route::resource('user','UserController');
+Route::resource('/user','UserController');
 
 Route::get('/liebiao','LiebiaoController@liebiao');
 
 Route::get('/mzsc','MzscController@mzsc');
+
+Route::get('/xiangqing','XiangqingController@xiangqing');
+
+Route::get('liebiaotwo','LiebiaoController@liebiaotwo');

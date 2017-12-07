@@ -3,12 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<title>列表页</title>
-	<link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
-	<link rel="stylesheet" href="./bootstrap/css/liebiao.css">
-	<link rel="stylesheet" href="./bootstrap/css/cbht.css">
-	<script src="./bootstrap/js/jquery.js"></script>
-	<script src="./bootstrap/js/bootstrap.js"></script>
-	<script src="./bootstrap/js/holder.min.js"></script>
+	<link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="/bootstrap/css/liebiao.css">
+	<link rel="stylesheet" href="/bootstrap/css/cbht.css">
+	<script src="/bootstrap/js/jquery.js"></script>
+	<script src="/bootstrap/js/bootstrap.js"></script>
+	<script src="/bootstrap/js/holder.min.js"></script>
 	
 </head>
 <body>
