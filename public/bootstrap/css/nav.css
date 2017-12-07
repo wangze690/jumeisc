@@ -1,0 +1,26 @@
+nav{
+	height: 40px;
+	width: 100%;
+	background-color: #000;
+}
+nav .dao{
+	padding: 0px;
+	height: 40px;
+}
+nav .dao ul{
+}
+nav .dao ul li{
+	
+	margin-left: 15px;
+}
+nav .dao ul li a{
+	border-radius: 0px;
+	color: #fff;
+}
+nav .dao ul li a:hover{
+	color: #000;
+	
+}
+nav .dao_t{
+	height: 40px;
+}

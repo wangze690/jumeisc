@@ -1,0 +1,19 @@
+#fot{
+	float:left;
+	font-size: 13px;
+	color:#fff;
+	line-height: 40px;
+	margin-left:20px;
+}
+#fuwu{
+	line-height: 25px;
+}
+.footer_1{
+	width: 120px;
+	float: left;
+}
+#fuwu:hover{
+	color:#ed145b;
+	transform: translate(10px);
+	transition: all 0.5s;
+}

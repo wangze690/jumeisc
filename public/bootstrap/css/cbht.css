@@ -1,0 +1,152 @@
+.cebian{
+	width: 40px;
+	height: 100vh;
+	/*
+	 100vh相当于可视页面的高度；
+	 * */
+	background: #444851;
+	position: fixed;
+	/*
+	 固定定位：
+	 相对于body去定位；
+	 * */
+	right: 0;
+}
+.tu_bo{
+	width: 40px;
+	height: 40px;
+	margin-top:200px;
+}
+
+.tu_bo:hover{
+	background-color: #dd1847;
+}
+
+.tu_bo i{
+	font-size: 20px;
+	line-height: 40px;
+	margin-left: 10px;
+	color: #ccc;
+	cursor:pointer;
+}
+
+.tu_fz{
+	width: 40px;
+	height: 40px;
+	margin-top:20px;
+}
+
+.tu_fz:hover{
+	background-color: #dd1847;
+}
+
+.tu_fz i{
+	font-size: 20px;
+	line-height: 40px;
+	margin-left: 10px;
+	color: #ccc;
+	cursor:pointer;
+}
+.tu_xin{
+	width: 40px;
+	height: 40px;
+	margin-top:20px;
+}
+
+.tu_xin:hover{
+	background-color: #dd1847;
+}
+
+.tu_xin i{
+	font-size: 20px;
+	line-height: 40px;
+	margin-left: 10px;
+	color: #ccc;
+	cursor:pointer;
+}
+.tu_soucang{
+	width: 40px;
+	height: 40px;
+	margin-top:20px;
+}
+
+.tu_soucang:hover{
+	background-color: #dd1847;
+}
+
+.tu_soucang i{
+	font-size: 20px;
+	line-height: 40px;
+	margin-left: 10px;
+	color: #ccc;
+	cursor:pointer;
+}
+.tu_erweima{
+	width: 40px;
+	height: 40px;
+	margin-top:130px;
+}
+
+.tu_erweima:hover{
+	background-color: #dd1847;
+}
+
+.tu_erweima i{
+	font-size: 20px;
+	line-height: 40px;
+	margin-left: 10px;
+	color: #ccc;
+	cursor:pointer;
+}
+.tu_kefu{
+	width: 40px;
+	height: 40px;
+	margin-top:20px;
+}
+
+.tu_kefu:hover{
+	background-color: #dd1847;
+}
+
+.tu_kefu i{
+	font-size: 20px;
+	line-height: 40px;
+	margin-left: 10px;
+	color: #ccc;
+	cursor:pointer;
+}
+
+
+
+.tu_bt{
+	width: 40px;
+	height: 100px;
+	margin-top:30px;
+}
+
+
+.tu_bt:hover{
+	background-color: #dd1847;
+}
+
+
+.sx_xt{
+	width: 80%;
+	border-top:1px solid #525151;
+	border-bottom:1px solid #525151;
+	margin-left: 10%;
+}
+.tu_bt a{
+	text-decoration: none;
+}
+.tu_bt i{
+	font-size: 20px;
+	line-height: 40px;
+	color: #ccc;
+	margin-left: 5px;
+}
+.tu_bt .sp_ct{
+	font-size: 14px;
+	color: #ccc;
+	margin-left: 10px;
+}

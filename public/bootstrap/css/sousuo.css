@@ -1,0 +1,74 @@
+.shousuo{
+	background-color: #fff;
+	width: 100%;
+	height: 150px;
+}
+.shousuo .na_w{
+	padding: 0px;
+	background-color: #fff;
+	height: 120px;
+}
+.shousuo .na_w img{
+	margin-top: 30px;
+}
+.shousuo .na_s{
+	padding: 0px;
+	background-color: #fff;
+	height: 120px;
+}
+.shousuo .na_s .sosuk{
+	border:3px solid #ed145b; 
+	height: 40px; 
+	width: 470px; 
+	margin-top: 45px; 
+	margin-left: 20px;
+}
+.shousuo .na_s .annu{
+	border-radius: 0px; width: 100px; 
+	height: 40px; 
+	margin-top: 45px;
+	background-color: #ed145b;
+}
+.shousuo .na_s .ul_o{
+	width: 500px;
+	height: 50px;
+	margin-left:24px;
+}
+.shousuo .na_s ul li{
+	width: 55px;
+	height: 15px;
+	font-size: 12px;
+	color: #999;
+	border-right:1px solid #999;
+	line-height: 15px;
+}
+.shousuo .na_s ul li a{
+	color: #999;
+	text-decoration: none;
+}
+.shousuo .na_s ul li a:hover{
+	color: red;
+}
+
+.shousuo .na_n{
+	padding: 0px;
+	background-color: #fff;
+	height: 120px;
+}
+
+.shousuo .na_n .gw_o{
+	border-radius:0px;
+	font-size: 12px;
+	color: #666;
+	width: 100px;
+	height: 30px;
+	background-color: #f8f8f8;
+}
+.shousuo .na_n .na_car{
+	width: 134px;
+	height: 32px;
+	border:1px solid #e5e5e5;
+	margin-left: 54px;
+	margin-top:55px;
+	box-shadow: 0px 0px 2px black;
+}

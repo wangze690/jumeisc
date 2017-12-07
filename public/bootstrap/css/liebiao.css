@@ -1,0 +1,93 @@
+*{
+	margin:0px;
+	padding: 0px;
+	list-style:none;
+}
+.big{
+	margin: 0 auto;
+	width: 1889px;
+	height: auto;
+}
+.dinner{
+}
+nav{
+	margin-top:20px;
+}
+.bk{
+	border: 1px solid #ccc;
+	padding:0 25px;
+	margin-bottom:10px;
+}
+.bk:hover{
+	border:1px solid red;
+}
+.sp{
+	background-color: #17d4f6;
+	color:#fff;
+	margin-left:10px;
+}
+.p_o{
+	margin-top: 25px;
+}
+.p_o .sp_dw{
+	color: #d31e33;
+}
+.p_o .sp_o{
+	font-size: 25px;
+	color: #d31e33;
+}
+.p_o .sp_t{
+	color: #999;
+}
+.p_o button{
+	background-color: #d31e33;
+	color: #fff;
+	margin-left: 145px;
+}
+
+section{
+	height: 300px;
+}
+section .rng{
+	margin-top:100px;
+	padding: 0px;
+}
+section button{
+	width: 380px;
+	height: 70px;
+	background-color: #d31e33;
+	color: #fff;
+}
+section .vn{
+	font-size: 25px;
+}
+
+footer{
+	width: 1899px;
+	height: 300px;
+	background-color: #57214c;
+}
+footer .skt{
+	color: #fff;
+	height: 100px;
+	margin-top: 40px;
+	border-right: 1px solid #000;
+}
+footer .skts{
+	color: #fff;
+	height: 100px;
+	margin-top: 40px;
+}
+footer h4{
+	float: left;
+}
+footer ul{
+	float: left;
+	margin-top:10px;
+	margin-left: 10px;
+}
+footer .nice{
+	color: #fff;
+	line-height:100px;
+	margin-top: 40px;
+}
