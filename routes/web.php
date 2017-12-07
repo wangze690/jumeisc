@@ -17,12 +17,13 @@ Route::get('/', function () {
 
 Route::get('/admin','AdminController@index');
 
-Route::resource('user','UserController');
+Route::resource('/user','UserController');
 
 Route::get('/liebiao','LiebiaoController@liebiao');
 
 Route::get('/mzsc','MzscController@mzsc');
 
+<<<<<<< HEAD
 //商品前端路由
 	//首页路由
 Route::get('/jumei','JumeiController@index');
@@ -36,3 +37,8 @@ Route::get('/message','CommonController@message');
 // 尺码列表
 Route::get('/jumei/sizelist','JumeiController@sizelist');
 Route::post('/jumei/sizelist','JumeiController@sizeadd');
+=======
+Route::get('/xiangqing','XiangqingController@xiangqing');
+
+Route::get('liebiaotwo','LiebiaoController@liebiaotwo');
+>>>>>>> 9282cf689697c34411c1132a8076b68d1d98181d

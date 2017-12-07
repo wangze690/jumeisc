@@ -11,4 +11,8 @@ class LiebiaoController extends Controller
 		return view('liebiao.liebiao');
 	}
    	
+   	public function liebiaotwo()
+   	{
+   		return view('liebiao.liebiaotwo');
+   	}
 }
