@@ -72,6 +72,8 @@
 						<dd class="pull-left"><a href="#">雅顿</a></dd>
 						<dd class="pull-left"><a href="#">佰草集</a></dd>
 					</dl>
+
+					<div class="cen_xs"></div>
 				</div>
 				<div class="clearfix"></div>	
 				<div class="ceb">
