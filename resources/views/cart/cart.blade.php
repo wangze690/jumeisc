@@ -103,22 +103,34 @@
 					<li>娇兰赋颜紧致精华乳 50ML</li>
 					<li>容量：50ML</li>
 				</ul>
-				<ul style="float:left;margin-left:210px;margin-top:40px;">
+				<ul style="float:left;margin-left:270px;margin-top:40px;">
 					<li style="font-size:16px;font-weight: bold;">1399.00</li>
 					<li><s>1790.00</s></li>
 				</ul>
-				<div id="btn">
-					<button class="btn-info" style="float: left;">-</button>
-						1
-					<button class="btn-info" style="float: right;">+</button>
-				</div>
-				<ul style="float: right;margin-right: -100px;margin-top: 30px;">
-					<li style="color: #ed145b; font-weight: bold;">1399</li>
-					<li>省391.00</li>
+				<ul style="float:left;margin-left:10px;margin-top:0px;">
+					<li>
+						<div id="btn" style="margin-left:0px;">
+							<button class="btn-info jian" style="float: left;">-</button>
+								<input class="num" type="text" value="5" style="width: 20px;">
+							<button class="btn-info jia" style="float: right;">+</button>
+						</div>
+					</li>
 				</ul>
-				<button style="border: 0px;background-color: #fff; float: right;margin-right:-180px;margin-top:-30px;">
-					<img src="/images/btn.png" alt="">
-				</button>
+				<ul style="float:left;margin-left:125px;margin-top:-40px;">
+					<li style="color:#ed145b;">
+						¥1399.00
+					</li>
+					<li>省368元</li>
+				</ul>
+				<ul style="float:right;margin-right:95px;margin-top:-40px;">
+					<li>
+						<button style="border: 0px;background-color: #fff; float: right;margin-right:0px;margin-top:0px;">
+							<img src="/images/btn.png" alt="">
+						</button>
+					</li>
+				</ul>
+				
+				
 			</div>
 			<div class="col-sm-12 bg-info" style="height:40px;border-left: 5px solid #ed145b;">
 				<ul class="col-md-6">
@@ -171,3 +183,13 @@
 <!-- 尾部结束 -->
 </body>
 </html>
+<script>
+
+$('.jian').click(function(){
+	var num = document.getElementByClassName('num').value();
+	alert(num);
+});
+
+   
+
+</script>
