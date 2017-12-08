@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="./bootstrap/css/cbht.css">
 	<link rel="stylesheet" href="./bootstrap/css/toubu.css">
 	<link rel="stylesheet" href="./bootstrap/css/sousuo.css">
+	<link rel="stylesheet" href="./bootstrap/css/foot.css">
 	<link rel="stylesheet" href="./bootstrap/css/nav.css">
 	<link rel="stylesheet" href="/bootstrap/css/head.css">
 	<script src="./bootstrap/js/jquery.js"></script>
@@ -437,7 +438,7 @@
 			</div>
 		</div>
 	</section>
-	<footer></footer>
+	@include('layouts.foot')
 </div>
 </body>
 </html>
