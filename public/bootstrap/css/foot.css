@@ -28,6 +28,12 @@ footer .top_t{
 }
 footer .top_t .top_tt{
 }
+.top_tt li:hover{
+	color: #ed145b;
+	cursor: pointer;
+	transform: translate(10px);
+	transition: all 0.5s;
+}
 footer .top_t .top_tt h5{
 	margin-top: 30px;
 }
