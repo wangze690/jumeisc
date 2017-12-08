@@ -5,6 +5,9 @@
 	<title>列表页</title>
 	<link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
 	<link rel="stylesheet" href="./bootstrap/css/liebiao.css">
+	<link rel="stylesheet" href="./bootstrap/css/toubu.css">
+	<link rel="stylesheet" href="./bootstrap/css/sousuo.css">
+	<link rel="stylesheet" href="./bootstrap/css/nav.css">
 	<link rel="stylesheet" href="./bootstrap/css/cbht.css">
 	<script src="./bootstrap/js/jquery.js"></script>
 	<script src="./bootstrap/js/bootstrap.js"></script>
@@ -13,11 +16,14 @@
 </head>
 <body>
 @include('layouts.ggcb')
-<div class="big"> 
+<div class="big">
+@include('layouts.toubu')
+@include('layouts.sousuo')
+@include('layouts.nav') 
 	<div class="dinner text-center">
 		<img src="./bootstrap/images/17.jpg" width="1899" alt="">
 	</div>
-	<nav>
+	<div class="dinner">
 		<div class="container">
 			<div class="col-md-4 mb">
 				<div class="bk">
@@ -547,7 +553,7 @@
 				</div>
 			</div>
 		</div>
-	</nav>
+	</div>
 	<section>
 		<div class="container">
 			<div class="col-md-4 col-md-offset-4 rng">
