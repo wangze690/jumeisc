@@ -9,6 +9,7 @@ nav .dao{
 }
 nav .dao ul{
 }
+
 nav .dao ul li{
 	
 	margin-left: 15px;
@@ -16,6 +17,7 @@ nav .dao ul li{
 nav .dao ul li a{
 	border-radius: 0px;
 	color: #fff;
+	font-weight: bold;
 }
 nav .dao ul li a:hover{
 	color: #000;

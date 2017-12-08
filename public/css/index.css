@@ -1,0 +1,124 @@
+ul{
+	list-style: none;
+}
+*{
+	margin:0px;
+	padding:0px;
+}
+#heade-left{
+	margin-left:60px;
+}
+#heade-p{
+	float:left;
+	margin-left:20px;
+	line-height:30px;
+	color:#666;
+}
+#heade-c{
+	float:left;
+	margin-left:20px;
+	line-height:30px;
+	color:#666;
+}
+#heade-s{
+	border:0px ;
+	width:85px;
+}
+#heade-right{
+	width:230px;
+	float:right;
+	margin-right:80px;
+	margin-top:-10px;
+}
+#heade-r{
+	float:left;
+	margin-left:20px;
+	line-height:30px;
+	color:#666;
+}
+#heade-center{
+	float:left;
+	margin-left:365px;
+	margin-top:-10px;
+}
+#heade-c:hover #heade-down{
+	display: block;
+}
+#heade-down{
+	width:90px;
+	border:1px solid #ccc;
+	box-shadow:0px 0px 3px 0px;
+	z-index: 100;
+	display: none;
+	position: absolute;
+	background-color: #fff;
+}
+#tip{
+	float:left;
+	margin-left:60px;
+}
+#dis{
+	width: 120px;
+	height:30px;
+	background-color: #ed145b;
+	color: #fff;
+	text-align: center;
+	line-height: 30px;
+	float: right;
+	margin-right:10px;
+	margin-top:10px;
+	display: none;
+}
+#news{
+	height:450px;
+	margin-left:-15px;
+	width: 350px;
+	background-color: #fff;
+}
+#news:hover #dis{
+	display: block;
+}
+#dic{
+	width: 350px;
+	height:30px;
+	background-color: rgba(159,108,168,.6);
+	text-align: center;
+	line-height: 30px;
+	color: #fff;
+	position: absolute;
+	top:350px;
+	display: none;
+}
+#news:hover #dic{
+	display: block;
+}
+#navs{
+	color:#ccc;
+	background-color:#ed145b
+}
+
+#fuwu{
+	line-height: 25px;
+}
+#fot{
+	float:left;
+	font-size: 13px;
+	color:#fff;
+	line-height: 40px;
+	margin-left:20px;
+}
+#side{
+			width: 50px;
+			height: 100vh;
+			/*
+			 100vh相当于可视页面的高度；
+			 * */
+			background: black;
+			position: fixed;
+			/*
+			 固定定位：
+			 相对于body去定位；
+			 * */
+			right: 0;
+		
+		}

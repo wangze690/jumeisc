@@ -1,0 +1,23 @@
+.center{
+	background: #f7f7f7;
+}
+.center_1{
+	margin-top: 20px;
+	margin-right: 8.3%;
+	font-weight: bold;
+}
+.center_2{
+	position: relative;
+}
+.center_3{
+	position: absolute;
+	right: 10px;
+	top: 0.5px;
+}
+.center_4{
+	margin-top: 10px;
+	background: #fff;
+}
+.center_5{
+	padding: 10px;
+}
