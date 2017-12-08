@@ -44,3 +44,5 @@ Route::post('/jumei/sizelist','JumeiController@sizeadd');
 Route::get('/xiangqing','XiangqingController@xiangqing');
 
 Route::get('liebiaotwo','LiebiaoController@liebiaotwo');
+
+Route::get('liebiaosan','LiebiaoController@liebiaosan');

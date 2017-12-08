@@ -16,7 +16,7 @@
 <body>
 <div class="container" style="height: 85px;">
     	<div class="header_left pull-left">
-	    	<img src="./img/logo.jpg" alt="" style="margin-top: 10px;">
+	    	<a href="/mzsc"><img src="./img/logo.jpg" alt="" style="margin-top: 10px;"></a>
 	    </div>
 	   <div class="header_right pull-right">
 		    <a href="#"><img src="./img/logo1.jpg" alt=""></a>
@@ -25,95 +25,41 @@
 		</div>
 	</div>
 </div>
-<div class="container" style="height: 550px;">
-	<div class="sign" style="position: relative;">
-		<div class="login-wrap" style="margin-top:50px;">
-			<div class="loginImage"></div>
-			<div class="loginBord ">
-				<div class="loginTit">
-	                   <div class="tosignup">已有账号<a href="denglu">在此登录</a></div>
-	                    <h1><strong>用户注册</strong></h1>
-	            </div>
-	            <form id="phone" method="post">
-                    <div class="line">
-                        <div class="textbox_ui">
-                            <input type="text" id="mobile" placeholder="请输入您的邮箱或者手机号" autofocus autocomplete="off" value="">
-                            <!-- <div class="focus_text">请输入11位手机号码</div> -->
-                            <div class="invalid">
-                                <i></i>
-                                <div class="msg"></div>
-                            </div>
-                            <i class="valid"></i>
-                            <i class="loading"></i>
-                        </div>
-                    </div>
-                            <div class="line verityWrap imgVerifyWrap" data-required="no" style="display:none">
-                                          <div class="textbox_ui">
-                            <input type="text" placeholder="验证码" id="verify_code" autocomplete="off">
-                            <!-- <div class="focus_text">按右图填写，不区分大小写</div> -->
-                            <div class="invalid">
-                                <i></i>
-                                <div class="msg"></div>
-                            </div>
-                        </div>
-                        <span id="change_verify_code">
-                            <img src="/i/account/hash_code?from=signup">
-                            换一张
-                        </span>
-                    </div>
-                    <div class="line verityWrap">
-                        <div class="textbox_ui sms_verify_wrapper">
-                            <input type="text" id="mobile_verify" placeholder="短信校验码" autocomplete="off">
-                                                            <!-- <div class="focus_text">请输入6位短信校验码</div> -->
-                                                        <div class="hint"></div>
-                            <div class="invalid">
-                                <i></i>
-                                <div class="msg"></div>
-                            </div>
-                        </div>
-                                            <a href="javascript:;" id="getPhoneCode" class="phonecode" data-verifyType="sms"><strong>获取短信校验码</strong></a>
-                                        </div>
-                    <div class="line">
-                        <div class="textbox_ui">
-                            <input type="password" placeholder="密码" id="password" autocomplete="off">
-                            <div class="focus_text">
-                                <!-- <p class="default">6-16个字符，建议使用字母加数字或符号组合</p> -->
-                                
-                            </div>
-                            <i class="valid"></i>
-                            <div class="invalid">
-                                <i></i>
-                                <div class="msg"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="line">
-                        <div class="textbox_ui">
-                            <input type="password" id="password2" placeholder="重复密码" autocomplete="off">
-                            
-                            <i class="valid"></i>
-                            <div class="invalid">
-                                <i></i>
-                                <div class="msg"></div>
-                            </div>
-                        </div>
-                    </div>
-                                        <div class="act" style="margin-left: 0px;">
-                        <p>
-                            <input type="submit" class="submit_btn" value="同意协议并注册" name="mobileCommit" style="width: 100%;">
-                        </p>
-                        <p>
-                            <a href="http://www.jumei.com/help/user_terms" rel="nofollow" target="_blank" style="color:#ed145b;">《聚美优品用户协议》</a>
-                        </p>
-                    </div>
-                    <br />
-                </form>
-                <div class="shadow_l"></div>
-                <div class="shadow_r"></div>
-
-			</div>
-			</div>
-		</div>
+<div class="container loginWrap">
+    <div class="col-md-6 pull-left loginImage">
+        <a href="#"><img src="./img/signpic.jpg" alt=""></a>
+    </div>
+    <div class="col-md-6 pull-right loginBord">
+        <div class="loginTit">
+            <h2 style="float: left;"><strong>用户注册</strong></h2>
+            <p style="float: right;">已有账号<a href="/denglu">在此登录</a></p>
+        </div>
+        <form>
+              <div class="form-group line">
+                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="手机号">
+              </div>
+              <div class="form-group line">
+                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="验证码" style="float:left; width: 150px;margin-bottom: 20px;">
+                <button type="submit" class="btn btn-default" style="float:right;">获取短信验证码</button>
+              </div>
+              <div class="form-group line">
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="短信验证码" style="float:left; width: 150px;margin-bottom: 20px;">
+                    <button type="submit" class="btn btn-default" style="float:right;">获取短信验证码</button>
+                </div>
+              <div class="form-group line">
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="密码">
+              </div>
+              <div class="form-group line">
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="确认密码">
+              </div>
+              <p>
+                <input type="submit" class="submit_btn" value="同意协议并注册" name="mobileCommit" style="width: 100%;">
+            </p>
+            <p>
+                <a href="#" rel="nofollow" target="_blank" style="color:#ed145b;">《聚美优品用户协议》</a>
+        </p>
+        </form>
+    </div>
 </div>
 <div class="clearfix"></div>
 <div class="footer_container" style="height: 219px;">

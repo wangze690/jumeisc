@@ -14,7 +14,7 @@
 <body>
 <div class="container" style="height: 85px;">
     	<div class="header_left pull-left">
-	    	<img src="./img/logo.jpg" alt="" style="margin-top: 10px;">
+	    	<a href="/mzsc"><img src="./img/logo.jpg" alt="" style="margin-top: 10px;"></a>
 	    </div>
 	   <div class="header_right pull-right">
 		    <a href="#"><img src="./img/logo1.jpg" alt=""></a>
@@ -29,8 +29,8 @@
         
         <div class="col-md-6 pull-right loginBord">
            <div class="loginTit">
-            <h2 style="float: left;"><strong>登录聚美</strong></h2>
-            <p style="float: right;">还没有聚美帐号？<a href="#">30秒注册</a></p>
+                <h2 style="float: left;"><strong>登录聚美</strong></h2>
+                <p style="float: right;">还没有聚美帐号？<a href="/zhuce">30秒注册</a></p>
            </div>
            <form>
               <div class="form-group">
@@ -39,15 +39,22 @@
               <div class="form-group">
                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="密码">
               </div>
+                <p>
+                    <a href="#" class="fr">忘记密码?</a>
+                    <label for="auto_login">
+                        <input type="checkbox" id="auto_login" checked="">
+                        &nbsp;自动登录
+                    </label>
+                </p>
               <input class="loginbtn submit_btn" type="submit" value="登 录" style=" display: block;width: 100%;">
             </form>
             <div>你也可以使用以下帐号登录</div>
              <!-- 百度分享  start -->
-                                <div>
-                                    <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-                                </div>
-                                <!-- 百度分享  end -->
+                <div>
+                    <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+                <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+                </div>
+            <!-- 百度分享  end -->
         </div>
 </div>
 

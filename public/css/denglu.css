@@ -11,12 +11,16 @@
     margin: 100px auto;
     line-height: 1.5;
     width: 965px;
+    margin-bottom: 50px;
 }
 .loginImage {
     background: url(../img/loginPic.jpg) no-repeat;
     width: 960px;
     height: 360px;
     position: absolute;
+}
+.form-control{
+    height: 50px;
 }
 .loginBord {
     width: 346px;
@@ -26,6 +30,7 @@
     padding: 0 23px;
     color: #333;
     box-shadow: 0 0 6px rgba(0,0,0,.075);
+    line-height: 40px;
 }
 body {
     font-size: 12px;
@@ -35,7 +40,9 @@ h2 {
     font-size: 20px;
     color: #e31256;
 }
-        
+.fr {
+    float: right;
+}
 .loginBord .loginTit {
     margin-bottom: 15px;
     line-height: 60px;

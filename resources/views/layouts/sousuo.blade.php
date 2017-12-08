@@ -1,7 +1,7 @@
 <div class="shousuo">
 		<div class="container">
 			<div class="col-md-3 na_w">
-				<img src="holder.js/200x90" alt="">
+				<a href="/mzsc"><img src="holder.js/200x90" alt=""></a>
 			</div>
 			<div class="col-md-7 na_s">
 				<form class="navbar-form navbar-left" role="search">
