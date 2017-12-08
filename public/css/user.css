@@ -1,0 +1,345 @@
+*{
+	margin:0px;
+	padding: 0px;
+	list-style: none;
+}
+#heade-left{
+    margin-left:60px;
+}
+#heade-p{
+    float:left;
+    margin-left:20px;
+    line-height:30px;
+    color:#666;
+}
+#heade-c{
+    float:left;
+    margin-left:20px;
+    line-height:30px;
+    color:#666;
+    cursor: pointer;
+}
+#heade-s{
+    border:0px ;
+    width:85px;
+}
+#heade-right{
+    width:230px;
+    float:right;
+    margin-right:80px;
+    margin-top:-10px;
+}
+#heade-r{
+    float:left;
+    margin-left:20px;
+    line-height:30px;
+    color:#666;
+}
+#heade-center{
+    float:left;
+    margin-left:365px;
+    margin-top:-10px;
+}
+#heade-c:hover #heade-down{
+    display: block;
+}
+#heade-down{
+    width:90px;
+    border:1px solid #ccc;
+    box-shadow:0px 0px 3px 0px;
+    z-index: 100;
+    display: none;
+    position: absolute;
+    background-color: #fff;
+}
+#navs{
+    color:#666;
+    font-weight: bold;
+    width: 150px;
+    text-align: center;
+}
+.profile{
+    border: 1px solid #DBD6D0;
+    border-bottom-color: #b7b2ae;
+    margin: 20px auto;
+    overflow: hidden;
+    line-height: 1.5;
+    font-size: 12px;
+    border-top: 20px;
+    width: 960px;
+    clear: both;
+    color: #666;
+    height: auto;
+}
+.center{
+	width: 960px;
+	height: auto;
+	background-color:#FFFFFF;
+    margin-top: 20px;
+}
+.notice {
+    padding: 10px;
+    background: #fff;
+    overflow: hidden;
+    line-height: 1.8;
+    width: 160px;
+    height: 111px;
+}
+.uid{
+    margin-bottom: 10px;
+    line-height: 32px;
+    margin-right: 2px;
+    clear: both;
+}
+.center .nav{
+    border-right: 1px solid #dbd6d0;
+    padding-bottom: 9999px;
+    margin-bottom: -9999px;
+    background: #FFFFFF;
+    width: 165px;
+    margin-right: -.25em;
+    height: auto;
+}
+.center .nav a{
+	color: #666;
+	text-decoration: none;
+}
+h2{
+    box-shadow: -1px 1px 2px 0 rgba(0,0,0,.2);
+    border-bottom: 1px solid #ccc;
+    background: #ede7e1;
+    line-height: 40px;
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+    width: 150px;
+    height: 41px;
+    margin-top: 5px; 
+}
+.nav h2 b{
+    background: url(../img/nav_title_bg.png) no-repeat 0 0;
+    float: left;
+    margin-left:-37px;
+    height: 50px;
+    width: 60px;
+    font-weight: 400px;
+}
+a{
+    font-size: 14px;
+    color: #666;
+
+}
+.nav a b {
+    background: url(../img/left_nav_icons.png) no-repeat;
+    position: absolute;
+    margin-left: -40px;
+    height: 25px;
+    width: 25px;
+}
+.section ul li{
+    width: 175px;
+    height: 46px;
+    font-size: 14px;
+    border-bottom: 1px solid #dbd6d0;
+    margin-left:-30px;
+    background: #F8F6F4;
+}
+.section ul li:hover{
+    background: #fff;
+}
+span{
+    margin-top: 10px;
+    height: 25px;
+    width: 25px;
+    color:#919191;
+    margin-left:20px;
+    }
+a.mostmall {
+    width: 130px;
+}
+.profile h1{
+    border-bottom: 1px solid #dbd6d0;
+    font-weight: 400;
+    position: relative;
+    padding-left: 15px;
+    line-height: 46px;
+    overflow: hidden;
+    font-size: 18px;
+    display: block;
+    color: #333;
+}
+.content{
+    overflow: hidden;
+    padding: 0 15px;
+    margin: 15px 0;
+    position: relative;
+    width: 760px;
+    height: auto;
+}
+.input_container {
+    margin: 20px 0;
+    width: 749px;
+    height: 58px;
+}
+.avatar_change {
+    background: #f8f6f4;
+    position: absolute;
+    margin-left: 600px;
+    text-align: center;
+    float: right;
+}
+.avatar_change a {
+    line-height: 2;
+    display: block;
+}
+a{
+    color: #ed145b;
+    text-decoration: none;
+}
+.input_container label {
+    float: left;
+    width: 130px;
+    text-align: right;
+    margin-right: 20px;
+    line-height: 30px;
+    color: #666;
+}
+.spark{
+    vertical-align: baseline;
+    display: inline-block;
+    padding-right: 4px;
+    color: #ed415b;
+}
+.input_container input {
+    max-width: 600px;
+}
+.formlist {
+    line-height: 30px;
+}
+.formlist dt{
+    text-align: right;
+    width: 130px;
+    clear: both;
+    float: left;
+}
+.data {
+    display: inline-block;
+    width: 110px;
+}
+.formlist dd {
+    margin: 0 0 0 120px;
+    font-weight: 400;
+}
+
+.data{
+    display: inline-block;
+    min-width: 110px;
+}
+.t_input{
+    width: 189px;
+    height: 30px;
+    margin-top: 10px;
+    box-shadow: 0 1px 2px 0 #f0f0f0;
+    background: #fff;
+}
+.select_arrow {
+    border-color: #b7b7b7 transparent;
+    border-top-color: inherit;
+    border-width: 5px 5px 0;
+    border-style: solid;
+    position: absolute;
+    margin-top: -2px;
+    overflow: hidden;
+    right: 7px;
+    height: 0;
+    width: 0;
+    top: 50%;
+}
+.select_ui {
+    border: 1px solid #ccc;
+    display: inline-block;
+    position: relative;
+    text-align: left;
+    line-height: 1.5;
+    height: auto;
+    width: auto;
+    float: left;
+    margin: 0;
+}
+.select_arrow {
+    border-color: #b7b7b7 transparent;
+    border-top-color: inherit;
+    border-width: 5px 5px 0;
+    border-style: solid;
+    position: absolute;
+    margin-top: -2px;
+    overflow: hidden;
+    right: 7px;
+    height: 0;
+    width: 0;
+    top: 50%;
+}
+option{
+    font-weight: normal;
+    display: block;
+    white-space: pre;
+    min-height: 1.2em;
+    padding: 0px 2px 1px;
+}
+.btn_mid_pink{
+    background: linear-gradient(to bottom,#f4769d,#ec195c);
+    box-shadow: 0 1px 2px 0 #bbb;
+    text-shadow: 1px 1px 3px #b9154a;
+    display: inline-block;
+    font-family: inherit;
+    word-break: keep-all;
+    white-space: nowrap;
+    font-weight: 400;
+    text-align: center;
+    line-height: 32px;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0 15px;
+    height: 32px;
+    color: #fff;
+    border: 0;
+}
+.input_container .radio, .input_container .checkbox {
+    width: auto;
+    line-height: normal;
+    margin-top: 8px;
+}
+.input_container textarea {
+    width: 525px;
+    height: 180px;
+}
+.comment_tip {
+    position: absolute;
+    right: 0;
+    margin-right: 130px;
+}
+.act {
+    margin-top:180px;
+    margin-left: 130px; 
+    clear: both;
+}
+.status_red {
+    color: #ed145b;
+    margin-top:30px;
+}
+#fot{
+    float: left;
+    color: #fff;
+    font-size: 13px;
+    line-height: 40px;
+    margin-left:20px;
+    cursor: pointer;
+}
+.footer_1{
+    width: 120px;
+    float: left;
+}
+#fuwu:hover{
+    transform: translate(10px);
+    transition: all 0.5s;
+}

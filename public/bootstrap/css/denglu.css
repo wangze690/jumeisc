@@ -1,0 +1,132 @@
+*{
+	margin:0px;
+	padding: 0px;
+	list-style: none;
+
+}
+.header_right{
+    padding-top:30px;
+}
+.login-wrap{
+	width: 960px;
+    position: relative;
+}
+.loginImage{
+	background: url(../img/loginPic.jpg) no-repeat;
+    width: 960px;
+    height: 360px;
+    position: absolute;
+}
+.loginBord{
+	box-shadow: 0 0 8px rgba(0,0,0,.075);
+	background: rgba(255,255,255,.85);
+	border: 1px solid #ededed;
+	position: absolute;
+	min-height: 400px;
+	padding: 0 23px;
+	width: 310px;
+	color: #333;
+	top: 30px;
+	right: 0;
+}
+.loginTit .tosignup {
+    color: #969696;
+    float: right;
+}
+.loginTit h1 {
+    font-weight: 400;
+    font-size: 20px;
+    color: #e31256;
+    font-family: "Microsoft YaHei","微软雅黑","黑体";
+}
+#username, #login_password, #dynamic_mobile {
+    padding-left: 38px;
+    width: 252px;
+}
+.textbox_ui .focus_text {
+    word-break: keep-all;
+    white-space: nowrap;
+    margin-top: 4px;
+    color: #999;
+    top: 100%;
+    left: 0;
+}
+input[type=submit], input[type=submit] {
+    border: 1px solid #F9477A;
+    display: inline-block;
+    font-family: inherit;
+    word-break: keep-all;
+    background: #F8296D;
+    white-space: nowrap;
+    font-weight: 400;
+    text-align: center;
+    line-height: 40px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0 30px;
+    height: 40px;
+    color: #fff;
+    border: 0;
+}
+i{
+    margin-top: -10px;
+    height: 20px;
+    width: 20px;
+}
+.textbox_ui .invalid i {
+    background-position: 0 -100px;
+    position: absolute;
+    left: -20px;
+    top: 50%;
+}
+.textbox_ui .invalid i {
+    background-image: url(../img/sign.png);
+    background-repeat: no-repeat;
+}
+.radio_wrapper {
+    height: 30px;
+}
+.radio_wrapper span {
+    padding-right: 30px;
+}
+.loginWrap .textbox_ui {
+    margin-bottom: 26px;
+}
+.sign .textbox_ui {
+    position: relative;
+}
+.textbox_ui {
+    height: 44px;
+}
+.textbox_ui input {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid #CFCFCF;
+    background-color: #fff;
+    vertical-align: middle;
+    padding: 10px 8px;
+    line-height: 1.5;
+    font-size: 14px;
+    outline: 0;
+    height: auto;
+    width: 284px;
+}
+.footer_container {
+    overflow: hidden;
+    background: #fff;
+    font-family: "微软雅黑",tahoma,arial,’Hiragino Sans GB',’\5b8b\4f53',sans-serif;
+    position: relative;
+    bottom: -1px;
+}
+.footer_copyright {
+    background: #fff;
+    color: #000;
+    text-align: center;
+}
+.footer_copy_con {
+    padding: 14px 0 18px;
+    line-height: 20px;
+    color: #000;
+    margin-top:70px;
+}

@@ -111,7 +111,7 @@
 					<li>
 						<div id="btn" style="margin-left:0px;">
 							<button class="btn-info jian" style="float: left;">-</button>
-								<input class="num" type="text" value="5" style="width: 20px;">
+								<input name="num" type="text" value="5" style="width: 20px;">
 							<button class="btn-info jia" style="float: right;">+</button>
 						</div>
 					</li>
@@ -183,11 +183,13 @@
 <!-- 尾部结束 -->
 </body>
 </html>
+<script src="/js/jquery.js"></script>
 <script>
 
 $('.jian').click(function(){
-	var num = document.getElementByClassName('num').value();
-	alert(num);
+	var num =  $('input[name=num]').val();
+	var new_num=parseInt(num.val())+1
+	alert(new_num);
 });
 
    

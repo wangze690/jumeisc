@@ -22,6 +22,11 @@ Route::resource('/user','UserController');
 Route::get('/liebiao','LiebiaoController@liebiao');
 
 Route::get('/mzsc','MzscController@mzsc');
+//前台登录
+Route::get('/denglu','QiantaiController@denglu');
+Route::get('/zhuce','QiantaiController@zhuce');
+Route::get('/grzx','QiantaiController@grzx');
+Route::get('/grzxs','QiantaiController@grzxs');
 
 //商品前端路由
 	//首页路由
@@ -39,4 +44,3 @@ Route::post('/jumei/sizelist','JumeiController@sizeadd');
 Route::get('/xiangqing','XiangqingController@xiangqing');
 
 Route::get('liebiaotwo','LiebiaoController@liebiaotwo');
-
