@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="./bootstrap/css/cbht.css">
 	<link rel="stylesheet" href="./bootstrap/css/toubu.css">
 	<link rel="stylesheet" href="./bootstrap/css/sousuo.css">
+	<link rel="stylesheet" href="./bootstrap/css/foot.css">
 	<link rel="stylesheet" href="./bootstrap/css/nav.css">
 	<link rel="stylesheet" href="/bootstrap/css/head.css">
 	<script src="./bootstrap/js/jquery.js"></script>
@@ -71,6 +72,8 @@
 						<dd class="pull-left"><a href="#">雅顿</a></dd>
 						<dd class="pull-left"><a href="#">佰草集</a></dd>
 					</dl>
+
+					<div class="cen_xs"></div>
 				</div>
 				<div class="clearfix"></div>	
 				<div class="ceb">
@@ -437,7 +440,7 @@
 			</div>
 		</div>
 	</section>
-	<footer></footer>
+	@include('layouts.foot')
 </div>
 </body>
 </html>
