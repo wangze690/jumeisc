@@ -30,10 +30,9 @@
 .bk:hover{
 	border:1px solid red;
 }
-.bk li {
-    display: inline;
+.bk{
     width: 310px;
-    height:auto;
+    height:400px;
     margin-right: 13px;
     margin-bottom: 25px;
     border: solid 1px #f8f5f5;

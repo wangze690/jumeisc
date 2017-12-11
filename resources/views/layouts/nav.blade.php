@@ -1,14 +1,11 @@
+
 <nav>
 <div class="container">
 	<div class="col-md-8 dao">
 		<ul class="nav nav-pills">
-			<li role="presentation"><a href="#">首页</a></li>
-			<li role="presentation"><a href="#">极速免税店</a></li>
-			<li role="presentation"><a href="#">母婴特卖</a></li>
-			<li role="presentation"><a href="#">美妆商城</a></li>
-			<li role="presentation"><a href="#">国际轻奢</a></li>
-			<li role="presentation"><a href="#">服装运动</a></li>
-			<li role="presentation"><a href="#">鞋包配饰</a></li>
+			@foreach($nav as $k=>$v)
+			<li role="presentation"><a href="#">{{$v->navname}}</a></li>
+			@endforeach
 		</ul>
 	</div>
 	<div class="col-md-4 dao_t">
