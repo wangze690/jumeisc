@@ -34,23 +34,21 @@
             <h2 style="float: left;"><strong>用户注册</strong></h2>
             <p style="float: right;">已有账号<a href="/denglu">在此登录</a></p>
         </div>
-        <form>
+        <form method="post" action="/zhuce">
               <div class="form-group line">
-                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="手机号">
+                <input type="text" class="form-control" id="user" placeholder="手机号" onfocus="show_user()" onblur="hide_user()" name="phone"><span id="u_span"></span>
               </div>
+        
               <div class="form-group line">
-                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="验证码" style="float:left; width: 150px;margin-bottom: 20px;">
-                <button type="submit" class="btn btn-default" style="float:right;">获取短信验证码</button>
-              </div>
-              <div class="form-group line">
-                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="短信验证码" style="float:left; width: 150px;margin-bottom: 20px;">
-                    <button type="submit" class="btn btn-default" style="float:right;">获取短信验证码</button>
+                    <input type="text" class="form-control" id="yzm" placeholder="短信验证码" name="yzm" onfocus="show_yzm()" onblur="hide_yzm()" style="float:left; width: 140px;margin-bottom: 20px;">
+                    <button type="button" class="btn btn-default" id="send" style="float:right;height: 44px;">获取短信验证码</button><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="y_span"></span>
                 </div>
               <div class="form-group line">
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="密码">
+                <input type="password" class="form-control" placeholder="密码" id="pass" onfocus="show_pass()" onBlur="hide_pass()" name="pwds"><span id="p_span"></span>
               </div>
               <div class="form-group line">
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="确认密码">
+                <input type="password" class="form-control" placeholder="确认密码" id="rpass"  onfocus="show_rpass()" onblur="hide_rpass()" name="pwdss"/><span id="rp_span"></span>
               </div>
               <p>
                 <input type="submit" class="submit_btn" value="同意协议并注册" name="mobileCommit" style="width: 100%;">
@@ -58,10 +56,221 @@
             <p>
                 <a href="#" rel="nofollow" target="_blank" style="color:#ed145b;">《聚美优品用户协议》</a>
         </p>
+        {{csrf_field()}}
         </form>
     </div>
 </div>
 <div class="clearfix"></div>
+<script>
+var preg_user = /1\d{10}/;
+var preg_pass = /^.{6,10}$/;
+
+function show_user()
+{
+  var uval = document.getElementById("user")
+  if(uval.value == "")
+  {
+    document.getElementById("u_span").innerHTML = "<span style='color:#f00;font-size:12px;'>请输入11位手机号码</span>";
+  }
+  else
+  {
+    if(preg_user.test(uval.value))
+    {
+      document.getElementById("u_span").innerHTML = "<span style='color:green;font-size:12px;'>√</span>";
+    }
+    else
+    {
+      document.getElementById("u_span").innerHTML = "<span style='color:#f00;font-size:12px;'>请输入正确的手机号</span>";
+    }
+  }
+}
+
+function hide_user()
+{
+  var uval = document.getElementById("user")
+  if(uval.value == "")
+  {
+    document.getElementById("u_span").innerHTML = "<span style='color:#f00;font-size:12px;'>手机号不能为空</span>";
+  }
+  else
+  {
+    if(preg_user.test(uval.value))
+    {
+      document.getElementById("u_span").innerHTML = "<span style='color:green;font-size:12px;'>√</span>";
+    }
+    else
+    {
+      document.getElementById("u_span").innerHTML = "<span style='color:#f00;font-size:12px;'>您输入的手机号码格式有误，需为 11 位数字格式</span>";
+    }
+  }
+}
+
+
+function show_yzm()
+{
+  var uval = document.getElementById("yzm")
+  if(uval.value == "")
+  {
+    document.getElementById("y_span").innerHTML = "<span style='color:#f00;font-size:12px;'>请输入6位验证码</span>";
+  }
+  else
+  {
+    if(preg_user.test(uval.value))
+    {
+      document.getElementById("y_span").innerHTML = "<span style='color:green;font-size:12px;'>√</span>";
+    }
+    else
+    {
+      document.getElementById("y_span").innerHTML = "<span style='color:#f00;font-size:12px;'>请输入正确的验证码</span>";
+    }
+  }
+}
+
+function hide_yzm()
+{
+  var uval = document.getElementById("yzm")
+  if(uval.value == "")
+  {
+    document.getElementById("y_span").innerHTML = "<span style='color:#f00;font-size:12px;'>验证码不能为空</span>";
+  }
+  else
+  {
+    if(preg_user.test(uval.value))
+    {
+      document.getElementById("y_span").innerHTML = "<span style='color:green;font-size:12px;'>√</span>";
+    }
+    else
+    {
+      document.getElementById("y_span").innerHTML = "<span style='color:#f00;font-size:12px;'>请输入正确的验证码</span>";
+    }
+  }
+}
+function show_pass()
+{
+  var pass = document.getElementById("pass");
+  if(pass.value == "")
+  {
+    document.getElementById("p_span").innerHTML = "<span style='color:#f00;font-size:12px;'>密码不能为空</span>";
+  }
+}
+function hide_pass()
+{
+  var pass = document.getElementById("pass");
+  if(pass.value == "")
+  {
+    document.getElementById("p_span").innerHTML = "<span style='color:#f00;font-size:12px;'>密码不能为空</span>";
+  }
+  else
+  {
+    if(preg_pass.test(pass.value))
+    {
+      document.getElementById("p_span").innerHTML = "<span style='color:green;font-size:12px;'>√</span>";
+    }
+    else
+    {
+      document.getElementById("p_span").innerHTML = "<span style='color:#f00;font-size:12px;'>密码格式不对</span>";
+    }
+  }
+}
+function hide_rpass()
+{
+  var pass = document.getElementById("pass");
+  var rpass = document.getElementById("rpass");
+  if(pass.value != rpass.value)
+  {
+    document.getElementById("rp_span").innerHTML = "<span style='color:#f00;font-size:12px;'>俩次密码不一致</span>";
+  }
+  else
+  {
+    document.getElementById("rp_span").innerHTML = "<span style='color:#f00;font-size:12px;'>√</span>";
+  }
+}
+</script>
+<script src="./bootstrap/js/jquery.js"></script>
+<script type="text/javascript">
+$(function (){
+      // 验证码发送
+      $('#send').click(function(){
+          //获取用户手机号
+          var phone = $('input[name=phone]').val();
+          // 验证手机号
+          var reg = /1\d{10}/;
+          //检测
+          if(!reg.test(phone))
+          {
+            alert('手机号码格式不正确');
+            return;
+          }
+          // 发送ajax
+          $.ajax({
+            type:'get',
+            data:{phone:phone},
+            url:'/message',
+            success:function(data)
+            {
+              // alert(data);
+              console.log(data);
+            }
+          })
+          //发送短信之后 1分钟之内不能点击该按钮
+          $(this).addClass('disabled');
+          var t = 60;
+          //加倒计时
+          var inte = setInterval(function(){
+            $('#send').html(t+'秒之后再重新发送');
+            t--;
+            if(t < 0) {
+              //停止定时器
+              clearInterval(inte);
+              //使按钮可点
+              $('#send').removeClass('disabled');
+              //更换文字
+              $('#send').html('发送验证码');
+            }
+          }, 1000);
+
+    });
+
+
+});
+</script>
+<script>
+    $("input[type=button]").click(function(){
+      var yes = document.getElementsByName('yes')[0].checked;
+      if(yes){
+        var a=$("#u_span").text();
+        
+        var b=$("#p_span").text();
+        
+        var c=$("#rp_span").text();
+        
+        var d=$("#yzm_span").text();
+        
+        if(a=="√" && b=="√" && c=="√" && d=="√"){
+          
+          var phone=$("input[name=phone]").val();
+          var pwds=$("input[name=pwds]").val();
+        
+          $.ajax({
+            type:"POST",
+            url:"/zhuce",
+            data:"phone="+phone+"&pwds="+pwds,
+            success:function(mess){
+              alert(mess);
+              if (mess=="注册成功"){
+                location.href="/denglu";
+              }
+            }
+          })
+      }
+      }else{
+        alert("请同意服务协议");
+      }
+  
+    })
+    
+  })
+</script>
 <div class="footer_container" style="height: 219px;">
     <div class="footer_con" id="footer_copyright">
         <p class="footer_copy_con text-center">

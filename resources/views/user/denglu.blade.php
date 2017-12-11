@@ -32,12 +32,13 @@
                 <h2 style="float: left;"><strong>登录聚美</strong></h2>
                 <p style="float: right;">还没有聚美帐号？<a href="/zhuce">30秒注册</a></p>
            </div>
-           <form>
+           <form method="post" action="/denglu">
               <div class="form-group">
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="已验证手机/邮箱/用户名">
+                <input type="text" class="form-control" id="user" placeholder="已验证手机/邮箱/用户名" onfocus="show_user()" onblur="hide_user()" name="phone"><span id="u_span"></span>
               </div>
               <div class="form-group">
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="密码">
+                <input type="password" class="form-control" id="pass" placeholder="密码" onfocus="show_pass()" onBlur="hide_pass()" name="pwds">
+                <span id="p_span"></span>
               </div>
                 <p>
                     <a href="#" class="fr">忘记密码?</a>
@@ -46,7 +47,9 @@
                         &nbsp;自动登录
                     </label>
                 </p>
+                {{csrf_field()}}
               <input class="loginbtn submit_btn" type="submit" value="登 录" style=" display: block;width: 100%;">
+
             </form>
             <div>你也可以使用以下帐号登录</div>
              <!-- 百度分享  start -->
@@ -59,7 +62,7 @@
 </div>
 
 <script>
-var preg_user = /^[a-z][a-zA-Z0-9]{5,11}$/;
+var preg_user = /1\d{10}/;
 var preg_pass = /^.{6,10}$/;
 
 function show_user()
@@ -67,7 +70,7 @@ function show_user()
     var uval = document.getElementById("user")
     if(uval.value == "")
     {
-        document.getElementById("u_span").innerHTML = "<span style='color:#f00;font-size:12px;'>字母数字组成的用户名</span>";
+        document.getElementById("u_span").innerHTML = "<span style='color:#f00;font-size:12px;'>登录名可能是您的手机号、邮箱或用户名</span>";
     }
     else
     {
@@ -148,7 +151,7 @@ function hide_rpass()
 <script type="text/javascript">
     $(function(){
     
-        $('input[type=button]').click(function(){
+        $('input[type=submit]').click(function(){
             //alert(phones);
             //alert(1);
             var phones = $("#u_span").text();
@@ -162,13 +165,13 @@ function hide_rpass()
                 
                 $.ajax({
                     type:"POST",
-                    url:"__URL__/logininfo",
+                    url:"/postdenglu",
                     data:"username="+uname+"&pwds="+upwd,
                     success: function(mess){
                         //alert(mess);
                         if(mess=="ok"){
                             $('input[type=button]').val("正在登录...");
-                            setTimeout("location.href='__APP__/Home/Grzx/grzx'",500);
+                            setTimeout("location.href='/grzx'",500);
                         }else{
                             alert("用户名或密码错误，忘记密码？");
                         }

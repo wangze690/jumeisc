@@ -24,7 +24,12 @@ Route::get('/liebiao','LiebiaoController@liebiao');
 Route::get('/mzsc','MzscController@mzsc');
 //前台登录
 Route::get('/denglu','QiantaiController@denglu');
+Route::post('/denglu','QiantaiController@postdenglu');
+
+//前台注册
 Route::get('/zhuce','QiantaiController@zhuce');
+Route::post('/zhuce','QiantaiController@getzhuce');
+
 Route::get('/grzx','QiantaiController@grzx');
 Route::get('/grzxs','QiantaiController@grzxs');
 
