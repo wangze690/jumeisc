@@ -41,6 +41,10 @@ Route::get('/message','CommonController@message');
 // 尺码列表
 Route::get('/jumei/sizelist','JumeiController@sizelist');
 Route::post('/jumei/sizelist','JumeiController@sizeadd');
-Route::get('/xiangqing','XiangqingController@xiangqing');
 
-Route::get('liebiaotwo','LiebiaoController@liebiaotwo');
+//详情
+Route::get('/xiangqing','XiangqingController@xiangqing');
+//列表二
+Route::get('/liebiaotwo','LiebiaoController@liebiaotwo');
+//列表(保湿)
+Route::get('/baoshi','BaoshiController@baoshi');
