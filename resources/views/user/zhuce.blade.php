@@ -42,7 +42,7 @@
               <div class="form-group line">
                     <input type="text" class="form-control" id="yzm" placeholder="短信验证码" name="yzm" onfocus="show_yzm()" onblur="hide_yzm()" style="float:left; width: 140px;margin-bottom: 20px;">
                     <button type="button" class="btn btn-default" id="send" style="float:right;height: 44px;">获取短信验证码</button><br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="y_span"></span>
+                    <span id="y_span" style="float: left;margin: 0 40px; margin-top:-20px; "></span>
                 </div>
               <div class="form-group line">
                 <input type="password" class="form-control" placeholder="密码" id="pass" onfocus="show_pass()" onBlur="hide_pass()" name="pwds"><span id="p_span"></span>
@@ -70,7 +70,7 @@ function show_user()
   var uval = document.getElementById("user")
   if(uval.value == "")
   {
-    document.getElementById("u_span").innerHTML = "<span style='color:#f00;font-size:12px;'>请输入11位手机号码</span>";
+    document.getElementById("u_span").innerHTML = "<span style='color:#999;font-size:12px;'>请输入11位手机号码</span>";
   }
   else
   {
@@ -80,7 +80,7 @@ function show_user()
     }
     else
     {
-      document.getElementById("u_span").innerHTML = "<span style='color:#f00;font-size:12px;'>请输入正确的手机号</span>";
+      document.getElementById("u_span").innerHTML = "<span style='color:#999;font-size:12px;'>请输入正确的手机号</span>";
     }
   }
 }
@@ -90,7 +90,7 @@ function hide_user()
   var uval = document.getElementById("user")
   if(uval.value == "")
   {
-    document.getElementById("u_span").innerHTML = "<span style='color:#f00;font-size:12px;'>手机号不能为空</span>";
+    document.getElementById("u_span").innerHTML = "<span style='color:#999;font-size:12px;'>手机号不能为空</span>";
   }
   else
   {
@@ -100,7 +100,7 @@ function hide_user()
     }
     else
     {
-      document.getElementById("u_span").innerHTML = "<span style='color:#f00;font-size:12px;'>您输入的手机号码格式有误，需为 11 位数字格式</span>";
+      document.getElementById("u_span").innerHTML = "<span style='color:#999;font-size:12px;'>您输入的手机号码格式有误，需为 11 位数字格式</span>";
     }
   }
 }
@@ -111,7 +111,7 @@ function show_yzm()
   var uval = document.getElementById("yzm")
   if(uval.value == "")
   {
-    document.getElementById("y_span").innerHTML = "<span style='color:#f00;font-size:12px;'>请输入6位验证码</span>";
+    document.getElementById("y_span").innerHTML = "<span style='color:#999;font-size:12px;'>请输入6位验证码</span>";
   }
   else
   {
@@ -121,7 +121,7 @@ function show_yzm()
     }
     else
     {
-      document.getElementById("y_span").innerHTML = "<span style='color:#f00;font-size:12px;'>请输入正确的验证码</span>";
+      document.getElementById("y_span").innerHTML = "<span style='color:#999;font-size:12px;'>请输入正确的验证码</span>";
     }
   }
 }
@@ -131,7 +131,7 @@ function hide_yzm()
   var uval = document.getElementById("yzm")
   if(uval.value == "")
   {
-    document.getElementById("y_span").innerHTML = "<span style='color:#f00;font-size:12px;'>验证码不能为空</span>";
+    document.getElementById("y_span").innerHTML = "<span style='color:#999;font-size:12px;'>验证码不能为空</span>";
   }
   else
   {
@@ -141,7 +141,7 @@ function hide_yzm()
     }
     else
     {
-      document.getElementById("y_span").innerHTML = "<span style='color:#f00;font-size:12px;'>请输入正确的验证码</span>";
+      document.getElementById("y_span").innerHTML = "<span style='color:#999;font-size:12px;'>请输入正确的验证码</span>";
     }
   }
 }
@@ -150,7 +150,7 @@ function show_pass()
   var pass = document.getElementById("pass");
   if(pass.value == "")
   {
-    document.getElementById("p_span").innerHTML = "<span style='color:#f00;font-size:12px;'>密码不能为空</span>";
+    document.getElementById("p_span").innerHTML = "<span style='color:#999;font-size:12px;'>密码不能为空</span>";
   }
 }
 function hide_pass()
@@ -158,7 +158,7 @@ function hide_pass()
   var pass = document.getElementById("pass");
   if(pass.value == "")
   {
-    document.getElementById("p_span").innerHTML = "<span style='color:#f00;font-size:12px;'>密码不能为空</span>";
+    document.getElementById("p_span").innerHTML = "<span style='color:#999;font-size:12px;'>密码不能为空</span>";
   }
   else
   {
@@ -168,7 +168,7 @@ function hide_pass()
     }
     else
     {
-      document.getElementById("p_span").innerHTML = "<span style='color:#f00;font-size:12px;'>密码格式不对</span>";
+      document.getElementById("p_span").innerHTML = "<span style='color:#999;font-size:12px;'>密码格式不对</span>";
     }
   }
 }
@@ -178,11 +178,11 @@ function hide_rpass()
   var rpass = document.getElementById("rpass");
   if(pass.value != rpass.value)
   {
-    document.getElementById("rp_span").innerHTML = "<span style='color:#f00;font-size:12px;'>俩次密码不一致</span>";
+    document.getElementById("rp_span").innerHTML = "<span style='color:#999;font-size:12px;'>俩次密码不一致</span>";
   }
   else
   {
-    document.getElementById("rp_span").innerHTML = "<span style='color:#f00;font-size:12px;'>√</span>";
+    document.getElementById("rp_span").innerHTML = "<span style='color:#999;font-size:12px;'>√</span>";
   }
 }
 </script>
@@ -234,43 +234,7 @@ $(function (){
 
 });
 </script>
-<script>
-    $("input[type=button]").click(function(){
-      var yes = document.getElementsByName('yes')[0].checked;
-      if(yes){
-        var a=$("#u_span").text();
-        
-        var b=$("#p_span").text();
-        
-        var c=$("#rp_span").text();
-        
-        var d=$("#yzm_span").text();
-        
-        if(a=="√" && b=="√" && c=="√" && d=="√"){
-          
-          var phone=$("input[name=phone]").val();
-          var pwds=$("input[name=pwds]").val();
-        
-          $.ajax({
-            type:"POST",
-            url:"/zhuce",
-            data:"phone="+phone+"&pwds="+pwds,
-            success:function(mess){
-              alert(mess);
-              if (mess=="注册成功"){
-                location.href="/denglu";
-              }
-            }
-          })
-      }
-      }else{
-        alert("请同意服务协议");
-      }
-  
-    })
-    
-  })
-</script>
+
 <div class="footer_container" style="height: 219px;">
     <div class="footer_con" id="footer_copyright">
         <p class="footer_copy_con text-center">

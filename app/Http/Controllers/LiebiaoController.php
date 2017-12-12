@@ -24,6 +24,15 @@ class LiebiaoController extends Controller
    	}
    	public function liebiaosan()
    	{
-   		return view('liebiao.liebiaosan');
+   		$shop = DB::table('shop')->where('pid','6')->get();
+         $shops = DB::table('shop')->where('pid','7')->get();
+         $shopd = DB::table('shop')->where('pid','8')->get();
+
+   		return view('liebiao.liebiaosan',[
+            'shop'=>$shop,
+            'shops'=>$shops,
+            'shopd'=>$shopd
+
+            ]);
    	}
 }

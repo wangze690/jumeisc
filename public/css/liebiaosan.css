@@ -22,18 +22,56 @@
 	height: auto;
 	width: auto;
 }
-.bk{
+.center .bk{
 	border: 1px solid #ccc;
 	padding:0px;
 	margin-bottom:10px;
+	margin-top: 20px;
 }
-.bk:hover{
-	border:1px solid red;
+.center .bk:hover{
+	border:1px solid #ec1b5d;
 }
-.bk{
-    width: 310px;
+.center .bk{
+    width: 300px;
     height:400px;
-    margin-right: 13px;
+    margin-left: 10px;
     margin-bottom: 25px;
     border: solid 1px #f8f5f5;
+    line-height: 20px;
+}
+.center .bk .price{
+	margin-top: 30px;
+}
+.tu{
+	height: 600px;
+}
+footer{
+	margin-top:260px; 
+	width: 1899px;
+	height: 300px;
+	background-color: #57214c;
+}
+footer .skt{
+	color: #fff;
+	height: 100px;
+	margin-top: 40px;
+	border-right: 1px solid #000;
+}
+footer .skts{
+	color: #fff;
+	height: 100px;
+	margin-top: 40px;
+}
+footer h4{
+	float: left;
+}
+footer ul{
+	float: left;
+	margin-top:10px;
+	margin-left: 10px;
+}
+footer .nice{
+	color: #fff;
+	line-height:100px;
+	margin-top: 40px;
 }

@@ -16,23 +16,23 @@ class QiantaiController extends Controller
     {
         $deluinfo = $request->only('phone','pwds');
         //检测数据是否正确 根据用户名来查找用户信息
-        $user = DB::table('users')->where('username', $data['username'])->first();
+        $user = DB::table('users')->where('phone', $deluinfo['phone'])->first();
         //判断 没有这个用户
         if(empty($user)) {
             return back()->with('msg','登陆失败!!');
         }
         
         //校验密码
-        if (Hash::check($data['password'], $user->password)) {
-            //  
+        if ($deluinfo['pwds']==$user->pwds) {
+              
             session(['id'=>$user->id]);
-            session(['username'=>$user->username]);
+            session(['phone'=>$user->phone]);
 
             //登陆成功
-            return redirect('/admin')->with('msg','登陆成功');
+            return redirect('/liebiaosan')->with('msg','登陆成功');
             
         }
-        return back()->with('msg','登陆失败!!');
+        return back()->with('msg','登录失败');
         
     }
 
@@ -46,7 +46,9 @@ class QiantaiController extends Controller
    
       //将数据插入到数据库中
         DB::table('users')->insert($userinfo);
+        return view('user.denglu');
     }
+
      public function grzx()
     {
     	return view('grzx.user');
