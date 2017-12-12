@@ -70,13 +70,16 @@ class XiangqingController extends Controller
             'addDate' => $addDate
         ];
         $jiaru = DB::table('carts')->insert($data);
-        if($jiaru)
+        if(empty($user_id))
         {
-            echo 1;
-        }
-        else
-        {
-            echo 0;
+            if($jiaru)
+            {
+                echo 1;
+            }
+            else
+            {
+                echo 0;
+            }
         }
     }
 }

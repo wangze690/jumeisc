@@ -1,3 +1,4 @@
+
 <?php
 
 /*
@@ -15,9 +16,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/admin','AdminController@index');
+//登录路由
+Route::get('/admin/login','LoginController@login');
+Route::post('/admin/login','LoginController@quert');
 
-Route::resource('/user','UserController');
+Route::group(['middleware'=>'login'],function(){
+//后台管理路由
+Route::get('/admin','AdminController@index');
+//用户管理路由
+Route::resource('user','UserController');
+//留言管理路由
+Route::resource('article','ArticleController');
+
+Route::resource('cate','CateController');
+});
+
+
 
 Route::get('/liebiao','LiebiaoController@liebiao');
 
@@ -61,4 +75,8 @@ Route::get('/jrgwc/','XiangqingController@jrgwc');
 Route::get('/liebiaotwo','LiebiaoController@liebiaotwo');
 //列表(保湿)
 Route::get('/baoshi','BaoshiController@baoshi');
+//列表gougo
+Route::get('/gougo','LiebiaoController@gougo');
+//收藏
+Route::get('shoucang','ShoucangController@shoucang');
 

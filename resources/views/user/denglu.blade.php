@@ -21,7 +21,6 @@
 		    <a href="#"><img src="./img/logo2.jpg" alt=""></a>
 		    <a href="#"><img src="./img/logo3.jpg" alt=""></a>
 		</div>
-	</div>
 </div>
 <div class="container loginWrap">
 	   <div class="col-md-6 pull-left loginImage">
@@ -70,7 +69,7 @@ function show_user()
     var uval = document.getElementById("user")
     if(uval.value == "")
     {
-        document.getElementById("u_span").innerHTML = "<span style='color:#f00;font-size:12px;'>登录名可能是您的手机号、邮箱或用户名</span>";
+        document.getElementById("u_span").innerHTML = "<span style='color:#999;font-size:12px;'>登录名可能是您的手机号、邮箱或用户名</span>";
     }
     else
     {
@@ -80,7 +79,7 @@ function show_user()
         }
         else
         {
-            document.getElementById("u_span").innerHTML = "<span style='color:#f00;font-size:12px;'>请输入正确的用户名</span>";
+            document.getElementById("u_span").innerHTML = "<span style='color:#999;font-size:12px;'>请输入正确的用户名</span>";
         }
     }
 }
@@ -90,7 +89,7 @@ function hide_user()
     var uval = document.getElementById("user")
     if(uval.value == "")
     {
-        document.getElementById("u_span").innerHTML = "<span style='color:#f00;font-size:12px;'>用户名不能为空</span>";
+        document.getElementById("u_span").innerHTML = "<span style='color:#999;font-size:12px;'>用户名不能为空</span>";
     }
     else
     {
@@ -100,7 +99,7 @@ function hide_user()
         }
         else
         {
-            document.getElementById("u_span").innerHTML = "<span style='color:#f00;font-size:12px;'>请输入正确的用户名</span>";
+            document.getElementById("u_span").innerHTML = "<span style='color:#999;font-size:12px;'>请输入正确的用户名</span>";
         }
     }
 }
@@ -110,7 +109,7 @@ function show_pass()
     var pass = document.getElementById("pass");
     if(pass.value == "")
     {
-        document.getElementById("p_span").innerHTML = "<span style='color:#f00;font-size:12px;'>密码不能为空</span>";
+        document.getElementById("p_span").innerHTML = "<span style='color:#999;font-size:12px;'>密码不能为空</span>";
     }
 }
 
@@ -119,7 +118,7 @@ function hide_pass()
     var pass = document.getElementById("pass");
     if(pass.value == "")
     {
-        document.getElementById("p_span").innerHTML = "<span style='color:#f00;font-size:12px;'>密码不能为空</span>";
+        document.getElementById("p_span").innerHTML = "<span style='color:#999;font-size:12px;'>密码不能为空</span>";
     }
     else
     {
@@ -129,7 +128,7 @@ function hide_pass()
         }
         else
         {
-            document.getElementById("p_span").innerHTML = "<span style='color:#f00;font-size:12px;'>密码格式不对</span>";
+            document.getElementById("p_span").innerHTML = "<span style='color:#999;font-size:12px;'>密码格式不对</span>";
         }
     }
 }
@@ -139,7 +138,7 @@ function hide_rpass()
     var rpass = document.getElementById("rpass");
     if(pass.value != rpass.value)
     {
-        document.getElementById("rp_span").innerHTML = "<span style='color:#f00;font-size:12px;'>俩次密码不一致</span>";
+        document.getElementById("rp_span").innerHTML = "<span style='color:#999;font-size:12px;'>俩次密码不一致</span>";
     }
     else
     {
@@ -147,39 +146,6 @@ function hide_rpass()
     }
 }
 
-</script>
-<script type="text/javascript">
-    $(function(){
-    
-        $('input[type=submit]').click(function(){
-            //alert(phones);
-            //alert(1);
-            var phones = $("#u_span").text();
-            //alert(phones);
-            var pwds = $("#p_span").text();
-            var uname=$('input[id=user]').val();//用户名
-            //alert(uname);
-            var upwd=$('input[id=pass]').val();//密码
-            //alert(upwd);
-            if(phones=="√" && pwds=="√" ){
-                
-                $.ajax({
-                    type:"POST",
-                    url:"/postdenglu",
-                    data:"username="+uname+"&pwds="+upwd,
-                    success: function(mess){
-                        //alert(mess);
-                        if(mess=="ok"){
-                            $('input[type=button]').val("正在登录...");
-                            setTimeout("location.href='/grzx'",500);
-                        }else{
-                            alert("用户名或密码错误，忘记密码？");
-                        }
-                    }
-                })
-            }
-        })
-    })
 </script>
 <div class="footer_container" style="height: 219px;">
     <div class="footer_con" id="footer_copyright">

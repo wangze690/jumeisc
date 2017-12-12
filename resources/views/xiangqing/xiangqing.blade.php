@@ -349,7 +349,9 @@
 					}
 					else
 					{
-						alert('加入购物车失败');
+						var ppp=confirm("您还未登录，请登录");
+						location.href="/denglu";	
+
 					}
 				}
 			})

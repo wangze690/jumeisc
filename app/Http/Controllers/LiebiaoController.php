@@ -22,9 +22,9 @@ class LiebiaoController extends Controller
    	
    	public function liebiaotwo()
    	{
-   		$sp_1 = DB::table('shop')->where('pid',5)->get();
-   		$sp_2 = DB::table('shop')->where('pid',6)->get();
-   		$sp_3 = DB::table('shop')->where('pid',7)->get();
+   		$sp_1 = DB::table('shop')->where('pid',20)->get();
+   		$sp_2 = DB::table('shop')->where('pid',21)->get();
+   		$sp_3 = DB::table('shop')->where('pid',22)->get();
          $nav = DB::table('nav')->where('path',2)->get();
 
    		return view('liebiao.liebiaotwo',[
@@ -37,6 +37,23 @@ class LiebiaoController extends Controller
    	}
    	public function liebiaosan()
    	{
-   		return view('liebiao.liebiaosan');
+   		$shop = DB::table('shop')->where('pid','6')->get();
+         $shops = DB::table('shop')->where('pid','7')->get();
+         $shopd = DB::table('shop')->where('pid','8')->get();
+
+   		return view('liebiao.liebiaosan',[
+            'shop'=>$shop,
+            'shops'=>$shops,
+            'shopd'=>$shopd
+
+            ]);
+   	}
+
+   	public function gougo()
+   	{
+         $nav = DB::table('nav')->where('path',2)->get();
+   		return view('liebiao.gougo',[
+            'nav'=>$nav
+            ]);
    	}
 }

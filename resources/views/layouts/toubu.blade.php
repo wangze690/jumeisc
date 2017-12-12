@@ -3,9 +3,13 @@
 <div class="container">
     <div class="col-md-3 tb_o">
         <ul>
+            @if(!session('id'))
             <li class="pull-left">欢迎来到聚美！</li>
-            <li class="pull-left"><a href="/denglu">请登录</a></li>
+            <li class="pull-left"><a href="/denglu">登录</a></li>
             <li class="pull-left"><a href="/zhuce">快速注册</a></li>
+            @else
+            <li class="pull-left"><a href="/center">欢迎回来: {{session('phone')}}</a></li>
+            @endif
         </ul>
     </div>
     <div class="col-md-4 tb_o"></div>
