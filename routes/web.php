@@ -68,7 +68,8 @@ Route::get('liebiaotwo','LiebiaoController@liebiaotwo');
 Route::get('liebiaosan','LiebiaoController@liebiaosan');
 
 //详情
-Route::get('/xiangqing','XiangqingController@xiangqing');
+Route::get('/xiangqing/{id}','XiangqingController@xiangqing');
+Route::get('/jrgwc/','XiangqingController@jrgwc');
 //列表二
 Route::get('/liebiaotwo','LiebiaoController@liebiaotwo');
 //列表(保湿)
