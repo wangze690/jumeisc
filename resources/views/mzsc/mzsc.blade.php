@@ -57,12 +57,15 @@
 	</script>
 
 	<section>
-		<div class="container">
+		<div class="container" style="position: relative;">
 			<div class="col-md-3 dr">
+				<h3><b>全部分类</b></h3>
+				@foreach($cbnav as $k=>$v)
 				<div class="ceb">
-					<h3><b>全部分类</b></h3>
+					
+					
 					<dl class="uzi">
-						<dt>推荐品牌</dt>
+						<dt>{{$v->navname}}</dt>
 						<dd class="pull-left"><a href="#">欧莱雅</a></dd>
 						<dd class="pull-left"><a href="#">菲诗小铺</a></dd>
 						<dd class="pull-left"><a href="#">雅诗兰黛</a></dd>
@@ -72,88 +75,119 @@
 						<dd class="pull-left"><a href="#">雅顿</a></dd>
 						<dd class="pull-left"><a href="#">佰草集</a></dd>
 					</dl>
-				</div>
-				<div class="clearfix"></div>	
-				<div class="ceb">
-					<dl class="uzi">
-						<dt>护肤</dt>
-						<dd class="pull-left"><a href="#">洁面</a></dd>
-						<dd class="pull-left"><a href="#">化妆水</a></dd>
-						<dd class="pull-left"><a href="#">精华</a></dd>
-						<dd class="pull-left"><a href="#">乳液</a></dd>
-						<dd class="pull-left"><a href="#">面霜</a></dd>
-						<dd class="pull-left"><a href="#">眼霜</a></dd>
-						<dd class="pull-left"><a href="#">面膜</a></dd>
-						<dd class="pull-left"><a href="#">护肤套装</a></dd>
-					</dl>
-				</div>
-				<div class="clearfix"></div>	
-				<div class="ceb">
-					<dl class="uzi">
-						<dt>彩妆</dt>
-						<dd class="pull-left"><a href="#">卸妆</a></dd>
-						<dd class="pull-left"><a href="#">防晒</a></dd>
-						<dd class="pull-left"><a href="#">BB霜</a></dd>
-						<dd class="pull-left"><a href="#">粉饼</a></dd>
-						<dd class="pull-left"><a href="#">眼影</a></dd>
-						<dd class="pull-left"><a href="#">睫毛膏</a></dd>
-						<dd class="pull-left"><a href="#">唇彩</a></dd>
-						<dd class="pull-left"><a href="#">腮红</a></dd>
-						<dd class="pull-left"><a href="#">彩妆套装</a></dd>
-					</dl>
-				</div>
-				<div class="clearfix"></div>	
-				<div class="ceb">
-					<dl class="uzi">
-						<dt>香氛</dt>
-						<dd class="pull-left"><a href="#">女士香水</a></dd>
-						<dd class="pull-left"><a href="#">男士香水</a></dd>
-						<dd class="pull-left"><a href="#">中性香水</a></dd>
-						<dd class="pull-left"><a href="#">Q版香水</a></dd>
-						<dd class="pull-left"><a href="#">香水套装</a></dd>
-					</dl>
-				</div>
-				<div class="clearfix"></div>	
-				<div class="ceb">
-					<dl class="uzi">
-						<dt>个人护理</dt>
-						<dd class="pull-left"><a href="#">洗发</a></dd>
-						<dd class="pull-left"><a href="#">护法</a></dd>
-						<dd class="pull-left"><a href="#">沐浴</a></dd>
-						<dd class="pull-left"><a href="#">润肤乳</a></dd>
-						<dd class="pull-left"><a href="#">牙膏</a></dd>
-						<dd class="pull-left"><a href="#">发膜</a></dd>
-						<dd class="pull-left"><a href="#">脱毛</a></dd>
-						<dd class="pull-left"><a href="#">护理套装</a></dd>
-					</dl>
-				</div>
-				<div class="clearfix"></div>	
-				<div class="ceb">
-					<dl class="uzi">
-						<dt>男士专区</dt>
-						<dd class="pull-left"><a href="#">洁面</a></dd>
-						<dd class="pull-left"><a href="#">爽肤水</a></dd>
-						<dd class="pull-left"><a href="#">乳液</a></dd>
-						<dd class="pull-left"><a href="#">面霜</a></dd>
-						<dd class="pull-left"><a href="#">精华</a></dd>
-						<dd class="pull-left"><a href="#">洗发</a></dd>
-						<dd class="pull-left"><a href="#">沐浴</a></dd>
-						<dd class="pull-left"><a href="#">男香</a></dd>
-					</dl>
-				</div>
-				<div class="clearfix"></div>	
-				<div class="ceb">
-					<dl class="uzi">
-						<dt>奢品美妆</dt>
-						<dd class="pull-left"><a href="#">雅诗兰黛</a></dd>
-						<dd class="pull-left"><a href="#">奥迪</a></dd>
-						<dd class="pull-left"><a href="#">海澜之谜</a></dd>
-						<dd class="pull-left"><a href="#">希思黎</a></dd>
-					</dl>
+					
+					<div class="cen_xs">
+						<div class="col-md-9 cen_xs_o">
+							<h5 class="text-center"><b>国际品牌</b></h5>
+							<ul>
+								<li class="pull-left">伊丽莎白雅顿</li>            
+								<li class="pull-left">兰蔻</li>
+								<li class="pull-left">科颜氏</li>
+								<li class="pull-left">迪奥</li>
+								<li class="pull-left">倩碧</li>
+								<li class="pull-left">娇韵诗</li>
+								<li class="pull-left">雅诗兰黛</li>
+								<li class="pull-left">SK-II</li>
+								<li class="pull-left">欧舒丹</li>
+								<li class="pull-left">碧欧泉</li>
+								<li class="pull-left">娇兰</li>
+								<li class="pull-left">贝玲妃</li>
+							</ul>
+							<div style="width: 650px; border-top:1px dashed #eee; margin-left: 10px;"></div>
+							
+							<h5 class="text-center"><b>国际品牌</b></h5>
+							<ul>
+								<li class="pull-left">伊丽莎白雅顿</li>            
+								<li class="pull-left">兰蔻</li>
+								<li class="pull-left">科颜氏</li>
+								<li class="pull-left">迪奥</li>
+								<li class="pull-left">倩碧</li>
+								<li class="pull-left">娇韵诗</li>
+								<li class="pull-left">雅诗兰黛</li>
+								<li class="pull-left">SK-II</li>
+								<li class="pull-left">欧舒丹</li>
+								<li class="pull-left">碧欧泉</li>
+								<li class="pull-left">娇兰</li>
+								<li class="pull-left">贝玲妃</li>
+							</ul>
+							<div style="width: 650px; border-top:1px dashed #eee; margin-left: 10px;"></div>
+
+							<h5 class="text-center"><b>国际品牌</b></h5>
+							<ul>
+								<li class="pull-left">伊丽莎白雅顿</li>            
+								<li class="pull-left">兰蔻</li>
+								<li class="pull-left">科颜氏</li>
+								<li class="pull-left">迪奥</li>
+								<li class="pull-left">倩碧</li>
+								<li class="pull-left">娇韵诗</li>
+								<li class="pull-left">雅诗兰黛</li>
+								<li class="pull-left">SK-II</li>
+								<li class="pull-left">欧舒丹</li>
+								<li class="pull-left">碧欧泉</li>
+								<li class="pull-left">娇兰</li>
+								<li class="pull-left">贝玲妃</li>
+							</ul>
+							<div style="width: 650px; border-top:1px dashed #eee; margin-left: 10px;"></div>
+
+							<h5 class="text-center"><b>国际品牌</b></h5>
+							<ul>
+								<li class="pull-left">伊丽莎白雅顿</li>            
+								<li class="pull-left">兰蔻</li>
+								<li class="pull-left">科颜氏</li>
+								<li class="pull-left">迪奥</li>
+								<li class="pull-left">倩碧</li>
+								<li class="pull-left">娇韵诗</li>
+								<li class="pull-left">雅诗兰黛</li>
+								<li class="pull-left">SK-II</li>
+								<li class="pull-left">欧舒丹</li>
+								<li class="pull-left">碧欧泉</li>
+								<li class="pull-left">娇兰</li>
+								<li class="pull-left">贝玲妃</li>
+							</ul>
+							<div style="width: 650px; border-top:1px dashed #eee; margin-left: 10px;"></div>
+
+							<h5 class="text-center"><b>国际品牌</b></h5>
+							<ul>
+								<li class="pull-left">伊丽莎白雅顿</li>            
+								<li class="pull-left">兰蔻</li>
+								<li class="pull-left">科颜氏</li>
+								<li class="pull-left">迪奥</li>
+								<li class="pull-left">倩碧</li>
+								<li class="pull-left">娇韵诗</li>
+								<li class="pull-left">雅诗兰黛</li>
+								<li class="pull-left">SK-II</li>
+								<li class="pull-left">欧舒丹</li>
+								<li class="pull-left">碧欧泉</li>
+								<li class="pull-left">娇兰</li>
+								<li class="pull-left">贝玲妃</li>
+							</ul>
+							<div style="width: 650px; border-top:1px dashed #eee; margin-left: 10px;"></div>
+
+							<h5 class="text-center"><b>国际品牌</b></h5>
+							<ul>
+								<li class="pull-left">伊丽莎白雅顿</li>            
+								<li class="pull-left">兰蔻</li>
+								<li class="pull-left">科颜氏</li>
+								<li class="pull-left">迪奥</li>
+								<li class="pull-left">倩碧</li>
+								<li class="pull-left">娇韵诗</li>
+								<li class="pull-left">雅诗兰黛</li>
+								<li class="pull-left">SK-II</li>
+								<li class="pull-left">欧舒丹</li>
+								<li class="pull-left">碧欧泉</li>
+								<li class="pull-left">娇兰</li>
+								<li class="pull-left">贝玲妃</li>
+							</ul>
+							<div style="width: 650px; border-top:1px dashed #eee; margin-left: 10px;"></div>
+						</div>
+						<div class="col-md-3 cen_xs_t"></div>
+					</div>
 				</div>
 				<div class="clearfix"></div>
+				@endforeach	
+				
 				<div class="ce_tu">
-					<img src="./bootstrap/images/20.jpg" width="265px" height="160px" alt="">
+					<img src="./bootstrap/images/20.jpg" width="265px" height="130px" alt="">
 				</div>
 			</div>
 			<div class="col-md-9 ds">
@@ -165,6 +199,7 @@
 						    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
 						    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
 						    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+						    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
 						  </ol>
 
 						  <!-- Wrapper for slides -->
@@ -179,9 +214,13 @@
 						      <div class="carousel-caption">
 						      </div>
 						    </div>
-
 							<div class="item">
 						      <img src="./bootstrap/images/23.jpg" width="100%" height="100%" alt="...">
+						      <div class="carousel-caption">
+						      </div>
+						    </div>
+							<div class="item">
+						      <img src="./bootstrap/images/024.jpg" width="100%" height="100%" alt="...">
 						      <div class="carousel-caption">
 						      </div>
 						    </div>
@@ -215,117 +254,58 @@
 					<div class="xia">
 						<ul class="nav nav-tabs" role="tablist">
 						    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">推荐商品</a></li>
-						    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">推荐商品</a></li>
-						    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">推荐商品</a></li>
-						    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">推荐商品</a></li>
-						    <li role="presentation"><a href="#diwuge" aria-controls="diwuge" role="tab" data-toggle="tab">推荐商品</a></li>
+						    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">独家品牌</a></li>
+						    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">欧美品牌</a></li>
+						    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">日韩品牌</a></li>
+						    <li role="presentation"><a href="#diwuge" aria-controls="diwuge" role="tab" data-toggle="tab">国货品牌</a></li>
+						    <li role="presentation"><a href="#diliuge" aria-controls="diliuge" role="tab" data-toggle="tab">洗护品牌</a></li>
 					    </ul>
 
 					  <!-- Tab panes -->
 					  	<div class="tab-content">
 						    <div role="tabpanel" class="tab-pane active" id="home">
 						    	<div class="oe">
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-4 net"><img src="holder.js/100px120" alt=""></div>
-
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-4 net"><img src="holder.js/100px120" alt=""></div>
-
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-4 net"><img src="holder.js/100px120" alt=""></div>
+						    		@foreach($pro as $j=>$h)
+									<div class="col-md-2 net"><img src="./bootstrap/images/{{$h->sppro}}" width="135px" height="116px" alt=""></div>
+									@endforeach
+									
 								</div>
 						    </div>
 						    <div role="tabpanel" class="tab-pane" id="profile">
 								<div class="oe">
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-4 net"><img src="holder.js/100px120" alt=""></div>
-
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-4 net"><img src="holder.js/100px120" alt=""></div>
-
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-4 net"><img src="holder.js/100px120" alt=""></div>
+									@foreach($pro_one as $y=>$g)
+									<div class="col-md-2 net"><img src="./bootstrap/images/{{$g->sppro}}" width="135px" height="116px" alt=""></div>
+									@endforeach
+									
 								</div>
 						    </div>
 						    <div role="tabpanel" class="tab-pane" id="messages">
 								<div class="oe">
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-4 net"><img src="holder.js/100px120" alt=""></div>
-
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-4 net"><img src="holder.js/100px120" alt=""></div>
-
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-4 net"><img src="holder.js/100px120" alt=""></div>
+									@foreach($pro_two as $n=>$m)
+									<div class="col-md-2 net"><img src="./bootstrap/images/{{$m->sppro}}" width="135px" height="116px" alt=""></div>
+									@endforeach
 								</div>
 						    </div>
 						    <div role="tabpanel" class="tab-pane" id="settings">
 								<div class="oe">
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-4 net"><img src="holder.js/100px120" alt=""></div>
-
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-4 net"><img src="holder.js/100px120" alt=""></div>
-
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-4 net"><img src="holder.js/100px120" alt=""></div>
+									@foreach($pro_one as $y=>$g)
+									<div class="col-md-2 net"><img src="./bootstrap/images/{{$g->sppro}}" width="135px" height="116px" alt=""></div>
+									@endforeach
 								</div>
 						    </div>
 						    <div role="tabpanel" class="tab-pane" id="diwuge">
 								<div class="oe">
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-4 net"><img src="holder.js/100px120" alt=""></div>
+									@foreach($pro as $j=>$h)
+									<div class="col-md-2 net"><img src="./bootstrap/images/{{$h->sppro}}" width="135px" height="116px" alt=""></div>
+									@endforeach
+								</div>
+						    </div>
 
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-4 net"><img src="holder.js/100px120" alt=""></div>
-
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-2 net"><img src="holder.js/100px120" alt=""></div>
-									<div class="col-md-4 net"><img src="holder.js/100px120" alt=""></div>
+						    <div role="tabpanel" class="tab-pane" id="diliuge">
+								<div class="oe">
+									@foreach($pro_two as $n=>$m)
+									<div class="col-md-2 net"><img src="./bootstrap/images/{{$m->sppro}}" width="135px" height="116px" alt=""></div>
+									@endforeach
 								</div>
 						    </div>
 					    </div>
@@ -337,106 +317,30 @@
 		<div class="container">
 			<div class="col-md-4 col-md-offset-4 h2 text-center b_d">精选活动ACTIVITY</div>
 		</div>
+		@foreach($senr as $c=>$e)
 		<div class="container">
+			
 			<div class="col-md-6 nmg">
-				<img src="holder.js/100px280" alt="">
+				<img src="./bootstrap/images/{{$e->sppro}}" width="560px" height="280" alt="">
 				<ul class="pull-left nmg_w">
-					<li class="li_o h4"><b>自然堂旗舰店</b></li>
-					<li class="li_t">你本来就很美</li>
-					<li class="li_s">满<span>199</span>赠<span>199</span></li>
+					<li class="li_o h4"><b>{{$e->sptitle}}</b></li>
+					<li class="li_t">{{$e->spcount}}</li>
+					<li class="li_s">满<span>{{$e->manmany}}</span>赠<span>{{$e->zengmany}}</span></li>
 				</ul>
-				<img class="pull-right nmg_z" src="holder.js/100x100" alt="">
+				<img class="pull-right nmg_z" src="./bootstrap/images/{{$e->xiaopro}}" alt="">
 			</div>
 			<div class="col-md-6 nmgs">
-				<img src="holder.js/100px280" alt="">
+				<img src="./bootstrap/images/{{$e->sppro}}" width="560px" height="280" alt="">
 				<ul class="pull-left nmg_w">
-					<li class="li_o h4"><b>自然堂旗舰店</b></li>
-					<li class="li_t">你本来就很美</li>
-					<li class="li_s">满<span>199</span>赠<span>199</span></li>
+					<li class="li_o h4"><b>{{$e->sptitle}}</b></li>
+					<li class="li_t">{{$e->spcount}}</li>
+					<li class="li_s">满<span>{{$e->manmany}}</span>赠<span>{{$e->zengmany}}</span></li>
 				</ul>
-				<img class="pull-right nmg_z" src="holder.js/100x100" alt="">
+				<img class="pull-right nmg_z" src="./bootstrap/images/{{$e->xiaopro}}" alt="">
 			</div>
+			
 		</div>
-		<div class="container">
-			<div class="col-md-6 nmg">
-				<img src="holder.js/100px280" alt="">
-				<ul class="pull-left nmg_w">
-					<li class="li_o h4"><b>自然堂旗舰店</b></li>
-					<li class="li_t">你本来就很美</li>
-					<li class="li_s">满<span>199</span>赠<span>199</span></li>
-				</ul>
-				<img class="pull-right nmg_z" src="holder.js/100x100" alt="">
-			</div>
-			<div class="col-md-6 nmgs">
-				<img src="holder.js/100px280" alt="">
-				<ul class="pull-left nmg_w">
-					<li class="li_o h4"><b>自然堂旗舰店</b></li>
-					<li class="li_t">你本来就很美</li>
-					<li class="li_s">满<span>199</span>赠<span>199</span></li>
-				</ul>
-				<img class="pull-right nmg_z" src="holder.js/100x100" alt="">
-			</div>
-		</div>
-		<div class="container">
-			<div class="col-md-6 nmg">
-				<img src="holder.js/100px280" alt="">
-				<ul class="pull-left nmg_w">
-					<li class="li_o h4"><b>自然堂旗舰店</b></li>
-					<li class="li_t">你本来就很美</li>
-					<li class="li_s">满<span>199</span>赠<span>199</span></li>
-				</ul>
-				<img class="pull-right nmg_z" src="holder.js/100x100" alt="">
-			</div>
-			<div class="col-md-6 nmgs">
-				<img src="holder.js/100px280" alt="">
-				<ul class="pull-left nmg_w">
-					<li class="li_o h4"><b>自然堂旗舰店</b></li>
-					<li class="li_t">你本来就很美</li>
-					<li class="li_s">满<span>199</span>赠<span>199</span></li>
-				</ul>
-				<img class="pull-right nmg_z" src="holder.js/100x100" alt="">
-			</div>
-		</div>
-		<div class="container">
-			<div class="col-md-6 nmg">
-				<img src="holder.js/100px280" alt="">
-				<ul class="pull-left nmg_w">
-					<li class="li_o h4"><b>自然堂旗舰店</b></li>
-					<li class="li_t">你本来就很美</li>
-					<li class="li_s">满<span>199</span>赠<span>199</span></li>
-				</ul>
-				<img class="pull-right nmg_z" src="holder.js/100x100" alt="">
-			</div>
-			<div class="col-md-6 nmgs">
-				<img src="holder.js/100px280" alt="">
-				<ul class="pull-left nmg_w">
-					<li class="li_o h4"><b>自然堂旗舰店</b></li>
-					<li class="li_t">你本来就很美</li>
-					<li class="li_s">满<span>199</span>赠<span>199</span></li>
-				</ul>
-				<img class="pull-right nmg_z" src="holder.js/100x100" alt="">
-			</div>
-		</div>
-		<div class="container">
-			<div class="col-md-6 nmg">
-				<img src="holder.js/100px280" alt="">
-				<ul class="pull-left nmg_w">
-					<li class="li_o h4"><b>自然堂旗舰店</b></li>
-					<li class="li_t">你本来就很美</li>
-					<li class="li_s">满<span>199</span>赠<span>199</span></li>
-				</ul>
-				<img class="pull-right nmg_z" src="holder.js/100x100" alt="">
-			</div>
-			<div class="col-md-6 nmgs">
-				<img src="holder.js/100px280" alt="">
-				<ul class="pull-left nmg_w">
-					<li class="li_o h4"><b>自然堂旗舰店</b></li>
-					<li class="li_t">你本来就很美</li>
-					<li class="li_s">满<span>199</span>赠<span>199</span></li>
-				</ul>
-				<img class="pull-right nmg_z" src="holder.js/100x100" alt="">
-			</div>
-		</div>
+		@endforeach
 	</section>
 	@include('layouts.foot')
 </div>

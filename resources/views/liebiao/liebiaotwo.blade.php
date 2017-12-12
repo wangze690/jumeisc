@@ -6,7 +6,7 @@
 	
 	<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="/css/liebiao.css">
-	<link rel="stylesheet" type="text/css" href="/css/footer.css">
+	<link rel="stylesheet" type="text/css" href="/bootstrap/css/foot.css">
 	<link rel="stylesheet" href="/bootstrap/css/cbht.css">
 	<link rel="stylesheet" href="/bootstrap/css/toubu.css">
 	<link rel="stylesheet" href="/bootstrap/css/sousuo.css">
@@ -631,8 +631,8 @@
 		</div>
 	</section>
 	<!-- 主体内容结束 -->
-	@include('layouts.footer')
+	@include('layouts.foot')
 </div>
-@include('layouts.ggcb')
+
 </body>
 </html>

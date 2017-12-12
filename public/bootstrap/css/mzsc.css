@@ -52,17 +52,18 @@
 section{
 	width: 100%;
 	height: auto;
-	background-color: rgba(0,0,0,.1);
+	background-color: #f7f7f7;
 }
 section .dr{
 	background-color: #fff;
 	padding: 0px;
 	margin-top: 10px;
 }
-section .dr .ceb h3{
+section .dr h3{
 	margin-left: 5px;
 }
 section .dr .ceb .uzi{
+	margin-bottom: 0px;
 	border-top:1px dashed #ccc;
 }
 section .dr .ceb .uzi dt{
@@ -79,6 +80,41 @@ section .dr .ceb .uzi dd a{
 section .dr .ceb .uzi dd a:hover{
 	color: red;
 	text-decoration: none;
+}
+section .dr .ceb .cen_xs{
+	position: absolute;
+	top: 0px;
+	left: 285px;
+	height: auto;
+	width: 900px;
+	background-color: #fff;
+	display: none;
+	z-index: 100;
+}
+section .dr .ceb .cen_xs .cen_xs_o{
+	padding: 0px;
+	border:1px solid #000;
+}
+section .dr .ceb .cen_xs .cen_xs_o h5{
+	margin-left: 10px;
+	border-left: 3px solid #000;
+	width: 80px;
+}
+section .dr .ceb .cen_xs .cen_xs_o ul{
+	height: 40px;
+}
+section .dr .ceb .cen_xs .cen_xs_o ul li{
+	width: auto;
+	line-height: 30px;
+	margin-left: 10px;
+	font-size: 12px;
+}
+section .dr .ceb .uzi:hover{
+	background-color: #eee;
+	height: 90px;
+}
+section .dr .ceb:hover .cen_xs{
+	display: block;
 }
 section .dr .ce_tu{
 	margin-left: 10px;
@@ -122,6 +158,9 @@ section .ds .ui .gu_g .o{
 section .ds .ui .xia{
 	width: 100%;
 	height: 425px;
+}
+section .ds .ui .xia a{
+	color:#000;
 }
 section .oe{
 	margin-top: 10px;

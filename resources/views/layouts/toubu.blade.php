@@ -4,8 +4,8 @@
     <div class="col-md-3 tb_o">
         <ul>
             <li class="pull-left">欢迎来到聚美！</li>
-            <li class="pull-left"><a href="">请登录</a></li>
-            <li class="pull-left"><a href="">快速注册</a></li>
+            <li class="pull-left"><a href="/denglu">请登录</a></li>
+            <li class="pull-left"><a href="/zhuce">快速注册</a></li>
         </ul>
     </div>
     <div class="col-md-4 tb_o"></div>

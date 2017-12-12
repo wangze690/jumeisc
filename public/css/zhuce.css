@@ -6,65 +6,35 @@
 .header_right{
 	padding-top:30px;
 }
-.login-wrap{
-	width: 960px;
-    position: relative;
-    margin-top: 120px;
-    margin-bottom: 70px;
-    height: 460px;
+.loginWrap {
+    margin: 100px auto;
+    line-height: 1.5;
+    width: 965px;
+    margin-bottom: 50px;
 }
-.loginImage{
-	background: url(../img/signPic.jpg) no-repeat;
-    width: 960px;
-    height: 400px;
-    position: absolute;
+.loginBord {
+    width: 346px;
+    height: 476px;
+    background: rgba(255,255,255,.85);
+    border: 1px solid #ededed;
+    padding: 0 23px;
+    color: #333;
+    box-shadow: 0 0 6px rgba(0,0,0,.075);
 }
-.loginBord{
-	box-shadow: 0 0 8px rgba(0,0,0,.075);
-	background: rgba(255,255,255,.85);
-	border: 1px solid #ededed;
-	position: absolute;
-	min-height: 400px;
-	padding: 0 23px;
-	width: 310px;
-	color: #333;
-	top: 30px;
-	right: 0;
+.form-control{
+    height: 44px;
 }
-
-.loginTit .tosignup {
-    color: #969696;
-    float: right;
+body {
+    font-size: 12px;
 }
-.loginTit h1 {
+h2 {
     font-weight: 400;
     font-size: 20px;
     color: #e31256;
-    font-family: "Microsoft YaHei","微软雅黑","黑体";
 }
-.textbox_ui input {
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    border: 1px solid #CFCFCF;
-    background-color: #fff;
-    vertical-align: middle;
-    padding: 10px 8px;
-    line-height: 1.5;
-    font-size: 14px;
-    outline: 0;
-    height: auto;
-    width: 284px;
-}
-.textbox_ui .hint {
-    position: absolute;
-    line-height: 1.5;
-    display: none;
-    word-break: keep-all;
-    white-space: nowrap;
-    margin-top: 4px;
-    color: #999;
-    top: 100%;
-    left: 0;
+.loginBord .loginTit {
+    margin-bottom: 15px;
+    line-height: 60px;
 }
 input[type=submit], input[type=submit] {
     border: 1px solid #F9477A;
