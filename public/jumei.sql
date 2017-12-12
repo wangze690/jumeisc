@@ -10,10 +10,34 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2017-12-07 23:15:43
+Date: 2017-12-12 09:01:42
 */
 
 SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for carts
+-- ----------------------------
+DROP TABLE IF EXISTS `carts`;
+CREATE TABLE `carts` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  `good_id` int(11) DEFAULT NULL,
+  `num` int(11) NOT NULL,
+  `conts` varchar(100) DEFAULT NULL,
+  `imgs` varchar(100) NOT NULL,
+  `cons` varchar(100) DEFAULT NULL,
+  `goods_xj` varchar(100) DEFAULT NULL,
+  `goods_yj` varchar(100) DEFAULT NULL,
+  `guige` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of carts
+-- ----------------------------
+INSERT INTO `carts` VALUES ('1', '1', '15', '5', '1399', 'gowu.jpg', '娇兰赋颜紧致精华乳 50ML', '1399', '1790', '50ML');
+INSERT INTO `carts` VALUES ('19', '1', '15', '2', '1399', 'gowu.jpg', '娇兰赋颜紧致精华乳 50ML', '1399', '1790', '50ml');
 
 -- ----------------------------
 -- Table structure for nav
@@ -124,4 +148,4 @@ CREATE TABLE `users` (
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES ('1', '张三', '15047446816', '$2y$10$T.lFHAEahWGEiqbglT.HOuMAaPbcaEttPS0UDTK11KCXGAISByRRe', '1');
+INSERT INTO `users` VALUES ('1', '张三', '15047446816', '$2y$10$tcuwp.OzbwGAwbPL63TFE.3tkHZSCFphTtqsJgGcUel54nWeZ3KEa', '1');

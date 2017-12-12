@@ -33,7 +33,6 @@ Route::post('/zhuce','QiantaiController@getzhuce');
 Route::get('/grzx','QiantaiController@grzx');
 Route::get('/grzxs','QiantaiController@grzxs');
 
-//商品前端路由
 	//首页路由
 Route::get('/jumei','IndexController@index');
 	//购物车路由
@@ -46,8 +45,9 @@ Route::post('/jumei/person{id}','PersonController@creat');
 // 短信验证
 Route::get('/message','CommonController@message');
 // 尺码列表
-Route::get('/jumei/sizelist','JumeiController@sizelist');
-Route::post('/jumei/sizelist','JumeiController@sizeadd');
+Route::get('/jumei/sizelist','SizeController@sizelist');
+Route::get('/sizelist/delete','SizeController@delete');
+Route::post('/jumei/sizelist','SizeController@sizeadd');
 
 
 Route::get('liebiaotwo','LiebiaoController@liebiaotwo');

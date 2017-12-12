@@ -9,58 +9,39 @@ class SizeController extends Controller
 {
     public function sizelist()
     {
-    	$nav1 = DB::table('nav')->where('path',0)->get();
-    	$nav2 = DB::table('nav')->where('path',1)->get();
-   			// for($i=0;$i<count($nav2);$i++)
-			// {
-			// $nav2->path = 
-			// $pthr['navclassid']=$ptwonav[$i]['navid'];
-			// $ptwonav[$i]['kkk']=$n->where($pthr)->select();
-			// }
-    	$nav3 = DB::table('nav')->where('path',2)->get();
-    	
-    	$shop1 = DB::table('shop')->where('pid',1)->get();
-    	$shop2 = DB::table('shop')->where('pid',2)->get();
-    	$shop3 = DB::table('shop')->where('pid',3)->get();
-    	$shop4 = DB::table('shop')->where('pid',4)->get();
-
-
-    	return view('size.sizelist',[
-    		'nav1'=>$nav1,
-    		'nav2'=>$nav2,
-    		'nav3'=>$nav3,
-    		'shop1'=>$shop1,
-    		'shop2'=>$shop2,
-    		'shop3'=>$shop3,
-    		'shop4'=>$shop4
-    		]);
+    	$size = DB::table('size')->get();
+    	foreach ($size as $key => $value)
+    	 {
+    		if($value->sex == 1)
+    		{
+    			$value->sex='女';
+    		}
+    		elseif($value->sex == 0)
+    		{
+    			$value->sex='男';
+    		}
+    	 }
+    	$nav = DB::table('nav')->where('path',2)->get();
+    	return view('size.sizelist',['nav'=>$nav,'size'=>$size]);
     }
-    public function sizeadd()
+    public function sizeadd(Request $request)
     {
-    	$nav1 = DB::table('nav')->where('path',0)->get();
-    	$nav2 = DB::table('nav')->where('path',1)->get();
-   			// for($i=0;$i<count($nav2);$i++)
-			// {
-			// $nav2->path = 
-			// $pthr['navclassid']=$ptwonav[$i]['navid'];
-			// $ptwonav[$i]['kkk']=$n->where($pthr)->select();
-			// }
-    	$nav3 = DB::table('nav')->where('path',2)->get();
-    	
-    	$shop1 = DB::table('shop')->where('pid',1)->get();
-    	$shop2 = DB::table('shop')->where('pid',2)->get();
-    	$shop3 = DB::table('shop')->where('pid',3)->get();
-    	$shop4 = DB::table('shop')->where('pid',4)->get();
-
-
-    	return view('jumei.size.sizeadd',[
-    		'nav1'=>$nav1,
-    		'nav2'=>$nav2,
-    		'nav3'=>$nav3,
-    		'shop1'=>$shop1,
-    		'shop2'=>$shop2,
-    		'shop3'=>$shop3,
-    		'shop4'=>$shop4
-    		]);
+    	$info = $request->except('_token');
+    	if(DB::table('size')->insert($info))
+    	{
+    		return back();
+    	}
+    }
+     public function delete(Request $request)
+    {
+    	$id = $request->input('cid');
+    	if(DB::table('size')->where('id',$id)->delete())
+    	{
+    		echo 1;
+    	}
+    	else
+    	{
+    		echo 0;
+    	}
     }
 }
