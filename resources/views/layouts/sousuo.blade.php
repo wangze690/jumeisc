@@ -2,9 +2,9 @@
 		<div class="container">
 			<div class="col-md-3 na_w">
 
-				<a href=""><img src="holder.js/200x90" alt=""></a>
+				<a href="/mzsc"><img src="/bootstrap/images/home_logo.png" alt=""></a>
 
-				<img src="/bootstrap/images/home_logo.png" alt="">
+				
 
 			</div>
 			<div class="col-md-7 na_s">
@@ -27,10 +27,12 @@
 		        </ul>
 			</div>
 			<div class="col-md-2 na_n">
-				<div class="na_car">
-					<img src="./bootstrap/images/cart.gif" alt="">
-					<input type="button" class="btn gw_o" value="去购物车结算">
-				</div>	
+				<a href="">
+					<div class="na_car">
+						<img src="./bootstrap/images/cart.gif" alt="">
+						<input type="button" class="btn gw_o" value="去购物车结算">
+					</div>
+				</a>	
 			</div>
 		</div>
 	</div>

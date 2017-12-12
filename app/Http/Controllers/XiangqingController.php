@@ -60,8 +60,9 @@ class XiangqingController extends Controller
 
     public function jrgwc(Request $Request)
     {
+
         $sp_id = $Request->input('sp_id');
-        $user_id = 1;
+        $user_id =  session('id');
         $addDate = Date('Y-m-d H:i:s');
         $data = [
             'sp_id' => $sp_id,
