@@ -1,4 +1,5 @@
 <footer>
+<link rel="stylesheet" href="/bootstrap/css/foot.css">
 	<div class="top">
 		<div class="container top_o">
 			<div class="col-md-2 top_ot">
@@ -117,7 +118,7 @@
 				<p>京公网安备 11010102001226 | 京ICP证111033号 | 食品流通许可证 SP1101051110165515（1-1） | 营业执照</p>
 			</div>
 			<div class="container">
-				<img src="./bootstrap/images/footer_btm.png" width="800px" alt="">
+				<img src="/bootstrap/images/footer_btm.png" width="800px" alt="">
 			</div>
 		</div>
 	</div>
