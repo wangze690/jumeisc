@@ -26,4 +26,12 @@ class LiebiaoController extends Controller
    	{
    		return view('liebiao.liebiaosan');
    	}
+
+   	public function gougo()
+   	{
+         $nav = DB::table('nav')->where('path',2)->get();
+   		return view('liebiao.gougo',[
+            'nav'=>$nav
+            ]);
+   	}
 }

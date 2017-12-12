@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use DB;
+use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
@@ -14,57 +14,54 @@ class UserController extends Controller
      */
     public function index()
     {
-        $user = DB::table('user')->paginate(10);
-
-        return view('admin.user.index',['user'=>$user]);
+         $user = DB::table('users')->get();
+        // $user = DB::table('users')->paginate(10);
+        
+       return view('admin.user.index',['user'=>$user]);
+       
     }
 
     /**
-     * Show the form for creating a new resource.
+     * 
      *
      * @return \Illuminate\Http\Response
      */
     public function create()
     {
-        //用户添加模板
         return view('admin.user.create');
     }
 
     /**
-     * Store a newly created resource in storage.
+     * 添加数据库
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        //获取到用户添加的内容
-        $rs = $request->only(['username','password','email']);
-        //密码加密
-        $rs['password'] = encrypt($rs['password']);
-        //文件上传
-        if($request->hasFile('profile'))
-        {
-            //获取文件名的后缀
-            $houzui = $request->file('profile')->extension();
-            //文件夹的路径
-            $suiji = uniqid('img_').'.'.$houzui;
-            //移动文件
-            $lujin = './uploads/'.date('Y-m-d');
-            
-            $request->file('profile')->move($lujin, $suiji);
+        // dd($request->all());
+      $info =  $request->only('username','password','email');
+      $info['password'] = encrypt($info['password']);
+      //文件上传
+      if($request->hasFile('profile'))
+      {
+        //获取文件后缀
+       $str = $request->file('profile')->extension();
+       //创建一个新的名称
+       $name = uniqid('img').'.'.$str;
+       //文件夹路径
+       $path = './uploade'.date('Y-m-d');
+       //移动文件
+       $request->file('profile')->move($path,$name);
+       //获取文件的路径
+       $info['profile'] = trim($path.'/'.$name,'.');
+      }
 
-            $rs['profile'] = trim($lujin.'/'.$suiji,'.');  //trim(a,b)函数可以去掉b
-        }
-        $rs['ztid'] = 1;
-
-        if( DB::table('user')->insert($rs)){
-            return redirect('/user')->with('msg','添加成功');
-        }else{
-             return back()->with('msg','添加失败');
-        }
-        
-        //
+      //将数据插入到数据库中
+      if(DB::table('user')->insert($info))
+      {
+        return redirect('/user')->with('msg','更新成功');
+      }
     }
 
     /**
@@ -79,14 +76,16 @@ class UserController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * 用户修改.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        //
+       
+        $user = DB::table('users')->where('id',$id)->first();
+        return view('admin.user.edit',['user'=>$user]);
     }
 
     /**
@@ -98,7 +97,29 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $info = $request->only('username','email');
+        //文件上传
+      if($request->hasFile('profile'))
+      {
+        //获取文件后缀
+       $str = $request->file('profile')->extension();
+       //创建一个新的名称
+       $name = uniqid('img').'.'.$str;
+       //文件夹路径
+       $path = './uploade'.date('Y-m-d');
+       //移动文件
+       $request->file('profile')->move($path,$name);
+       //获取文件的路径
+       $info['profile'] = trim($path.'/'.$name,'.');
+      }
+      if(DB::table('user')->where('id',$id)->update($info))
+      {
+            return redirect('/user')->with('msg','修改成功');
+      }
+      else
+      {
+            return back()->with('msg','更新失败');
+      }
     }
 
     /**
@@ -109,6 +130,10 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        if(DB::table('user')->where('id',$id)->delete())
+        {
+             return back()->with('msg','删除成功');
+        }
+
     }
 }

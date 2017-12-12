@@ -1,81 +1,54 @@
 @extends('admin.index')
-
 @section('title')
+		<div class="title" >
+			<h3>用户管理</h3>
+		</div>
+		@endsection
+@section('content')
+	
+	<div class="right" style="margin-top:50px;">
+	<table class="table table-striped">
+	<thead>
+		<tr >
+			<td style="border: 1px solid #999;">id</td>
+			<td style="border: 1px solid #999;">username</td>
+		
+			<td style="border: 1px solid #999;">profile</td>
+			<td style="border: 1px solid #999;">操作</td>
+		</tr>
+	</thead>
+	<tbody>
+	@foreach($user as $k=>$v)
+		<tr >
+			<td style="border: 1px solid #999;">{{$v->id}}</td>
+			<td style="border: 1px solid #999;">{{$v->username}}</td>
+			<td style="border: 1px solid #999;"><img src="{{$v->profile}}" width="100" height="70" alt=""></td>
+			<td style="border: 1px solid #999;">
+			<a href="/user/{{$v->id}}/edit" class="btn-info btn-sm pull-right">修改</a>
+			<form action="/user/{{$v->id}}" method="post" class="del">
+			{{method_field('DELETE')}}
+			{{csrf_field()}}
+			<button class="btn-danger btn-xs pull-right">删除</button>
+			</form>
+			</td>
+		</tr>
+		@endforeach
+		<nav style="position:absolute; top:1050px; right:80px;">
+		  
+		 
+		</nav>
+	</tbody>
+	</table>
+</div>
 @endsection
-
-@section('neirong')
-	<div class="table-wrapper orders-table section">
-                    <div class="row-fluid head">
-                        <div class="span12">
-                            <h4>用户添加</h4>
-                        </div>
-                    </div>
-
-                    <div class="row-fluid filter-block">
-                        <div class="pull-right">
-                            <div class="btn-group pull-right">
-                                <button class="glow left large">搜索</button>
-                                <button class="glow middle large">Pending</button>
-                                <button class="glow right large">Completed</button>
-                            </div>
-                            <input class="search order-search" placeholder="Search for an order.." type="text">
-                        </div>
-                    </div>
-
-                    <div class="row-fluid">
-                        <table class="table table-hover">
-                            <thead>
-                                <tr>
-                                    <th class="span2">
-                                        ID
-                                    </th>
-                                    <th class="span3">
-                                        用户名
-                                    </th>
-                                    <th class="span3">
-                                        <span class="line"></span>
-                                        密码
-                                    </th>
-                                    <th class="span3">
-                                        <span class="line"></span>
-                                        邮箱
-                                    </th>
-                                    <th class="span3">
-                                        <span class="line"></span>
-                                        头像
-                                    </th>
-                                    <th class="span3">
-                                        <span class="line"></span>
-                                        状态
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <!-- row -->
-                                @foreach($user as $k=>$v)
-                                <tr class="first">
-                                    <td>
-                                        <a href="#">{{$v->id}}</a>
-                                    </td>
-                                    <td>
-                                        {{$v->username}}
-                                    </td>
-                                    <td>
-                                        <a href="#">password</a>
-                                    </td>
-                                    <td>
-                                        <span class="label label-success">{{$v->email}}</span>
-                                    </td>
-                                    <td>
-                                        3
-                                    </td>
-                                    <td>
-                                        $ 3,500.00
-                                    </td>
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+@section('js')
+	<script>
+		$('.del').submit(function(){
+			var res = confirm('您确定要删除这条数据吗?');
+			if(!res)
+			{
+				return false;
+			}
+		})
+	</script>
 @endsection

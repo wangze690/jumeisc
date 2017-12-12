@@ -2,8 +2,6 @@
 		<div class="container">
 			<div class="col-md-3 na_w">
 
-				<a href=""><img src="holder.js/200x90" alt=""></a>
-
 				<img src="/bootstrap/images/home_logo.png" alt="">
 
 			</div>

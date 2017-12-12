@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
-    //网站后台首页
+    //后台主页面方法
     public function index()
     {
     	return view('admin.index');
