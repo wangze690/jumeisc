@@ -16,9 +16,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/admin','AdminController@index');
+//登录路由
+Route::get('/admin/login','LoginController@login');
+Route::post('/admin/login','LoginController@quert');
 
-Route::resource('/user','UserController');
+Route::group(['middleware'=>'login'],function(){
+//后台管理路由
+Route::get('/admin','AdminController@index');
+//用户管理路由
+Route::resource('user','UserController');
+//留言管理路由
+Route::resource('article','ArticleController');
+
+Route::resource('cate','CateController');
+});
+
+
 
 Route::get('/liebiao','LiebiaoController@liebiao');
 
@@ -36,12 +49,14 @@ Route::get('/grzxs','QiantaiController@grzxs');
 
 //商品前端路由
 	//首页路由
-Route::get('/jumei','JumeiController@index');
+Route::get('/jumei','IndexController@index');
 	//购物车路由
-Route::get('/cart{id}','JumeiController@cart');
+Route::get('/cart{id}','CartController@cart');
+Route::get('/cart/delete','CartController@delete');
+Route::post('/dingdan','CartController@dingdan');
 	//个人中心路由
-Route::get('/jumei/person{id}','JumeiController@person');
-Route::post('/jumei/person{id}','JumeiController@creat');
+Route::get('/jumei/person{id}','PersonController@person');
+Route::post('/jumei/person{id}','PersonController@creat');
 // 短信验证
 Route::get('/message','CommonController@message');
 // 尺码列表
@@ -54,9 +69,12 @@ Route::get('liebiaotwo','LiebiaoController@liebiaotwo');
 Route::get('liebiaosan','LiebiaoController@liebiaosan');
 
 //详情
-Route::get('/xiangqing','XiangqingController@xiangqing');
+Route::get('/xiangqing/{id}','XiangqingController@xiangqing');
+Route::get('/jrgwc/','XiangqingController@jrgwc');
 //列表二
 Route::get('/liebiaotwo','LiebiaoController@liebiaotwo');
 //列表(保湿)
 Route::get('/baoshi','BaoshiController@baoshi');
+//列表gougo
+Route::get('/gougo','LiebiaoController@gougo');
 

@@ -136,7 +136,7 @@
 <!-- 主体结束 -->
 @show
 
-@include('layouts.foote')
+@include('layouts.foot')
 
 	<script src="/js/jquery.js"></script>
 	<script>

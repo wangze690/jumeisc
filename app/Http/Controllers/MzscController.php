@@ -29,7 +29,7 @@ class MzscController extends Controller
     		'pro'=>$pro,
     		'pro_one'=>$pro_one,
     		'pro_two'=>$pro_two,
-    		'senr'=>$senr,
+    		'senr'=>$senr
     		]);
     }
 }

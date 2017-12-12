@@ -156,7 +156,7 @@
 <!-- 主体结束 -->
 @show
 <!-- 尾部开始 -->
-	@include('layouts.foote')
+	@include('layouts.foot')
 <!-- 尾部结束 -->
 @section('js')
 @show

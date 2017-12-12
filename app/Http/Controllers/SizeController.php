@@ -4,10 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
-use Hash;
 
-class JumeiController extends Controller
+class SizeController extends Controller
 {
+
     public function index()
     {
     	
@@ -16,7 +16,6 @@ class JumeiController extends Controller
     	$shop2 = DB::table('shop')->where('pid',2)->get();
     	$shop3 = DB::table('shop')->where('pid',3)->get();
     	$shop4 = DB::table('shop')->where('pid',4)->get();
-
 
     	return view('index.index',[
 
@@ -62,6 +61,7 @@ class JumeiController extends Controller
     	
     	
     }
+
     public function sizelist()
     {
     	$nav1 = DB::table('nav')->where('path',0)->get();
@@ -80,7 +80,7 @@ class JumeiController extends Controller
     	$shop4 = DB::table('shop')->where('pid',4)->get();
 
 
-    	return view('jumei.size.sizelist',[
+    	return view('size.sizelist',[
     		'nav1'=>$nav1,
     		'nav2'=>$nav2,
     		'nav3'=>$nav3,

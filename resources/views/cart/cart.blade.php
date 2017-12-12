@@ -17,7 +17,7 @@
 		}
 		#tip{
 			float:left;
-			margin-left:65px;
+			margin-left:75px;
 			line-height:40px;
 			text-align: right;
 		}
@@ -83,7 +83,7 @@
 		<div class="col-md-10 col-md-offset-1" style="height:auto;">
 			<div class="col-sm-12 bg-info" style="height:40px;border-left: 5px solid #ed145b; ">
 				<p class="col-md-6" style="line-height: 40px;margin-left:-20px;">
-					<input type="checkbox"> &nbsp;聚美优品发货
+					 &nbsp;聚美优品发货
 				</p>
 				<ul class="col-md-6">
 					<li id="tip">聚美价(元)</li>
@@ -92,41 +92,59 @@
 					<li id="tip">操作</li>
 				</ul>
 			</div>
-			<div class="col-sm-12" style="height:120px;border: 1px solid #ccc;">
+		@foreach($carts as $k => $v)
+		<form action="/dingdan" method="post">
+			<div class="col-sm-12 goods" style="height:120px;border: 1px solid #ccc;">
 				<p style="float:left;line-height: 120px;">
-					<input type="checkbox">
+					<input type="checkbox" name="id[]" value="{{$v->id}}">
 				</p>
-				<p style="float:left;line-height: 120px; margin-left:30px;">
+				<p style="float:left;line-height: 120px; margin-left:30px; width: 120px;">
 					<img src="/images/gowu.jpg" alt="">
 				</p>
-				<ul style="float:left;margin-left:-20px;margin-top:40px;">
-					<li>娇兰赋颜紧致精华乳 50ML</li>
-					<li>容量：50ML</li>
+				<ul style="float:left;margin-left:-20px;margin-top:40px;" class="col-md-5">
+					<li>{{$v->cons}}</li>
+					<li>{{$v->guige}}</li>
 				</ul>
-				<ul style="float:left;margin-left:210px;margin-top:40px;">
-					<li style="font-size:16px;font-weight: bold;">1399.00</li>
-					<li><s>1790.00</s></li>
+				<ul class="col-md-1" style="margin-top: 40px;">
+					<li style="font-size:16px;font-weight: bold;">{{$v->goods_xj}}</li>
+					<li><s>{{$v->goods_yj}}</s></li>
 				</ul>
-				<div id="btn">
-					<button class="btn-info" style="float: left;">-</button>
-						1
-					<button class="btn-info" style="float: right;">+</button>
-				</div>
-				<ul style="float: right;margin-right: -100px;margin-top: 30px;">
-					<li style="color: #ed145b; font-weight: bold;">1399</li>
-					<li>省391.00</li>
+				<ul style="margin-top: 40px;" class="col-md-2">
+					<li>
+						<div id="btn" style="position: absolute; top: -30px; left: 50px;">
+							<button class="btn-info jian" style="float: left;" type="button">
+								-
+							</button>
+								<input name="num[]" type="text" value="{{$v->num}}" style="width: 20px; border: 0px;">
+							<button class="btn-info jia" style="float: right;" type="button">
+								+
+							</button>
+						</div>
+					</li>
 				</ul>
-				<button style="border: 0px;background-color: #fff; float: right;margin-right:-180px;margin-top:-30px;">
-					<img src="/images/btn.png" alt="">
-				</button>
+				<ul class="col-md-1" style="margin-top: 40px;">
+					<li style="color:#ed145b;">
+						¥1399
+					</li>
+					<li>省368元</li>
+				</ul>
+				{{csrf_field()}}
+				<ul class="col-md-1" style="margin-top: 40px; margin-left:20px;">
+					<li>
+						<button style="border: 0px;background-color: #fff;" class="del" cid="{{$v->id}}" type="button">
+							<img src="/images/btn.png" alt="">
+						</button>
+					</li>
+				</ul>				
 			</div>
+		@endforeach
 			<div class="col-sm-12 bg-info" style="height:40px;border-left: 5px solid #ed145b;">
 				<ul class="col-md-6">
 					<li style="float:left;font-size: 16px;line-height: 40px;font-weight: bold;">
 						商品金额:
 					</li>
 					<li style="color:#ed145b;float:left;font-size: 16px;line-height: 40px;font-weight: bold; margin-left:20px;">
-						¥ 1399.00
+						¥ {{$nums}}
 					</li>
 				</ul>
 			</div>
@@ -134,7 +152,6 @@
 		<div class="col-md-10 col-md-offset-1" style="height:50px;margin-top:20px;">
 			<div class="col-md-12 bg-info" style="height:50px;">
 				<ul>
-					<li id="chue"><input type="checkbox"> 全选</li>
 					<li id="chue">继续购物</li>
 					<li id="chue">| 清空选中商品</li>
 				</ul>
@@ -142,11 +159,15 @@
 					<li id="cont">共 <span style="color:#ed145b;">2</span> 件商品</li>
 					<li id="cont">商品应付总额:
 						<span style="color:#ed145b;">¥</span>
-						<span style="color:#ed145b;">1399.00</span>
+						<span style="color:#ed145b;">{{$nums}}</span>
 					</li>
-					<li id="cont" style="width: 100px;height:50px;background-color:#ed145b;color:#fff; margin-top:-10px;margin-right:-10px;font-size: 18px;text-align: center;line-height: 50px;">去结算</li>
+					<li id="cont" >
+						<button type="submit" style="width: 100px;height:50px;background-color:#ed145b;color:#fff; margin-top:-10px;margin-right:-10px;font-size: 18px;text-align: center;line-height: 50px;">结算</button>
+					</li>
 				</ul>
 			</div>
+		</form>
+
 		</div>
 	</section>
 <!-- 主体结束 -->
@@ -171,3 +192,47 @@
 <!-- 尾部结束 -->
 </body>
 </html>
+<script src="/js/jquery.js"></script>
+<script>
+ $del = $('.del').click(function(){
+	var cid = $(this).attr('cid');
+	var tr = $(this).parents('.goods');
+	$.ajax({
+		type:'get',
+		url:'/cart/delete',
+		data:{'cid':cid},
+		success:function(data)
+		{
+
+			if(data == '1')
+			{
+				tr.fadeOut(1000);
+			}
+		}
+	})
+});
+
+// 减
+$('.jian').click(function(){
+	var num = $(this).parent().find('input');
+	if(parseInt(num.val())>1){
+			
+		var new_num=parseInt(num.val())-1;
+		num.val(new_num);
+	}
+	else
+	{
+		num.val(1);
+	}
+	
+});
+// 加
+$('.jia').click(function(){
+	var num = $(this).parent().find('input');
+	
+	var new_num=parseInt(num.val())+1;
+	num.val(new_num);
+
+});   
+
+</script>
