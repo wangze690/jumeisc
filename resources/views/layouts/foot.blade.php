@@ -88,7 +88,7 @@
 		</div>
 		<div class="container">
 			<div class="wokao">
-				<img src="./bootstrap/images/28.jpg" width="100%" height="100%" alt="">
+				<img src="/bootstrap/images/28.jpg" width="100%" height="100%" alt="">
 			</div>
 		</div>
 	</div>

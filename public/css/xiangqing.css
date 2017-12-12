@@ -9,6 +9,10 @@ a{
 	text-decoration: none;
 	color: #666;
 }
+a:hover{
+	color: #ed145b;
+	text-decoration: none;
+}
 .alls{
 	width: 100%;
 	margin: 0 auto;

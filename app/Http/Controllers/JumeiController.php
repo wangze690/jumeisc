@@ -17,7 +17,6 @@ class JumeiController extends Controller
     	$shop3 = DB::table('shop')->where('pid',3)->get();
     	$shop4 = DB::table('shop')->where('pid',4)->get();
 
-
     	return view('index.index',[
 
     		'shop1'=>$shop1,
