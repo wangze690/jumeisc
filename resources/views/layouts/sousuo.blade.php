@@ -2,9 +2,7 @@
 		<div class="container">
 			<div class="col-md-3 na_w">
 
-				<a href=""><img src="holder.js/200x90" alt=""></a>
-
-				<img src="/bootstrap/images/home_logo.png" alt="">
+				<a href="/mzsc"><img src="/bootstrap/images/home_logo.png" alt=""></a>
 
 			</div>
 			<div class="col-md-7 na_s">
@@ -15,7 +13,7 @@
 			        <button type="submit" class="btn btn-danger btn-md annu" style="">搜索</button>
 		        </form>
 		        <ul class="ul_o">
-					<li class="pull-left text-center"><a href="#">保湿</a></li>
+					<li class="pull-left text-center"><a href="/baoshi">保湿</a></li>
 					<li class="pull-left text-center"><a href="#">面膜</a></li>
 					<li class="pull-left text-center"><a href="#">洗面奶</a></li>
 					<li class="pull-left text-center"><a href="#">补水</a></li>
@@ -27,12 +25,21 @@
 		        </ul>
 			</div>
 			<div class="col-md-2 na_n">
+<<<<<<< HEAD
 				<div class="na_car">
 					<img src="./bootstrap/images/cart.gif" alt="">
 					<a href="/carts{{session('id')}}">
 						<input type="button" class="btn gw_o" value="去购物车结算">
 					</a>
 				</div>	
+=======
+				<a href="">
+					<div class="na_car">
+						<img src="./bootstrap/images/cart.gif" alt="">
+						<input type="button" class="btn gw_o" value="去购物车结算">
+					</div>
+				</a>	
+>>>>>>> c69ca6542c1fd40eed95a9c94bd5f5041c76e210
 			</div>
 		</div>
 	</div>

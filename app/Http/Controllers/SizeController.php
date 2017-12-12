@@ -7,6 +7,61 @@ use DB;
 
 class SizeController extends Controller
 {
+
+    public function index()
+    {
+    	
+    	$shop1 = DB::table('shop')->where('pid',1)->get();
+
+    	$shop2 = DB::table('shop')->where('pid',2)->get();
+    	$shop3 = DB::table('shop')->where('pid',3)->get();
+    	$shop4 = DB::table('shop')->where('pid',4)->get();
+
+    	return view('index.index',[
+
+    		'shop1'=>$shop1,
+    		'shop2'=>$shop2,
+    		'shop3'=>$shop3,
+    		'shop4'=>$shop4
+    		]);
+    }
+    public function cart()
+    {
+    	return view('cart.cart');
+    }
+    public function person()
+    {
+    	
+
+
+    	return view('person.person',[]);
+    }
+
+
+    public function creat(Request $request,$id)
+    {
+    	$data = $request->only('vcode');
+
+    	if(session('vcode') == $data['vcode'])
+    	{
+    		$pwd = $request->only('password');
+	    	$pwd['password'] = Hash::make($pwd['password']);
+	    	// 检测密码是否和数据库中一样
+	    	$user = DB::table('users')->where('password',$pwd['password'])->first();
+	    	if(empty($user))
+	    	{
+	    		DB::table('users')->update($pwd);
+	    		
+	    	}
+    	}
+    	else
+    	{
+    		return back()->with('msg','验证码错误');
+    	}
+    	
+    	
+    }
+
     public function sizelist()
     {
     	$size = DB::table('size')->get();
