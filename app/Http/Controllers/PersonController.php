@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
-use Hash;
 
 class PersonController extends Controller
 {
@@ -37,7 +36,6 @@ class PersonController extends Controller
     	{
     		return back()->with('msg','验证码错误');
     	}
-    	
     	
     }
 }
