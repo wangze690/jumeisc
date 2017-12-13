@@ -5,15 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 
-
 class PersonController extends Controller
 {
     public function person()
     {
     	
 
-
-    	return view('person.person',[]);
+        $nav = DB::table('nav')->where('path',2)->get();
+    	return view('person.person',['nav'=>$nav]);
     }
 
 
@@ -38,15 +37,5 @@ class PersonController extends Controller
     		return back()->with('msg','验证码错误');
     	}
     	
-    }
-
-    public function getArea(Request $request)
-    {
-        $pid = $request->pid;
-       
-        $areas = DB::table('areas')->where('area_parent_id',$pid)->get();
-
-        return $areas->toJson();
-
     }
 }

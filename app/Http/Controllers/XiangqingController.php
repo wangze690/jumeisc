@@ -60,22 +60,58 @@ class XiangqingController extends Controller
 
     public function jrgwc(Request $Request)
     {
+
         $sp_id = $Request->input('sp_id');
-        $user_id = 1;
+        $user_id =  session('id');
         $addDate = Date('Y-m-d H:i:s');
         $data = [
             'sp_id' => $sp_id,
             'user_id' => $user_id,
             'addDate' => $addDate
         ];
-        $jiaru = DB::table('carts')->insert($data);
-        if($jiaru)
-        {
-            echo 1;
+        if(empty($user_id)){
+        
         }
         else
         {
-            echo 0;
+             $jiaru = DB::table('carts')->insert($data);
+            if($jiaru)
+            {
+                echo 1;
+            }
+            else
+            {
+                echo 0;
+            }
         }
+    } 
+
+    public function jrsc(Request $Request)
+    {
+        $sp_id = $Request->input('sp_id');
+        $user_id = session('id');
+        $addDate = Date('Y-m-d H:i:s');
+        $arr = [
+            'sp_id' => $sp_id,
+            'user_id' => $user_id,
+            'addDate' => $addDate
+        ];
+        if(emtyp($user_id))
+        {
+
+        }
+        else
+        {
+            $tianjia = DB::table('shoucang')->insert($arr);
+            if($tianjia)
+            {
+                echo 1;
+            }
+            else
+            {
+                echo 0;
+            }
+        }
+        
     }
 }

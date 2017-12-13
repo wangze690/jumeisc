@@ -55,6 +55,7 @@ class QiantaiController extends Controller
 
     	return view('grzx.user',['nav'=>$nav]);
     }
+
     public function grzxs(Request $request)
     {
         $nav = DB::table('nav')->where('path',2)->get();
@@ -62,12 +63,13 @@ class QiantaiController extends Controller
 
         return view('grzx.add',['nav'=>$nav]);
     }
+    
      public function addres(Request $request)
     {
         // dd($request->all());
         //获取数据
         $data = $request->except(['_token']);
-        //
+        
         $data['user_id'] = session('id');
         //插入
         if(DB::table('shouhuodz')->insert($data)) {
@@ -84,6 +86,15 @@ class QiantaiController extends Controller
             $value->xname = DB::table('areas')->where('id',$value->xian)->value('area_name');
         }
         return view('grzx.add',['shouhuodz'=>$shouhuodz]);
+
+    }
+    public function getArea(Request $request)
+    {
+        $pid = $request->pid;
+       
+        $areas = DB::table('areas')->where('area_parent_id',$pid)->get();
+
+        return $areas->toJson();
 
     }
 }

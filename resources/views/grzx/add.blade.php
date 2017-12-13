@@ -21,7 +21,7 @@
 	@include('layouts.toubu')
 	@include('layouts.sousuo')
 	@include('layouts.nav')
-<div class="alls" style="width: auto;height:1400px; background: #EDE7E1; margin-top:-20px; "> 
+<div class="alls" style="width: auto;height:1400px; background: #EDE7E1; margin-top:-20px;"> 
 <div class="profile">
 	<div class="container center">
 		<div class="col-md-4 nav">
@@ -62,6 +62,7 @@
 		        </ul>
 	        </div>
     	</div>
+    	
 		 <div class="container">
 				<div class="col-md-10 sector">
 						<h1>管理收货地址</h1>
@@ -117,15 +118,12 @@
 					</form>
 					<div class='col-md-12 dizhi'>
 						<h4>已保存的地址</h4>
-						@foreach($shouhuodz as $k=>$v)
 						<div class="row" style="background:#F9F8F7;">
-						  <div class="col-xs-6 col-md-2">{{$v->name}}</div>
-						  <div class="col-xs-6 col-md-6">{{$v->pname}}{{$v->cname}}{{$v->xian}}{{$v->detail}}</div>
-						  <div class="col-xs-6 col-md-2">{{$v->phone}}</div>						  
+						  <div class="col-xs-6 col-md-2">姓名</div>
+						  <div class="col-xs-6 col-md-6">地址</div>
+						  <div class="col-xs-6 col-md-2">电话号</div>				  
 						  <div class="col-xs-6 col-md-2">操作/删除</div>
 						</div>
-						@endforeach
-					
 					</div>
 				</div>
 	            </div>
@@ -197,6 +195,11 @@ $('select[name=city]').change(function(){
 });
 
 </script>
+
+		</div>
+		
+</div>
+</div>
 @include('layouts.foot')
 </body>
 </html>

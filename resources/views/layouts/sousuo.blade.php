@@ -2,7 +2,7 @@
 		<div class="container">
 			<div class="col-md-3 na_w">
 
-				<img src="/bootstrap/images/home_logo.png" alt="">
+				<a href="/mzsc"><img src="/bootstrap/images/home_logo.png" alt=""></a>
 
 			</div>
 			<div class="col-md-7 na_s">
@@ -25,10 +25,14 @@
 		        </ul>
 			</div>
 			<div class="col-md-2 na_n">
+
 				<div class="na_car">
 					<img src="./bootstrap/images/cart.gif" alt="">
-					<input type="button" class="btn gw_o" value="去购物车结算">
+					<a href="/carts{{session('id')}}">
+						<input type="button" class="btn gw_o" value="去购物车结算">
+					</a>
 				</div>	
+
 			</div>
 		</div>
 	</div>
