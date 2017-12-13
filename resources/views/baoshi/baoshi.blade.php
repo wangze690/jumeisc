@@ -108,10 +108,10 @@
 							<div>
 								<span>
 									<button class="btn button_1 jrgwc">加入购物车</button>
-									<input type="hidden" value="{{$v->id}}">
 								</span>
 								<span>
-									<button class="btn button_2">收藏</button>
+									<button class="btn button_2 shoucang">收藏</button>
+									<input type="hidden" value="{{$v->id}}">
 								</span>
 							</div>
 						</div>
@@ -160,6 +160,8 @@
 <script>
 	$('.jrgwc').click(function(){
 		var sp_id = $('input[type=hidden]').val();
+		alert(sp_id);
+		exit;
 		$.ajax({
 			type:'get',
 			url:'/jrgwc',
@@ -171,9 +173,29 @@
 				}
 				else
 				{
-					var ppp=confirm("您还未登录，请登录");
-					location.href="/denglu";	
+					var ppp=confirm("您还未登录,请先登录");
+					location.href="/denglu";
 				}	
+			}
+		})
+	})
+
+	$('.shoucang').click(function(){
+		var sp_id = $('input[type=hidden]').val();
+		$.ajax({
+			type:'get',
+			url:'/jrsc',
+			data:{'sp_id':sp_id},
+			success:function(msg){
+				if(msg)
+				{
+					alert('添加收藏成功');
+				}
+				else
+				{
+					var ppp=confirm("您还未登录,请先登录");
+					location.href="/denglu";
+				}
 			}
 		})
 	})

@@ -26,7 +26,7 @@
 		<!-- 焦点图 -->
 		@foreach($sp_3 as $k=>$v)
 		<div class="col-md-12 text-center">
-			<img src="/bootstrap/images/{{$v->profile}}">
+			<img width="1500" src="/img/{{$v->profile}}">
 		</div>
 		@endforeach
 

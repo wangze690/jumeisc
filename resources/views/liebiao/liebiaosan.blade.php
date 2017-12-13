@@ -13,7 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="/bootstrap/css/foot.css">
 </head>
 <style>
-    body {
+    body{
         position: relative;
         height:2000px;
     }
@@ -45,11 +45,11 @@
 	
     .content li {
     	width: 960px;
-        height: 1000px;
+        height: 1400px;
         margin-bottom: 20px;
         margin-left: 100px;
     }
-    </style>
+</style>
 
 <body data-spy="scroll" data-target="#navbar-example">
 @include('layouts.toubu')
@@ -74,13 +74,13 @@
 		<div id="navbar-example">
 		    <ul class="daohang nav nav-tabs" role="tablist">
 				<img src="./img/520.jpg" alt="">
-		        <li><a href="/liebiaotwo">热卖推荐</a></li>
+		        <li><a href="#one">热卖推荐</a></li>
 		        <li><a href="#two">女士手提包</a></li>
 		        <li><a href="#three">女士斜跨包</a></li>
 		        <li><a href="#four">女士钱包</a></li>
 		        <li><a href="#five">男士钱包</a></li>
 		        <li><a href="#fives">双肩包</a></li>
-		        <li><a href="#fived" style="background:black; color: #fff;">返回顶部</a></li>
+		        <li><a href="#fived" style="background:black; color: #fff;border-radius:0px; ">返回顶部</a></li>
 		    </ul>
 	    </div>
 	    <div class="container center">
@@ -92,7 +92,7 @@
 						<div>
 							<img src="./img/{{$p->profile}}" style="width:290px;height: 300px;">
 
-							<h5>{{$p->shopcons}}</h5>
+							<h5>{{$p->shoptitle}}</h5>
 							<p class="price">
 								<p style="float:left;margin-left:5px;color:#ec1b5d;">
 									<span style="font-size:14px;">¥</span>
@@ -114,7 +114,7 @@
 						<div>
 							<img src="./img/{{$ps->profile}}" style="width:290px;height: 300px;">
 
-							<h5>{{$ps->shopcons}}</h5>
+							<h5>{{$ps->shoptitle}}</h5>
 							<p class="price">
 								<p style="float:left;margin-left:5px;color:#ec1b5d;">
 									<span style="font-size:14px;">¥</span>
@@ -127,23 +127,89 @@
 					</div>
 					@endforeach
 	            </li>
+
 	            <li id="three" style="background:#fff;">
 	            	<img src="./img/tiao3.jpg" alt="">
-	            	
-					
+	            	@foreach($shopd as $kd => $pd)
+					<div class="col-md-4 bk">
+						<div>
+							<img src="./img/{{$pd->profile}}" style="width:290px;height: 300px;">
 
-	            	
+							<h5>{{$pd->shoptitle}}</h5>
+							<p class="price">
+								<p style="float:left;margin-left:5px;color:#ec1b5d;">
+									<span style="font-size:14px;">¥</span>
+									<span style="font-size: 32px;font-weight:500;">¥{{$pd->shopxj}}</span>
+									<span style="color: #666;"><s>¥{{$pd->shopyj}}</s></span>
+								</p>
+									<button class="btn bu_o" style="float:right;margin-right: 5px;background:#ec1b5d;color:#fff;">去看看</button>
+							</p>
+						</div>
+					</div>
+					@endforeach
 	            </li>
+
 	            <li id="four" style="background:#fff;">
 	            	<img src="./img/tiao4.jpg" alt="">
+	            	@foreach($shopf as $kf => $pf)
+					<div class="col-md-4 bk">
+						<div>
+							<img src="./img/{{$pf->profile}}" style="width:290px;height: 300px;">
+
+							<h5>{{$pf->shoptitle}}</h5>
+							<p class="price">
+								<p style="float:left;margin-left:5px;color:#ec1b5d;">
+									<span style="font-size:14px;">¥</span>
+									<span style="font-size: 32px;font-weight:500;">¥{{$pf->shopxj}}</span>
+									<span style="color: #666;"><s>¥{{$pf->shopyj}}</s></span>
+								</p>
+									<button class="btn bu_o" style="float:right;margin-right: 5px;background:#ec1b5d;color:#fff;">去看看</button>
+							</p>
+						</div>
+					</div>
+					@endforeach
 	            	
 	            </li>
+
 	            <li id="five" style="background:#fff;">
 	            	<img src="./img/522.jpg" alt="">
-	            	
+	            	@foreach($shopg as $kg => $pg)
+					<div class="col-md-4 bk">
+						<div>
+							<img src="./img/{{$pg->profile}}" style="width:290px;height: 300px;">
+
+							<h5>{{$pg->shoptitle}}</h5>
+							<p class="price">
+								<p style="float:left;margin-left:5px;color:#ec1b5d;">
+									<span style="font-size:14px;">¥</span>
+									<span style="font-size: 32px;font-weight:500;">¥{{$pg->shopxj}}</span>
+									<span style="color: #666;"><s>¥{{$pg->shopyj}}</s></span>
+								</p>
+									<button class="btn bu_o" style="float:right;margin-right: 5px;background:#ec1b5d;color:#fff;">去看看</button>
+							</p>
+						</div>
+					</div>
+					@endforeach
 	            </li>
 	            <li id="fives" style="background:#fff;">
 	            	<img src="./img/tiao5.jpg" alt="">
+	            	@foreach($shoph as $kh => $ph)
+					<div class="col-md-4 bk">
+						<div>
+							<img src="./img/{{$ph->profile}}" style="width:290px;height: 300px;">
+
+							<h5>{{$ph->shoptitle}}</h5>
+							<p class="price">
+								<p style="float:left;margin-left:5px;color:#ec1b5d;">
+									<span style="font-size:14px;">¥</span>
+									<span style="font-size: 32px;font-weight:500;">¥{{$ph->shopxj}}</span>
+									<span style="color: #666;"><s>¥{{$ph->shopyj}}</s></span>
+								</p>
+									<button class="btn bu_o" style="float:right;margin-right: 5px;background:#ec1b5d;color:#fff;">去看看</button>
+							</p>
+						</div>
+					</div>
+					@endforeach
 	            	
 	            </li>
 	        </ul>
