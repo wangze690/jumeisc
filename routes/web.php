@@ -46,6 +46,8 @@ Route::post('/zhuce','QiantaiController@getzhuce');
 
 Route::get('/grzx','QiantaiController@grzx');
 Route::get('/grzxs','QiantaiController@grzxs');
+Route::post('/grzxs', 'QiantaiController@addres');
+Route::get('/getarea', 'QiantaiController@getArea');
 
 	//首页路由
 Route::get('/jumei','IndexController@index');
@@ -53,9 +55,14 @@ Route::get('/jumei','IndexController@index');
 Route::get('/cart{id}','CartController@cart');
 Route::get('/cart/delete','CartController@delete');
 Route::post('/dingdan','CartController@dingdan');
-	//个人中心路由
+//个人中心路由
 Route::get('/jumei/person{id}','PersonController@person');
 Route::post('/jumei/person{id}','PersonController@creat');
+
+
+
+
+
 // 短信验证
 Route::get('/message','CommonController@message');
 // 尺码列表
@@ -71,6 +78,7 @@ Route::get('liebiaosan','LiebiaoController@liebiaosan');
 //详情
 Route::get('/xiangqing/{id}','XiangqingController@xiangqing');
 Route::get('/jrgwc/','XiangqingController@jrgwc');
+Route::get('/jrsc','XiangqingController@jrsc');
 //列表二
 Route::get('/liebiaotwo','LiebiaoController@liebiaotwo');
 //列表(保湿)
@@ -78,7 +86,14 @@ Route::get('/baoshi','BaoshiController@baoshi');
 //列表gougo
 Route::get('/gougo','LiebiaoController@gougo');
 //收藏
+
 Route::get('/shoucang','ShoucangController@shoucang');
+
+
+//session
+Route::get('/qcsession','SessionController@qcsession');
+
+
 
 //分类管理
 Route::resource('flgli','FlgliController');

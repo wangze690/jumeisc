@@ -8,7 +8,7 @@
             <li class="pull-left"><a href="/denglu">登录</a></li>
             <li class="pull-left"><a href="/zhuce">快速注册</a></li>
             @else
-            <li class="pull-left"><a href="/center">欢迎回来: {{session('phone')}}</a></li>
+            <li class="pull-left">欢迎回来: <a href="/center">{{session('phone')}}</a> <span>退出</span></li>
             @endif
         </ul>
     </div>
@@ -25,3 +25,16 @@
     </div>
 </div>
 </header>
+<script type="text/javascript" src="/bootstrap/js/jquery.js"></script>
+<script type="text/javascript">
+    $('span').click(function(){
+        $.ajax({
+            type:'get',
+            url:'/qcsession',
+            data:{'id',session('id')},
+            success:function(mess){
+
+            }
+        })
+    })
+</script>

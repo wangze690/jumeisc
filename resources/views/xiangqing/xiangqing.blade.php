@@ -343,16 +343,17 @@
 				url:'/jrgwc',
 				data:{'sp_id':sp_id},
 				success:function(mess){
+					
 					if(mess == 1)
 					{
 						alert('加入购物车成功');
 					}
 					else
 					{
-						var ppp=confirm("您还未登录，请登录");
-						location.href="/denglu";	
-
+						var ppp=confirm("您还未登录,请先登录");
+						location.href="/denglu";
 					}
+					
 				}
 			})
 		})

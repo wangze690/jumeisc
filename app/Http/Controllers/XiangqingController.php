@@ -69,9 +69,12 @@ class XiangqingController extends Controller
             'user_id' => $user_id,
             'addDate' => $addDate
         ];
-        $jiaru = DB::table('carts')->insert($data);
-        if(empty($user_id))
+        if(empty($user_id)){
+        
+        }
+        else
         {
+             $jiaru = DB::table('carts')->insert($data);
             if($jiaru)
             {
                 echo 1;
@@ -81,5 +84,34 @@ class XiangqingController extends Controller
                 echo 0;
             }
         }
+    } 
+
+    public function jrsc(Request $Request)
+    {
+        $sp_id = $Request->input('sp_id');
+        $user_id = session('id');
+        $addDate = Date('Y-m-d H:i:s');
+        $arr = [
+            'sp_id' => $sp_id,
+            'user_id' => $user_id,
+            'addDate' => $addDate
+        ];
+        if(emtyp($user_id))
+        {
+
+        }
+        else
+        {
+            $tianjia = DB::table('shoucang')->insert($arr);
+            if($tianjia)
+            {
+                echo 1;
+            }
+            else
+            {
+                echo 0;
+            }
+        }
+        
     }
 }
