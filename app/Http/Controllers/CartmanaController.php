@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 
-class SizemanaController extends Controller
+class CartmanaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +14,9 @@ class SizemanaController extends Controller
      */
     public function index()
     {
-        $size = DB::table('size')->get();
+        $carts = DB::table('carts')->get();
         // $user = DB::table('users')->paginate(10);
-        
-       return view('admin.size.index',['size'=>$size]);
+       return view('admin.cart.index',['carts'=>$carts]);
     }
 
     /**
@@ -27,7 +26,7 @@ class SizemanaController extends Controller
      */
     public function create()
     {
-        return view('admin.size.create');
+        return view('admin.cart.create');
     }
 
     /**
@@ -38,11 +37,26 @@ class SizemanaController extends Controller
      */
     public function store(Request $request)
     {
-      $info =  $request->except('_token');
-      //将数据插入到数据库中
-      if(DB::table('size')->insert($info))
+        $info =  $request->except('_token');
+      //文件上传
+      if($request->hasFile('imgs'))
       {
-        return redirect('/sizemana')->with('msg','更新成功');
+        //获取文件后缀
+       $str = $request->file('imgs')->extension();
+       //创建一个新的名称
+       $name = uniqid('img').'.'.$str;
+       //文件夹路径
+       $path = './uploade/'.date('Y-m-d');
+       //移动文件
+       $request->file('imgs')->move($path,$name);
+       //获取文件的路径
+       $info['imgs'] = trim($path.'/'.$name,'.');
+      }
+
+      //将数据插入到数据库中
+      if(DB::table('carts')->insert($info))
+      {
+        return redirect('/cartmana')->with('msg','更新成功');
       }
     }
 
@@ -65,8 +79,8 @@ class SizemanaController extends Controller
      */
     public function edit($id)
     {
-         $size = DB::table('size')->where('id',$id)->first();
-        return view('admin.size.edit',['size'=>$size]);
+        $carts = DB::table('carts')->where('id',$id)->first();
+        return view('admin.cart.edit',['carts'=>$carts]);
     }
 
     /**
@@ -78,10 +92,26 @@ class SizemanaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $info = $request->except('_method','_token');
-      if(DB::table('size')->where('id',$id)->update($info))
+         $info =  $request->except('_token','_method');
+      //文件上传
+      if($request->hasFile('imgs'))
       {
-            return redirect('/sizemana')->with('msg','修改成功');
+        //获取文件后缀
+       $str = $request->file('imgs')->extension();
+       //创建一个新的名称
+       $name = uniqid('img').'.'.$str;
+       //文件夹路径
+       $path = './uploade/'.date('Y-m-d');
+       //移动文件
+       $request->file('imgs')->move($path,$name);
+       //获取文件的路径
+       $info['imgs'] = trim($path.'/'.$name,'.');
+      }
+
+    
+      if(DB::table('carts')->where('id',$id)->update($info))
+      {
+            return redirect('/cartmana')->with('msg','修改成功');
       }
       else
       {
@@ -97,10 +127,9 @@ class SizemanaController extends Controller
      */
     public function destroy($id)
     {
-        if(DB::table('size')->where('id',$id)->delete())
+        if(DB::table('carts')->where('id',$id)->delete())
         {
              return back()->with('msg','删除成功');
         }
-
     }
 }

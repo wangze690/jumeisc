@@ -9,7 +9,8 @@ class CartController extends Controller
 {
     public function cart()
     {
-    	$carts = DB::table('carts')->get();
+        $ssid = session('id');
+    	$carts = DB::table('carts')->where('user_id',$ssid)->get();
     	$nums = 0;
     	foreach($carts as $key =>$value)
     	{
