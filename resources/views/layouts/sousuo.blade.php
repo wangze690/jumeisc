@@ -13,7 +13,7 @@
 			        <button type="submit" class="btn btn-danger btn-md annu" style="">搜索</button>
 		        </form>
 		        <ul class="ul_o">
-					<li class="pull-left text-center"><a href="#">保湿</a></li>
+					<li class="pull-left text-center"><a href="/baoshi">保湿</a></li>
 					<li class="pull-left text-center"><a href="#">面膜</a></li>
 					<li class="pull-left text-center"><a href="#">洗面奶</a></li>
 					<li class="pull-left text-center"><a href="#">补水</a></li>

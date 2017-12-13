@@ -38,11 +38,18 @@ class LiebiaoController extends Controller
    		$shop = DB::table('shop')->where('pid','6')->get();
          $shops = DB::table('shop')->where('pid','7')->get();
          $shopd = DB::table('shop')->where('pid','8')->get();
+         $shopf = DB::table('shop')->where('pid','9')->get();
+         $shopg = DB::table('shop')->where('pid','11')->get();
+         $shoph = DB::table('shop')->where('pid','12')->get();
+
 
    		return view('liebiao.liebiaosan',[
             'shop'=>$shop,
             'shops'=>$shops,
-            'shopd'=>$shopd
+            'shopd'=>$shopd,
+            'shopf'=>$shopf,
+            'shopg'=>$shopg,
+            'shoph'=>$shoph
 
             ]);
    	}

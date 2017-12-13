@@ -29,7 +29,7 @@ class QiantaiController extends Controller
             session(['phone'=>$user->phone]);
 
             //登陆成功
-            return redirect('/liebiaosan')->with('msg','登陆成功');
+            return redirect('/grzxs')->with('msg','登陆成功');
             
         }
         return back()->with('msg','登录失败');
@@ -51,10 +51,39 @@ class QiantaiController extends Controller
 
      public function grzx()
     {
-    	return view('grzx.user');
+        $nav = DB::table('nav')->where('path',2)->get();
+
+    	return view('grzx.user',['nav'=>$nav]);
     }
-    public function grzxs()
+    public function grzxs(Request $request)
     {
-        return view('grzx.add');
+        $nav = DB::table('nav')->where('path',2)->get();
+
+
+        return view('grzx.add',['nav'=>$nav]);
+    }
+     public function addres(Request $request)
+    {
+        // dd($request->all());
+        //获取数据
+        $data = $request->except(['_token']);
+        //
+        $data['user_id'] = session('id');
+        //插入
+        if(DB::table('shouhuodz')->insert($data)) {
+            return back()->with('msg','地址添加成功');
+        }else{
+            return back()->with('msg','添加失败!!');
+        }
+        //读取收货地址
+        $shouhuodz = DB::table('shouhuodz')->where('user_id', session('id'))->get();
+
+        foreach ($shouhuodz as $key => &$value){
+            $value->pname = DB::table('areas')->where('id',$value->province)->value('area_name');
+            $value->cname = DB::table('areas')->where('id',$value->city)->value('area_name');
+            $value->xname = DB::table('areas')->where('id',$value->xian)->value('area_name');
+        }
+        return view('grzx.add',['shouhuodz'=>$shouhuodz]);
+
     }
 }
