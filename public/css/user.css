@@ -124,11 +124,7 @@ h2{
     width: 60px;
     font-weight: 400px;
 }
-a{
-    font-size: 14px;
-    color: #666;
 
-}
 .nav a b {
     background: url(../img/left_nav_icons.png) no-repeat;
     position: absolute;

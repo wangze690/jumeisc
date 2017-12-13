@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	@section('title')
 	<title>个人中心</title>
+	@show
 	<link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
 	<link rel="stylesheet" href="./bootstrap/css/nav.css">
 	<link rel="stylesheet" href="./bootstrap/css/toubu.css">
@@ -62,6 +64,7 @@
 		        </ul>
 	        </div>
     	</div>
+    	@section('conter')
 		 <div class="container">
 				<div class="col-md-9 sector">
 					<h1>设置账户信息</h1>
@@ -75,13 +78,13 @@
 			                </div>
 					<div class="input_container input_address_select">
 						<label for="select_province"><span class="spark">*</span>收货地址：</label>
-			                        <!-- 新的四级地区模板，2014年9月10日购物车上线后弃用，将此文件内容合并入province_city.tpl -->
+			                        
 			<div class="district_selector">
-			    <span class="select_ui"><div class="select_arrow"></div><div class="select_text_ui" style="min-width: 8.5em;">省/直辖市</div><select class="f-input select_province" data-default="省/直辖市"><option value="">省/直辖市</option><option value="11">北京市</option><option value="12">天津市</option><option value="13">河北省</option><option value="14">山西省</option><option value="15">内蒙古自治区</option><option value="21">辽宁省</option><option value="22">吉林省</option><option value="23">黑龙江省</option><option value="31">上海市</option><option value="32">江苏省</option><option value="33">浙江省</option><option value="34">安徽省</option><option value="35">福建省</option><option value="36">江西省</option><option value="37">山东省</option><option value="41">河南省</option><option value="42">湖北省</option><option value="43">湖南省</option><option value="44">广东省</option><option value="45">广西壮族自治区</option><option value="46">海南省</option><option value="50">重庆市</option><option value="51">四川省</option><option value="52">贵州省</option><option value="53">云南省</option><option value="54">西藏自治区</option><option value="61">陕西省</option><option value="62">甘肃省</option><option value="63">青海省</option><option value="64">宁夏回族自治区</option><option value="65">新疆维吾尔自治区</option></select></span>
-			    <span class="select_ui"><div class="select_arrow"></div><div class="select_text_ui" style="min-width: 1.5em;">市</div><select class="f-input select_city" data-default="市">
+			    <span class="select_ui"><div class="select_arrow"></div><select class="f-input select_province" data-default="省/直辖市"><option value="">省/直辖市</option><option value="11">北京市</option><option value="12">天津市</option><option value="13">河北省</option><option value="14">山西省</option><option value="15">内蒙古自治区</option><option value="21">辽宁省</option><option value="22">吉林省</option><option value="23">黑龙江省</option><option value="31">上海市</option><option value="32">江苏省</option><option value="33">浙江省</option><option value="34">安徽省</option><option value="35">福建省</option><option value="36">江西省</option><option value="37">山东省</option><option value="41">河南省</option><option value="42">湖北省</option><option value="43">湖南省</option><option value="44">广东省</option><option value="45">广西壮族自治区</option><option value="46">海南省</option><option value="50">重庆市</option><option value="51">四川省</option><option value="52">贵州省</option><option value="53">云南省</option><option value="54">西藏自治区</option><option value="61">陕西省</option><option value="62">甘肃省</option><option value="63">青海省</option><option value="64">宁夏回族自治区</option><option value="65">新疆维吾尔自治区</option></select></span>
+			    <span class="select_ui"><div class="select_arrow"></div><select class="f-input select_city" data-default="市">
 			        <option value="">市</option>
 			    </select></span>
-			    <span class="select_ui"><div class="select_arrow"></div><div class="select_text_ui" style="min-width: 3.5em;">区/县</div><select class="f-input select_area" data-default="区/县">
+			    <span class="select_ui"><div class="select_arrow"></div><select class="f-input select_area" data-default="区/县">
 			        <option value="">区/县</option>
 			    </select></span>
 			    <span class="select_ui" style="display: none;"><div class="select_arrow"></div><div class="select_text_ui" style="min-width: 5.5em;">乡镇/街道</div><select class="f-input select_district" data-default="乡镇/街道">
@@ -106,8 +109,9 @@
 				</form>
 				</div>
 		</div>
+		@show
 </div>
 </div>
-@include('layouts.footer')
+@include('layouts.foot')
 </body>
 </html>

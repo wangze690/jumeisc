@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
+use Hash;
 
 class PersonController extends Controller
 {
@@ -10,8 +12,8 @@ class PersonController extends Controller
     {
     	
 
-
-    	return view('person.person',[]);
+        $nav = DB::table('nav')->where('path',2)->get();
+    	return view('person.person',['nav'=>$nav]);
     }
 
 

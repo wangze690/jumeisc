@@ -10,7 +10,7 @@ class IndexController extends Controller
 {
      public function index()
     {
-    	
+    	$nav = DB::table('nav')->where('path',2)->get();
     	$shop1 = DB::table('shop')->where('pid',1)->get();
     	$shop2 = DB::table('shop')->where('pid',2)->get();
     	$shop3 = DB::table('shop')->where('pid',3)->get();
@@ -18,7 +18,7 @@ class IndexController extends Controller
 
 
     	return view('index.index',[
-
+            'nav'=>$nav,
     		'shop1'=>$shop1,
     		'shop2'=>$shop2,
     		'shop3'=>$shop3,

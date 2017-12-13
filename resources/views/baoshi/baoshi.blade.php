@@ -38,30 +38,11 @@
 					<div class="section_4">
 						<div class="col-md-1 section_5">品牌:</div>
 						<div class="col-md-11 section_6">
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" style="cursor: pointer;">展开></a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<button class="col-md-1">+多选</button>
+							
+							@foreach($pinpai as $k=>$v)
+							<a class="col-md-1" href="">{{$v->name}}</a>
+							@endforeach
+							
 						</div>
 						<div class="clearfix"></div>
 					</div>
@@ -69,12 +50,11 @@
 					<div class="section_4">
 						<div class="col-md-1 section_5">分类:</div>
 						<div class="col-md-11 section_6">
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
+							
+							@foreach($fenlei as $k=>$v)
+							<a class="col-md-2" href="">{{$v->name}}</a>
+							@endforeach
+							
 						</div>
 						<div class="clearfix"></div>
 					</div>
@@ -82,30 +62,11 @@
 					<div class="section_4">
 						<div class="col-md-1 section_5">功效:</div>
 						<div class="col-md-11 section_6">
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" style="cursor: pointer;">展开></a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<a class="col-md-1" href="">御泥坊</a>
-							<button class="col-md-1">+多选</button>
+
+							@foreach($gongxiao as $k=>$v)
+							<a class="col-md-1" href="">{{$v->name}}</a>
+							@endforeach
+							
 						</div>
 						<div class="clearfix"></div>
 					</div>
@@ -113,18 +74,11 @@
 					<div class="section_4">
 						<div class="col-md-1 section_5">价格:</div>
 						<div class="col-md-11 section_6">
-							<a class="col-md-1" href="">012-139元</a>
-							<a class="col-md-1" href="">0-139元</a>
-							<a class="col-md-1" href="">0-139元</a>
-							<a class="col-md-1" href="">0-139元</a>
-							<a class="col-md-1" href="">0-139元</a>
-							<a class="col-md-1" href=""></a>
-							<a class="col-md-1" href=""></a>
-							<a class="col-md-1" href=""></a>
-							<a class="col-md-1" href=""></a>
-							<a class="col-md-1" href=""></a>
-							<a class="col-md-1" href=""></a>
-							<button class="col-md-1">+多选</button>
+
+							@foreach($jiage as $k=>$v)
+							<a class="col-md-2" href="">{{$v->jiage}}</a>
+							@endforeach
+							
 						</div>
 						<div class="clearfix"></div>
 					</div>
@@ -143,608 +97,29 @@
 					</ul>
 					<div class="clearfix"></div>
 					<div>
+						@foreach($shop as $k=>$v)
 						<div class="col-md-3 section_7">
-							<img src="holder.js/230x270;">
-							<p>英国.沙宣激强持久定型发泥 50g</p>
-							<p><font color="#ed145b" size="5">￥31.9</font> <s>￥39.8</s></p>
+							<a href="/xiangqing/{{$v->id}}">
+								<img width="230" height="270" src="/img/{{$v->profile}}">
+							</a>
+							<a href="/xiangqing/{{$v->id}}">{{$v->shopcons}}</a>
+							<p><font color="#ed145b" size="5">￥{{$v->shopxj}}</font> <s>￥{{$v->shopyj}}</s></p>
 							<p>月销83</p>
 							<div>
 								<span>
-									<button class="btn button_1">加入购物车</button>
+									<button class="btn button_1 jrgwc">加入购物车</button>
+									<input type="hidden" value="{{$v->id}}">
 								</span>
 								<span>
 									<button class="btn button_2">收藏</button>
 								</span>
 							</div>
 						</div>
-
-						<div class="col-md-3 section_7">
-							<img src="holder.js/230x270;">
-							<p>英国.沙宣激强持久定型发泥 50g</p>
-							<p><font color="#ed145b" size="5">￥31.9</font> <s>￥39.8</s></p>
-							<p>月销83</p>
-							<div>
-								<span>
-									<button class="btn button_1">加入购物车</button>
-								</span>
-								<span>
-									<button class="btn button_2">收藏</button>
-								</span>
-							</div>
-						</div>
-
-						<div class="col-md-3 section_7">
-							<img src="holder.js/230x270;">
-							<p>英国.沙宣激强持久定型发泥 50g</p>
-							<p><font color="#ed145b" size="5">￥31.9</font> <s>￥39.8</s></p>
-							<p>月销83</p>
-							<div>
-								<span>
-									<button class="btn button_1">加入购物车</button>
-								</span>
-								<span>
-									<button class="btn button_2">收藏</button>
-								</span>
-							</div>
-						</div>
-
-						<div class="col-md-3 section_7">
-							<img src="holder.js/230x270;">
-							<p>英国.沙宣激强持久定型发泥 50g</p>
-							<p><font color="#ed145b" size="5">￥31.9</font> <s>￥39.8</s></p>
-							<p>月销83</p>
-							<div>
-								<span>
-									<button class="btn button_1">加入购物车</button>
-								</span>
-								<span>
-									<button class="btn button_2">收藏</button>
-								</span>
-							</div>
-						</div>
-
-						<div class="col-md-3 section_7">
-							<img src="holder.js/230x270;">
-							<p>英国.沙宣激强持久定型发泥 50g</p>
-							<p><font color="#ed145b" size="5">￥31.9</font> <s>￥39.8</s></p>
-							<p>月销83</p>
-							<div>
-								<span>
-									<button class="btn button_1">加入购物车</button>
-								</span>
-								<span>
-									<button class="btn button_2">收藏</button>
-								</span>
-							</div>
-						</div>
-
-						<div class="col-md-3 section_7">
-							<img src="holder.js/230x270;">
-							<p>英国.沙宣激强持久定型发泥 50g</p>
-							<p><font color="#ed145b" size="5">￥31.9</font> <s>￥39.8</s></p>
-							<p>月销83</p>
-							<div>
-								<span>
-									<button class="btn button_1">加入购物车</button>
-								</span>
-								<span>
-									<button class="btn button_2">收藏</button>
-								</span>
-							</div>
-						</div>
-
-						<div class="col-md-3 section_7">
-							<img src="holder.js/230x270;">
-							<p>英国.沙宣激强持久定型发泥 50g</p>
-							<p><font color="#ed145b" size="5">￥31.9</font> <s>￥39.8</s></p>
-							<p>月销83</p>
-							<div>
-								<span>
-									<button class="btn button_1">加入购物车</button>
-								</span>
-								<span>
-									<button class="btn button_2">收藏</button>
-								</span>
-							</div>
-						</div>
-
-						<div class="col-md-3 section_7">
-							<img src="holder.js/230x270;">
-							<p>英国.沙宣激强持久定型发泥 50g</p>
-							<p><font color="#ed145b" size="5">￥31.9</font> <s>￥39.8</s></p>
-							<p>月销83</p>
-							<div>
-								<span>
-									<button class="btn button_1">加入购物车</button>
-								</span>
-								<span>
-									<button class="btn button_2">收藏</button>
-								</span>
-							</div>
-						</div>
-
-						<div class="col-md-3 section_7">
-							<img src="holder.js/230x270;">
-							<p>英国.沙宣激强持久定型发泥 50g</p>
-							<p><font color="#ed145b" size="5">￥31.9</font> <s>￥39.8</s></p>
-							<p>月销83</p>
-							<div>
-								<span>
-									<button class="btn button_1">加入购物车</button>
-								</span>
-								<span>
-									<button class="btn button_2">收藏</button>
-								</span>
-							</div>
-						</div>
-
-						<div class="col-md-3 section_7">
-							<img src="holder.js/230x270;">
-							<p>英国.沙宣激强持久定型发泥 50g</p>
-							<p><font color="#ed145b" size="5">￥31.9</font> <s>￥39.8</s></p>
-							<p>月销83</p>
-							<div>
-								<span>
-									<button class="btn button_1">加入购物车</button>
-								</span>
-								<span>
-									<button class="btn button_2">收藏</button>
-								</span>
-							</div>
-						</div>
-
-						<div class="col-md-3 section_7">
-							<img src="holder.js/230x270;">
-							<p>英国.沙宣激强持久定型发泥 50g</p>
-							<p><font color="#ed145b" size="5">￥31.9</font> <s>￥39.8</s></p>
-							<p>月销83</p>
-							<div>
-								<span>
-									<button class="btn button_1">加入购物车</button>
-								</span>
-								<span>
-									<button class="btn button_2">收藏</button>
-								</span>
-							</div>
-						</div>
-
-						<div class="col-md-3 section_7">
-							<img src="holder.js/230x270;">
-							<p>英国.沙宣激强持久定型发泥 50g</p>
-							<p><font color="#ed145b" size="5">￥31.9</font> <s>￥39.8</s></p>
-							<p>月销83</p>
-							<div>
-								<span>
-									<button class="btn button_1">加入购物车</button>
-								</span>
-								<span>
-									<button class="btn button_2">收藏</button>
-								</span>
-							</div>
-						</div>
-
-						<div class="col-md-3 section_7">
-							<img src="holder.js/230x270;">
-							<p>英国.沙宣激强持久定型发泥 50g</p>
-							<p><font color="#ed145b" size="5">￥31.9</font> <s>￥39.8</s></p>
-							<p>月销83</p>
-							<div>
-								<span>
-									<button class="btn button_1">加入购物车</button>
-								</span>
-								<span>
-									<button class="btn button_2">收藏</button>
-								</span>
-							</div>
-						</div>
-
-						<div class="col-md-3 section_7">
-							<img src="holder.js/230x270;">
-							<p>英国.沙宣激强持久定型发泥 50g</p>
-							<p><font color="#ed145b" size="5">￥31.9</font> <s>￥39.8</s></p>
-							<p>月销83</p>
-							<div>
-								<span>
-									<button class="btn button_1">加入购物车</button>
-								</span>
-								<span>
-									<button class="btn button_2">收藏</button>
-								</span>
-							</div>
-						</div>
-
-						<div class="col-md-3 section_7">
-							<img src="holder.js/230x270;">
-							<p>英国.沙宣激强持久定型发泥 50g</p>
-							<p><font color="#ed145b" size="5">￥31.9</font> <s>￥39.8</s></p>
-							<p>月销83</p>
-							<div>
-								<span>
-									<button class="btn button_1">加入购物车</button>
-								</span>
-								<span>
-									<button class="btn button_2">收藏</button>
-								</span>
-							</div>
-						</div>
-
-						<div class="col-md-3 section_7">
-							<img src="holder.js/230x270;">
-							<p>英国.沙宣激强持久定型发泥 50g</p>
-							<p><font color="#ed145b" size="5">￥31.9</font> <s>￥39.8</s></p>
-							<p>月销83</p>
-							<div>
-								<span>
-									<button class="btn button_1">加入购物车</button>
-								</span>
-								<span>
-									<button class="btn button_2">收藏</button>
-								</span>
-							</div>
-						</div>
-
-						<div class="col-md-3 section_7">
-							<img src="holder.js/230x270;">
-							<p>英国.沙宣激强持久定型发泥 50g</p>
-							<p><font color="#ed145b" size="5">￥31.9</font> <s>￥39.8</s></p>
-							<p>月销83</p>
-							<div>
-								<span>
-									<button class="btn button_1">加入购物车</button>
-								</span>
-								<span>
-									<button class="btn button_2">收藏</button>
-								</span>
-							</div>
-						</div>
-
-						<div class="col-md-3 section_7">
-							<img src="holder.js/230x270;">
-							<p>英国.沙宣激强持久定型发泥 50g</p>
-							<p><font color="#ed145b" size="5">￥31.9</font> <s>￥39.8</s></p>
-							<p>月销83</p>
-							<div>
-								<span>
-									<button class="btn button_1">加入购物车</button>
-								</span>
-								<span>
-									<button class="btn button_2">收藏</button>
-								</span>
-							</div>
-						</div>
-
-						<div class="col-md-3 section_7">
-							<img src="holder.js/230x270;">
-							<p>英国.沙宣激强持久定型发泥 50g</p>
-							<p><font color="#ed145b" size="5">￥31.9</font> <s>￥39.8</s></p>
-							<p>月销83</p>
-							<div>
-								<span>
-									<button class="btn button_1">加入购物车</button>
-								</span>
-								<span>
-									<button class="btn button_2">收藏</button>
-								</span>
-							</div>
-						</div>
-
-						<div class="col-md-3 section_7">
-							<img src="holder.js/230x270;">
-							<p>英国.沙宣激强持久定型发泥 50g</p>
-							<p><font color="#ed145b" size="5">￥31.9</font> <s>￥39.8</s></p>
-							<p>月销83</p>
-							<div>
-								<span>
-									<button class="btn button_1">加入购物车</button>
-								</span>
-								<span>
-									<button class="btn button_2">收藏</button>
-								</span>
-							</div>
-						</div>
-
-						<div class="col-md-3 section_7">
-							<img src="holder.js/230x270;">
-							<p>英国.沙宣激强持久定型发泥 50g</p>
-							<p><font color="#ed145b" size="5">￥31.9</font> <s>￥39.8</s></p>
-							<p>月销83</p>
-							<div>
-								<span>
-									<button class="btn button_1">加入购物车</button>
-								</span>
-								<span>
-									<button class="btn button_2">收藏</button>
-								</span>
-							</div>
-						</div>
-
-						<div class="col-md-3 section_7">
-							<img src="holder.js/230x270;">
-							<p>英国.沙宣激强持久定型发泥 50g</p>
-							<p><font color="#ed145b" size="5">￥31.9</font> <s>￥39.8</s></p>
-							<p>月销83</p>
-							<div>
-								<span>
-									<button class="btn button_1">加入购物车</button>
-								</span>
-								<span>
-									<button class="btn button_2">收藏</button>
-								</span>
-							</div>
-						</div>
-
-						<div class="col-md-3 section_7">
-							<img src="holder.js/230x270;">
-							<p>英国.沙宣激强持久定型发泥 50g</p>
-							<p><font color="#ed145b" size="5">￥31.9</font> <s>￥39.8</s></p>
-							<p>月销83</p>
-							<div>
-								<span>
-									<button class="btn button_1">加入购物车</button>
-								</span>
-								<span>
-									<button class="btn button_2">收藏</button>
-								</span>
-							</div>
-						</div>
-
-						<div class="col-md-3 section_7">
-							<img src="holder.js/230x270;">
-							<p>英国.沙宣激强持久定型发泥 50g</p>
-							<p><font color="#ed145b" size="5">￥31.9</font> <s>￥39.8</s></p>
-							<p>月销83</p>
-							<div>
-								<span>
-									<button class="btn button_1">加入购物车</button>
-								</span>
-								<span>
-									<button class="btn button_2">收藏</button>
-								</span>
-							</div>
-						</div>
-
-						<div class="col-md-3 section_7">
-							<img src="holder.js/230x270;">
-							<p>英国.沙宣激强持久定型发泥 50g</p>
-							<p><font color="#ed145b" size="5">￥31.9</font> <s>￥39.8</s></p>
-							<p>月销83</p>
-							<div>
-								<span>
-									<button class="btn button_1">加入购物车</button>
-								</span>
-								<span>
-									<button class="btn button_2">收藏</button>
-								</span>
-							</div>
-						</div>
-
-						<div class="col-md-3 section_7">
-							<img src="holder.js/230x270;">
-							<p>英国.沙宣激强持久定型发泥 50g</p>
-							<p><font color="#ed145b" size="5">￥31.9</font> <s>￥39.8</s></p>
-							<p>月销83</p>
-							<div>
-								<span>
-									<button class="btn button_1">加入购物车</button>
-								</span>
-								<span>
-									<button class="btn button_2">收藏</button>
-								</span>
-							</div>
-						</div>
-
-						<div class="col-md-3 section_7">
-							<img src="holder.js/230x270;">
-							<p>英国.沙宣激强持久定型发泥 50g</p>
-							<p><font color="#ed145b" size="5">￥31.9</font> <s>￥39.8</s></p>
-							<p>月销83</p>
-							<div>
-								<span>
-									<button class="btn button_1">加入购物车</button>
-								</span>
-								<span>
-									<button class="btn button_2">收藏</button>
-								</span>
-							</div>
-						</div>
-
-						<div class="col-md-3 section_7">
-							<img src="holder.js/230x270;">
-							<p>英国.沙宣激强持久定型发泥 50g</p>
-							<p><font color="#ed145b" size="5">￥31.9</font> <s>￥39.8</s></p>
-							<p>月销83</p>
-							<div>
-								<span>
-									<button class="btn button_1">加入购物车</button>
-								</span>
-								<span>
-									<button class="btn button_2">收藏</button>
-								</span>
-							</div>
-						</div>
-
-						<div class="col-md-3 section_7">
-							<img src="holder.js/230x270;">
-							<p>英国.沙宣激强持久定型发泥 50g</p>
-							<p><font color="#ed145b" size="5">￥31.9</font> <s>￥39.8</s></p>
-							<p>月销83</p>
-							<div>
-								<span>
-									<button class="btn button_1">加入购物车</button>
-								</span>
-								<span>
-									<button class="btn button_2">收藏</button>
-								</span>
-							</div>
-						</div>
-
-						<div class="col-md-3 section_7">
-							<img src="holder.js/230x270;">
-							<p>英国.沙宣激强持久定型发泥 50g</p>
-							<p><font color="#ed145b" size="5">￥31.9</font> <s>￥39.8</s></p>
-							<p>月销83</p>
-							<div>
-								<span>
-									<button class="btn button_1">加入购物车</button>
-								</span>
-								<span>
-									<button class="btn button_2">收藏</button>
-								</span>
-							</div>
-						</div>
-
-						<div class="col-md-3 section_7">
-							<img src="holder.js/230x270;">
-							<p>英国.沙宣激强持久定型发泥 50g</p>
-							<p><font color="#ed145b" size="5">￥31.9</font> <s>￥39.8</s></p>
-							<p>月销83</p>
-							<div>
-								<span>
-									<button class="btn button_1">加入购物车</button>
-								</span>
-								<span>
-									<button class="btn button_2">收藏</button>
-								</span>
-							</div>
-						</div>
-
-						<div class="col-md-3 section_7">
-							<img src="holder.js/230x270;">
-							<p>英国.沙宣激强持久定型发泥 50g</p>
-							<p><font color="#ed145b" size="5">￥31.9</font> <s>￥39.8</s></p>
-							<p>月销83</p>
-							<div>
-								<span>
-									<button class="btn button_1">加入购物车</button>
-								</span>
-								<span>
-									<button class="btn button_2">收藏</button>
-								</span>
-							</div>
-						</div>
-
-						<div class="col-md-3 section_7">
-							<img src="holder.js/230x270;">
-							<p>英国.沙宣激强持久定型发泥 50g</p>
-							<p><font color="#ed145b" size="5">￥31.9</font> <s>￥39.8</s></p>
-							<p>月销83</p>
-							<div>
-								<span>
-									<button class="btn button_1">加入购物车</button>
-								</span>
-								<span>
-									<button class="btn button_2">收藏</button>
-								</span>
-							</div>
-						</div>
-
-						<div class="col-md-3 section_7">
-							<img src="holder.js/230x270;">
-							<p>英国.沙宣激强持久定型发泥 50g</p>
-							<p><font color="#ed145b" size="5">￥31.9</font> <s>￥39.8</s></p>
-							<p>月销83</p>
-							<div>
-								<span>
-									<button class="btn button_1">加入购物车</button>
-								</span>
-								<span>
-									<button class="btn button_2">收藏</button>
-								</span>
-							</div>
-						</div>
-
-						<div class="col-md-3 section_7">
-							<img src="holder.js/230x270;">
-							<p>英国.沙宣激强持久定型发泥 50g</p>
-							<p><font color="#ed145b" size="5">￥31.9</font> <s>￥39.8</s></p>
-							<p>月销83</p>
-							<div>
-								<span>
-									<button class="btn button_1">加入购物车</button>
-								</span>
-								<span>
-									<button class="btn button_2">收藏</button>
-								</span>
-							</div>
-						</div>
-
-						<div class="col-md-3 section_7">
-							<img src="holder.js/230x270;">
-							<p>英国.沙宣激强持久定型发泥 50g</p>
-							<p><font color="#ed145b" size="5">￥31.9</font> <s>￥39.8</s></p>
-							<p>月销83</p>
-							<div>
-								<span>
-									<button class="btn button_1">加入购物车</button>
-								</span>
-								<span>
-									<button class="btn button_2">收藏</button>
-								</span>
-							</div>
-						</div>
-
-						<div class="col-md-3 section_7">
-							<img src="holder.js/230x270;">
-							<p>英国.沙宣激强持久定型发泥 50g</p>
-							<p><font color="#ed145b" size="5">￥31.9</font> <s>￥39.8</s></p>
-							<p>月销83</p>
-							<div>
-								<span>
-									<button class="btn button_1">加入购物车</button>
-								</span>
-								<span>
-									<button class="btn button_2">收藏</button>
-								</span>
-							</div>
-						</div>
-
-						<div class="col-md-3 section_7">
-							<img src="holder.js/230x270;">
-							<p>英国.沙宣激强持久定型发泥 50g</p>
-							<p><font color="#ed145b" size="5">￥31.9</font> <s>￥39.8</s></p>
-							<p>月销83</p>
-							<div>
-								<span>
-									<button class="btn button_1">加入购物车</button>
-								</span>
-								<span>
-									<button class="btn button_2">收藏</button>
-								</span>
-							</div>
-						</div>
-
-						<div class="col-md-3 section_7">
-							<img src="holder.js/230x270;">
-							<p>英国.沙宣激强持久定型发泥 50g</p>
-							<p><font color="#ed145b" size="5">￥31.9</font> <s>￥39.8</s></p>
-							<p>月销83</p>
-							<div>
-								<span>
-									<button class="btn button_1">加入购物车</button>
-								</span>
-								<span>
-									<button class="btn button_2">收藏</button>
-								</span>
-							</div>
-						</div>
-
-						<div class="col-md-3 section_7">
-							<img src="holder.js/230x270;">
-							<p>英国.沙宣激强持久定型发泥 50g</p>
-							<p><font color="#ed145b" size="5">￥31.9</font> <s>￥39.8</s></p>
-							<p>月销83</p>
-							<div>
-								<span>
-									<button class="btn button_1">加入购物车</button>
-								</span>
-								<span>
-									<button class="btn button_2">收藏</button>
-								</span>
-							</div>
-						</div>
-
+						@endforeach
 					</div>
 
+					<div class="clearfix"></div>
+					
 					<div class="text-right">
 					    <ul class="pagination">
 					    	<li>
@@ -781,4 +156,26 @@
 		@include('layouts.foot')
 	</div>
 </body>
+<script type="text/javascript"></script>
+<script>
+	$('.jrgwc').click(function(){
+		var sp_id = $('input[type=hidden]').val();
+		$.ajax({
+			type:'get',
+			url:'/jrgwc',
+			data:{'sp_id':sp_id},
+			success:function(mess){	
+				if(mess == 1)
+				{
+					alert('加入购物车成功');
+				}
+				else
+				{
+					var ppp=confirm("您还未登录，请登录");
+					location.href="/denglu";	
+				}	
+			}
+		})
+	})
+</script>
 </html>
