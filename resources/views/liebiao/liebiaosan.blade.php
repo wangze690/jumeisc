@@ -74,7 +74,7 @@
 		<div id="navbar-example">
 		    <ul class="daohang nav nav-tabs" role="tablist">
 				<img src="./img/520.jpg" alt="">
-		        <li><a href="/liebiaotwo">热卖推荐</a></li>
+		        <li><a href="#one">热卖推荐</a></li>
 		        <li><a href="#two">女士手提包</a></li>
 		        <li><a href="#three">女士斜跨包</a></li>
 		        <li><a href="#four">女士钱包</a></li>

@@ -160,6 +160,8 @@
 <script>
 	$('.jrgwc').click(function(){
 		var sp_id = $('input[type=hidden]').val();
+		alert(sp_id);
+		exit;
 		$.ajax({
 			type:'get',
 			url:'/jrgwc',

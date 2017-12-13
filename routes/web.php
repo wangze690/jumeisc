@@ -80,5 +80,7 @@ Route::get('/baoshi','BaoshiController@baoshi');
 Route::get('/gougo','LiebiaoController@gougo');
 //收藏
 Route::get('shoucang','ShoucangController@shoucang');
+//session
+Route::get('qcsession','SessionController@qcsession');
 
 
