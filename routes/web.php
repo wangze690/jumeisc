@@ -71,6 +71,7 @@ Route::get('liebiaosan','LiebiaoController@liebiaosan');
 //详情
 Route::get('/xiangqing/{id}','XiangqingController@xiangqing');
 Route::get('/jrgwc/','XiangqingController@jrgwc');
+Route::get('jrsc','XiangqingController@jrsc');
 //列表二
 Route::get('/liebiaotwo','LiebiaoController@liebiaotwo');
 //列表(保湿)
@@ -79,4 +80,5 @@ Route::get('/baoshi','BaoshiController@baoshi');
 Route::get('/gougo','LiebiaoController@gougo');
 //收藏
 Route::get('shoucang','ShoucangController@shoucang');
+
 

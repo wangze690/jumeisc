@@ -28,28 +28,4 @@ class BaoshiController extends Controller
     				]);
     }
 
-    public function jrgwc(Request $Request)
-    {
-
-        $sp_id = $Request->input('sp_id');
-        $user_id =  session('id');
-        $addDate = Date('Y-m-d H:i:s');
-        $data = [
-            'sp_id' => $sp_id,
-            'user_id' => $user_id,
-            'addDate' => $addDate
-        ];
-        $jiaru = DB::table('carts')->insert($data);
-        if(empty($user_id))
-        {
-            if($jiaru)
-            {
-                echo 1;
-            }
-            else
-            {
-                echo 0;
-            }
-        }
-    }
 }
