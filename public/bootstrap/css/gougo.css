@@ -1,0 +1,105 @@
+.big{
+	background-color: rgb(180, 50, 87);
+	width: 1920px;
+	height: auto;
+	margin:0 auto;
+}
+section{
+	width: 100%;
+	background-color: rgb(180, 50, 87);
+	height: auto;
+}
+section .mf_one{
+	position: relative;
+	width: 1920px;
+	height: 638px;
+}
+section .mf_one a{
+	position: absolute;
+	top: 460px;
+	left: 640px;
+	width: 100px;
+	height: 40px;
+}
+section .mf_two{
+	position: relative;
+	width: 100%;
+	height: 478px;
+}
+section .mf_two .qw{
+	width: 330px;
+	height: 150px;
+	z-index: 1;
+	position: absolute;
+	left: 450px;
+	top: 50px;
+
+}
+section .mf_two .qe{
+	width: 330px;
+	height: 150px;
+	z-index: 1;
+	position: absolute;
+	left: 800px;
+	top: 50px;
+
+}
+section .mf_two .qr{
+	width: 330px;
+	height: 150px;
+	z-index: 1;
+	position: absolute;
+	left: 1150px;
+	top: 50px;
+
+}
+section .mf_two .qt{
+	width: 330px;
+	height: 150px;
+	z-index: 1;
+	position: absolute;
+	left: 450px;
+	top: 260px;
+}
+section .mf_two .qy{
+	width: 330px;
+	height: 150px;
+	z-index: 1;
+	position: absolute;
+	left: 800px;
+	top: 260px;
+}
+section .mf_two .qu{
+	width: 330px;
+	height: 150px;
+	z-index: 1;
+	position: absolute;
+	left: 1150px;
+	top: 260px;
+}
+section .mf_thr .woqu{
+	padding:0px;
+
+	
+}
+section .mf_thr .woqu .woqu_o{
+	margin-bottom: 30px;
+}
+section .mf_thr .woqu .woqu_o .baoz{
+	background-color: #fff;
+	height: 400px;
+}
+section .mf_thr .woqu ul{
+	margin-top: 15px;
+	margin-right: 50px;
+}
+section .mf_thr .woqu button{
+	border-radius: 0px;
+	width: 140px;
+	height: 30px;
+	background-color: #FF8920;
+	color: #fff;
+	margin-left: 60px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}

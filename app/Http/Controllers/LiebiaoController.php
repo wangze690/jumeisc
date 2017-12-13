@@ -52,8 +52,10 @@ class LiebiaoController extends Controller
    	public function gougo()
    	{
          $nav = DB::table('nav')->where('path',2)->get();
+         $pinpai = DB::table('pinpai')->where('ztid',1)->get();
    		return view('liebiao.gougo',[
-            'nav'=>$nav
+            'nav'=>$nav,
+            'pinpai'=>$pinpai
             ]);
    	}
 }
