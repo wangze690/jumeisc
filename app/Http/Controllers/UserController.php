@@ -56,6 +56,7 @@ class UserController extends Controller
        //获取文件的路径
        $info['profile'] = trim($path.'/'.$name,'.');
       }
+
       //将数据插入到数据库中
       if(DB::table('users')->insert($info))
       {
@@ -111,7 +112,7 @@ class UserController extends Controller
        //获取文件的路径
        $info['profile'] = trim($path.'/'.$name,'.');
       }
-      if(DB::table('user')->where('id',$id)->update($info))
+      if(DB::table('users')->where('id',$id)->update($info))
       {
             return redirect('/user')->with('msg','修改成功');
       }

@@ -85,7 +85,10 @@ class FlgliController extends Controller
      */
     public function edit($id)
     {
-        //
+        $ak = DB::table('nav')->where('id',$id)->first();
+        return view('admin.flgli.edit',[
+            'ak'=>$ak
+            ]);
     }
 
     /**
@@ -97,7 +100,13 @@ class FlgliController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $xiugai = $request->only('navname','pid','path','url');
+        if(DB::table('nav')->where('id',$id)->update($xiugai))
+        {
+            return redirect('/flgli')->with('msg','修改成功');
+        }else{
+            return back()->with('msg','修改成功');
+        }
     }
 
     /**

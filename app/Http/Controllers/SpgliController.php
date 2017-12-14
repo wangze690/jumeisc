@@ -13,9 +13,10 @@ class SpgliController extends Controller
      */
     public function index()
     {
-        $sptj =  DB::table('shop')->insert();
-        dd($sptj);
-        return view('admin.spgli.index');
+        $spsp = DB::table('shop')->get();
+        return view('admin.spgli.index',[
+            'spsp'=>$spsp
+            ]);
     }
 
     /**
@@ -36,11 +37,32 @@ class SpgliController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->except(['_token']);
-        if(DB::table('shop')->insert($data)){
-            return redirect('/spgli')->with('msg','添加成功');
-        }else{
-            return back()->with('msg','添加失败!!');
+        // $data = $request->except(['_token']);
+        // if(DB::table('shop')->insert($data)){
+        //     return redirect('/spgli')->with('msg','添加成功');
+        // }else{
+        //     return back()->with('msg','添加失败!!');
+        // }
+        $info =  $request->only('shoptitle','shopcons','shopxj','shopyj');
+        //文件上传
+        if($request->hasFile('profile'))
+        {
+        //获取文件后缀
+        $str = $request->file('profile')->extension();
+        //创建一个新的名称
+        $name = uniqid('img').'.'.$str;
+        //文件夹路径
+        $path = './uploade'.date('Y-m-d');
+        //移动文件
+        $request->file('profile')->move($path,$name);
+        //获取文件的路径
+        $info['profile'] = trim($path.'/'.$name,'.');
+        }
+
+        //将数据插入到数据库中
+        if(DB::table('shop')->insert($info))
+        {
+        return redirect('/spgli')->with('msg','添加成功');
         }
 
     }
@@ -64,7 +86,10 @@ class SpgliController extends Controller
      */
     public function edit($id)
     {
-        //
+        $mk = DB::table('shop')->where('id',$id)->first();
+        return view('admin.spgli.edit',[
+            'mk'=>$mk
+            ]);
     }
 
     /**
@@ -76,7 +101,29 @@ class SpgliController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $info =  $request->only('shoptitle','shopcons','shopxj','shopyj','pid','profile','manmany','zengmany','sppro','xiaopro');
+        //文件上传
+        if($request->hasFile('profile'))
+        {
+        //获取文件后缀
+        $str = $request->file('profile')->extension();
+        //创建一个新的名称
+        $name = uniqid('img').'.'.$str;
+        //文件夹路径
+        $path = './uploade'.date('Y-m-d');
+        //移动文件
+        $request->file('profile')->move($path,$name);
+        //获取文件的路径
+        $info['profile'] = trim($path.'/'.$name,'.');
+        }
+
+        //将数据插入到数据库中
+        if(DB::table('shop')->where('id',$id)->update($info))
+        {
+            return redirect('/spgli')->with('msg','修改成功');
+        }else{
+            return back()->with('msg','修改失败');
+        }
     }
 
     /**
@@ -87,6 +134,11 @@ class SpgliController extends Controller
      */
     public function destroy($id)
     {
-        //
+        if(DB::table('shop')->where('id',$id)->delete())
+        {
+            return back()->with('msg','删除成功');
+        }else{
+            return back()->with('msg','删除失败!!!');
+        }
     }
 }
