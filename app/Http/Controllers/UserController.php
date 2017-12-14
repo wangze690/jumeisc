@@ -135,4 +135,11 @@ class UserController extends Controller
         }
 
     }
+
+    public function logout(Request $request)
+    {
+      //清除session
+      $request->session()->flush();
+      return back();
+    }
 }
