@@ -31,6 +31,8 @@ Route::resource('article','ArticleController');
 Route::resource('cate','CateController');
 });
 
+Route::get('/denglu','UserController@logout');
+
 
 
 Route::get('/liebiao','LiebiaoController@liebiao');
