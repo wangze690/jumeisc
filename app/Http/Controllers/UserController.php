@@ -40,7 +40,7 @@ class UserController extends Controller
     public function store(Request $request)
     {
         // dd($request->all());
-      $info =  $request->only('username','password','email');
+      $info =  $request->only('username','password','email','phone');
       $info['password'] = encrypt($info['password']);
       //文件上传
       if($request->hasFile('profile'))
@@ -56,9 +56,8 @@ class UserController extends Controller
        //获取文件的路径
        $info['profile'] = trim($path.'/'.$name,'.');
       }
-
       //将数据插入到数据库中
-      if(DB::table('user')->insert($info))
+      if(DB::table('users')->insert($info))
       {
         return redirect('/user')->with('msg','更新成功');
       }
@@ -130,7 +129,7 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        if(DB::table('user')->where('id',$id)->delete())
+        if(DB::table('users')->where('id',$id)->delete())
         {
              return back()->with('msg','删除成功');
         }

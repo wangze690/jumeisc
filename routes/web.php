@@ -88,8 +88,14 @@ Route::get('/baoshi','BaoshiController@baoshi');
 //列表gougo
 Route::get('/gougo','LiebiaoController@gougo');
 //收藏
-Route::get('shoucang','ShoucangController@shoucang');
+
+Route::get('/shoucang','ShoucangController@shoucang');
+
+
 //session
-Route::get('qcsession','SessionController@qcsession');
+Route::get('/qcsession','SessionController@qcsession');
 
 
+
+//分类管理
+Route::resource('flgli','FlgliController');

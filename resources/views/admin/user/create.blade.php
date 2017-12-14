@@ -10,7 +10,13 @@
 	  <div class="form-group">
 	    <label for="inputPassword3" class="col-sm-2 control-label">name</label>
 	    <div class="col-sm-5">
-	      <input type="password" class="form-control" id="inputPassword3" placeholder="name" name="username">
+	      <input type="text" class="form-control" id="inputPassword3" placeholder="name" name="username">
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label for="inputPassword3" class="col-sm-2 control-label">phone</label>
+	    <div class="col-sm-5">
+	      <input type="text" class="form-control" id="inputPassword3" placeholder="phone" name="phone">
 	    </div>
 	  </div>
 	 <div class="form-group">
@@ -32,7 +38,7 @@
 	    </div>
 	  </div>
 	  <div class="form-group">
-	    <label for="inputPassword3" class="col-sm-2 control-label">email</label>
+	    <label for="inputPassword3" class="col-sm-2 control-label">file</label>
 	    <div class="col-sm-5">
 	      <input type="file" class="form-control" id="inputPassword3" name="profile">
 	    </div>
