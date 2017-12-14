@@ -88,12 +88,9 @@ Route::get('/baoshi','BaoshiController@baoshi');
 //列表gougo
 Route::get('/gougo','LiebiaoController@gougo');
 //收藏
-
 Route::get('/shoucang','ShoucangController@shoucang');
+Route::post('/qcshoucang/{id}','ShoucangController@delete');
 
-
-//session
-Route::get('/qcsession','SessionController@qcsession');
 
 
 

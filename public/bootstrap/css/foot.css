@@ -26,7 +26,8 @@ footer .top .top_o .top_ot p{
 footer .top_t{
 
 }
-footer .top_t .top_tt{
+footer .top_t .top_tt h5{
+	font-weight: bold;
 }
 .top_tt li:hover{
 	color: #ed145b;
