@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
-class FlgliController extends Controller
+class SpgliController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,16 +13,9 @@ class FlgliController extends Controller
      */
     public function index()
     {
-       $xinxi =  DB::select("select id,navname,pid,concat(path,'_',id) as paths from nav order by paths=2");
-       foreach ($xinxi as $key => $value) {
-           $count = count(explode('_',$value->paths))-2;
-
-            $value->navname =str_repeat('|----', $count).$value->navname;
-       }
-
-       return view('admin.flgli.index',[
-        'xinxi' => $xinxi
-        ]);
+        $sptj =  DB::table('shop')->insert();
+        dd($sptj);
+        return view('admin.spgli.index');
     }
 
     /**
@@ -32,10 +25,7 @@ class FlgliController extends Controller
      */
     public function create()
     {
-        $flgl =DB::table('nav')->where(['path'=>3,'pid'=>0])->get();
-        return view('admin.flgli.create',[
-            'flgl'=>$flgl
-            ]);
+        return view('admin.spgli.create');
     }
 
     /**
@@ -46,20 +36,9 @@ class FlgliController extends Controller
      */
     public function store(Request $request)
     {
-        //获取参数把不用的去掉
         $data = $request->except(['_token']);
-        //判断是否食顶级分类
-        if($data['pid'] == 0){
-            $data['path'] = '3';  
-        }
-        else{
-            //读取父级分类的信息
-            $d = DB::table('nav')->where('id',$data['pid'])->first();
-            $data['path'] = $d->path.'_'.$d->id;
-        }
-        //将数据添加到数据库中
-        if(DB::table('nav')->insert($data)){
-            return redirect('/flgli')->with('msg','添加成功');
+        if(DB::table('shop')->insert($data)){
+            return redirect('/spgli')->with('msg','添加成功');
         }else{
             return back()->with('msg','添加失败!!');
         }
@@ -108,16 +87,6 @@ class FlgliController extends Controller
      */
     public function destroy($id)
     {
-       $a =  DB::table('nav')->where('id',$id)->first();
-       $path = $a->path.'_'.$a->id;
-       
-       $res = DB::table('nav')->where('path','like',$path.'%')->delete();
-      
-      if(DB::table('nav')->where('id',$id)->delete())
-      {
-        return back()->with('msg','删除成功');
-      }else{
-        return back()->with('msg','删除失败！！');
-      }
+        //
     }
 }

@@ -90,10 +90,8 @@ Route::get('/gougo','LiebiaoController@gougo');
 Route::get('/shoucang','ShoucangController@shoucang');
 
 
-//session
-Route::get('/qcsession','SessionController@qcsession');
-
-
 
 //分类管理
 Route::resource('flgli','FlgliController');
+//商品管理
+Route::resource('spgli','SpgliController');
