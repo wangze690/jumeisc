@@ -98,7 +98,7 @@ class XiangqingController extends Controller
         ];
         if(empty($user_id))
         {
-            echo 0;
+           
         }
         else
         {

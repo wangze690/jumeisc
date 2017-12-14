@@ -9,21 +9,34 @@ class ShoucangController extends Controller
 {
     public function shoucang()
     {
-    	$nav = DB::table('nav')->where('path',2)->get();
-    	$shoucang = DB::table('shoucang')->get();
+        $user_id = session('id');
+        $shoucang = DB::table('shoucang')->where('user_id',$user_id)->get();
     	foreach ($shoucang as $key => $value) {
-    	}
-    	$sp_id = $value->sp_id;
-    	$user_id = $value->user_id;
+          $value->goods = DB::table('shop')->where('id',$value->sp_id)->first();
+        }
 
-    	$user = DB::table('users')->where('id',$user_id)->get();
-    	$sp_id = DB::table('shop')->where('id',$sp_id)->get();
-    	dd($sp_id);
+        $sl = DB::table('shoucang')->where('user_id',$user_id)->count();
 
-    	return view('shoucang.shoucang',[
+        $nav = DB::table('nav')->where('path',2)->get();
+        return view('shoucang.shoucang',[
+                    'shoucang' => $shoucang,
+                    'nav' => $nav,
+                    'sl' => $sl
+                    ]);
 
-    				'nav' => $nav
-    				]);
+    }
+
+   
+    public function delete($id)
+    {
+       if(DB::table('shoucang')->where('id',$id)->delete())
+        {
+            return back()->with('msg','删除成功');
+        }
+        else
+        {
+            return back()->back('msg','删除失败');
+        }
     }
 
 }
