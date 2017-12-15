@@ -43,23 +43,25 @@ Route::post('/denglu','QiantaiController@postdenglu');
 //前台注册
 Route::get('/zhuce','QiantaiController@zhuce');
 Route::post('/zhuce','QiantaiController@getzhuce');
-
+//个人中心
 Route::get('/grzx','QiantaiController@grzx');
+//收货地址
 Route::get('/grzxs','QiantaiController@grzxs');
-Route::post('/grzxs', 'QiantaiController@addres');
+Route::post('/grzxss', 'QiantaiController@addres');
 Route::get('/getarea', 'QiantaiController@getArea');
+Route::get('/delete', 'QiantaiController@delete');
 
-	//首页路由
+//首页路由
 Route::get('/jumei','IndexController@index');
-	//购物车路由
+//购物车路由
 Route::get('/cart{id}','CartController@cart');
 Route::get('/cart/delete','CartController@delete');
 Route::post('/dingdan','CartController@dingdan');
 //个人中心路由
 Route::get('/jumei/person{id}','PersonController@person');
 Route::post('/jumei/person{id}','PersonController@creat');
-
-
+//轮播管理路由
+Route::resource('/lunbo','LunboController');
 
 
 

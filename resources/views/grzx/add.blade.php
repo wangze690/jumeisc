@@ -65,11 +65,10 @@
     	
 		 <div class="container">
 				<div class="col-md-10 sector">
-						<h1>管理收货地址</h1>
-						<h3 style="font-size:16px;font-weight:700;">新增收货地址</h3>
-						
-						<div class="col-md-6 col-md-offset-1">
-	                <form class="form-horizontal" method="post" action="/grzxs">
+					<h1>管理收货地址</h1>
+					<h3 style="font-size:16px;font-weight:700;">新增收货地址</h3>
+					<div class="col-md-6 col-md-offset-1">
+	                	<form class="form-horizontal" method="post" action="/grzxss">
 						  <div class="form-group">
 						    <label for="inputEmail3" class="col-sm-2 control-label">* 姓名</label>
 						    <div class="col-sm-10">
@@ -89,7 +88,7 @@
 	                        <select name="province" id="" class="form-control ">
 	                            <option value="">请选择</option>
 	                        </select>
-	                    </div>
+	                      </div>
 
 	                    <div class='col-md-3'>
 	                        <select name="city" id="" class="form-control ">
@@ -101,10 +100,10 @@
 	                            <option value="">请选择</option>
 	                        </select>
 	                    </div>
-		                  
+		            </div>      
 		                  <div class="form-group">
 		                    <label for="exampleInputEmail1" class="col-sm-2 control-label">详细地址</label>
-		                    <textarea name="detail" id="" ></textarea>
+		                    <textarea name="detail"></textarea>
 		                  </div>
 		                  <div class="checkbox">
 		                    <label>
@@ -114,17 +113,26 @@
 		                   {{csrf_field()}}
 		                  <div class="container">
 							<button type="submit" class="btn" style="background: #EE1658;color: #fff;">保存收货地址</button>
-							</div>
-					</form>
+						  </div>
 					<div class='col-md-12 dizhi'>
-						<h4>已保存的地址</h4>
-						<div class="row" style="background:#F9F8F7;">
-						  <div class="col-xs-6 col-md-2">姓名</div>
-						  <div class="col-xs-6 col-md-6">地址</div>
-						  <div class="col-xs-6 col-md-2">电话号</div>				  
-						  <div class="col-xs-6 col-md-2">操作/删除</div>
+							<h3 style="font-size:16px;font-weight:700;">已保存的地址</h3>
+							<div class="row" style="background:#F9F8F7; border: 1px solid #ccc;">
+							  <div class="col-xs-6 col-md-2">收货人</div>
+							  <div class="col-xs-6 col-md-6">地址</div>
+							  <div class="col-xs-6 col-md-2">电话号</div>				  
+							  <div class="col-xs-6 col-md-2">操作</div>
+							</div>
+							@foreach($shouhuodz as $k=>$v)
+							<div class="row rows" style="background:#fff;border: 1px solid #ccc;">
+							  <div class="col-xs-6 col-md-2">{{$v->name}}</div>
+							  <div class="col-xs-6 col-md-6">{{$v->pname}}{{$v->cname}}{{$v->xname}}{{$v->detail}}</div>
+							  <div class="col-xs-6 col-md-2">{{$v->phone}}</div>
+							  <button class="col-xs-6 col-md-2 del" cid="{{$v->id}}" type="button" style="color:#fff;background:#999;margin-top: 5px;margin-left: 15px;height: 30px;width: 90px;">&nbsp;删除</button>
+
+							</div>
+							 @endforeach
 						</div>
-					</div>
+					</form>
 				</div>
 	            </div>
 	            
@@ -195,8 +203,27 @@ $('select[name=city]').change(function(){
 });
 
 </script>
+<script src="/js/jquery.js"></script>
+<script>
+ $del = $('.del').click(function(){
+	var id = $(this).attr('cid');
+	var tr = $(this).parents('.rows');
+	$.ajax({
+		type:'get',
+		url:'/delete',
+		data:{'id':id},
+		success:function(data)
+		{
+			if(data == 1)
+			{
+				tr.fadeOut(1000);
+			}
+		}
+	})
+});
+</script>
 
-		</div>
+	</div>
 		
 </div>
 </div>

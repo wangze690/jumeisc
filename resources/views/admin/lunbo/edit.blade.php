@@ -12,20 +12,19 @@
 
 
 	<div class="right" style="margin-top:50px;">
-			<form class="form-horizontal" action="/user/{{$user->id}}" method="post" enctype="multipart/form-data">
+			<form class="form-horizontal" action="/lunbo/{{$lunbo->id}}" method="post" enctype="multipart/form-data">
 	  <div class="form-group">
-	    <label for="inputPassword3" class="col-sm-2 control-label">name</label>
+	    <label for="inputPassword3" class="col-sm-2 control-label">名称</label>
 	    <div class="col-sm-5">
-	      <input type="text" class="form-control" id="inputPassword3" value="{{$user->phone}}" name="phone">
+	      <input type="text" class="form-control" id="inputPassword3" value="{{$lunbo->pid}}" name="pid">
 	    </div>
 	  </div>
 	  
 	     <div class="form-group">
-        <img src="{{$user->touxiang}}" alt="" width="200" style="margin-left:-500px; ">
-        <br>
-        <label for="inputPassword3" class="col-sm-2 control-label">头像</label>
+        <label for="inputPassword3" class="col-sm-2 control-label">图片</label>
         <div class="col-sm-5">
-        <input type="file" class="form-control" name="touxiang">
+        <img src="{{$lunbo->url}}" alt="" width="200px;">
+        <input type="file" class="form-control" name="url">
         </div>
     </div>
 	  
