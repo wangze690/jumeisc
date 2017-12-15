@@ -59,7 +59,12 @@ class UserController extends Controller
     public function store(Request $request)
     {
         // dd($request->all());
+
       $info =  $request->only('phone','touxiang');
+
+      $info =  $request->only('username','password','email','phone');
+      $info['password'] = encrypt($info['password']);
+
       //文件上传
       if($request->hasFile('touxiang'))
       {
@@ -153,5 +158,12 @@ class UserController extends Controller
              return back()->with('msg','删除成功');
         }
 
+    }
+
+    public function logout(Request $request)
+    {
+      //清除session
+      $request->session()->flush();
+      return back();
     }
 }

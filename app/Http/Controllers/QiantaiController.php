@@ -29,7 +29,7 @@ class QiantaiController extends Controller
             session(['phone'=>$user->phone]);
 
             //登陆成功
-            return redirect('/grzxs')->with('msg','登陆成功');
+            return redirect('/mzsc')->with('msg','登陆成功');
             
         }
         return back()->with('msg','登录失败');

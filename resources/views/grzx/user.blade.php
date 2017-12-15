@@ -45,7 +45,7 @@
 		        <h2>我的聚美优品<b></b></h2>
 		       	<li><span class="glyphicon glyphicon-list" aria-hidden="true"></span>我的订单</li>
 		        <li><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>我的心愿单</li>
-		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>我的收藏</li>
+		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span><a href="/shoucang">我的收藏</a></li>
 		        <li><span class="glyphicon glyphicon-road" aria-hidden="true"></span>我的会员等级</li>
 		        <li><span class="glyphicon glyphicon-tag" aria-hidden="true"></span>我的现金劵</li>
 		        <li><span class="glyphicon glyphicon-yen" aria-hidden="true"></span>我的红包</li>
@@ -55,8 +55,13 @@
 		        <h2>管理个人账户<b></b></h2>
 		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>我的现金劵</li>
 		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>我的红包</li>
+<<<<<<< HEAD
 		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>管理收货地址</li>
 		        <li><span class="glyphicon glyphicon-user" aria-hidden="true"></span>设置账户信息</li>
+=======
+		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>我的金币</li>
+		        <li><span class="glyphicon glyphicon-user" aria-hidden="true"></span><a href="/grzx">设置账户信息</a></li>
+>>>>>>> eaff5f0c46583c638b9c7583b9e54f2d3051768e
 		        <h2>售后服务<b></b></h2>
 		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>我的现金劵</li>
 		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>我的红包</li>

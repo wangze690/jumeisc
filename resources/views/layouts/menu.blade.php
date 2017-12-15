@@ -28,15 +28,32 @@
 			</div>
 			<div class="div2">
 				<div class="spgl"></div>
-				类别管理
+				分类管理
 			</div>
 			<div class="div3">
 				<ul>
-					<li><a class="a" href="javascript:void(0);"
-						onClick="openurl('classQuery.html');">大类信息</a></li>
+					<li><a class="a" href="/flgli/create"
+						onClick="openurl('classQuery.html');">添加分类</a></li>
+					<li><a class="a" href="/flgli"
+						onClick="">分类管理</a></li>
 						
 				</ul>
 			</div>
+
+			<div class="div2">
+				<div class="spgl"></div>
+				商品管理
+			</div>
+			<div class="div3">
+				<ul>
+					<li><a class="a" href="/spgli/create"
+						onClick="openurl('classQuery.html');">添加商品</a></li>
+					<li><a class="a" href="/spgli"
+						onClick="">商品列表</a></li>
+						
+				</ul>
+			</div>
+
 			<div class="div2">
 				<div class="yhgl"></div>
 				用户管理

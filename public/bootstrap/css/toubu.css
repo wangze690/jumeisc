@@ -8,6 +8,12 @@ header{
 	padding: 0px;
 	height: 40px;
 }
+span{
+	cursor: pointer;
+}
+span:hover{
+	color: #ed145b;
+}
 .tb_o ul{
 	line-height: 40px;
 	color: #6c6c6c;

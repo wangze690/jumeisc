@@ -101,7 +101,7 @@ class ArticleController extends Controller
      */
     public function destroy($id)
     {
-      dd($id);
+      
        if(DB::table('nav')->where('id',$id)->delete())
         {
              return back()->with('msg','删除成功');
