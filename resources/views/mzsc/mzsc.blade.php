@@ -317,30 +317,21 @@
 		<div class="container">
 			<div class="col-md-4 col-md-offset-4 h2 text-center b_d">精选活动ACTIVITY</div>
 		</div>
-		@foreach($senr as $c=>$e)
-		<div class="container">
-			
+		
+		<div class="container" style="padding: 0px;">
+			@foreach($senr as $c=>$e)
 			<div class="col-md-6 nmg">
 				<img src="./bootstrap/images/{{$e->sppro}}" width="560px" height="280" alt="">
 				<ul class="pull-left nmg_w">
-					<li class="li_o h4"><b>{{$e->sptitle}}</b></li>
-					<li class="li_t">{{$e->spcount}}</li>
+					<li class="li_o h4"><b>{{$e->shoptitle}}</b></li>
+					<li class="li_t">{{$e->shopcons}}</li>
 					<li class="li_s">满<span>{{$e->manmany}}</span>赠<span>{{$e->zengmany}}</span></li>
 				</ul>
 				<img class="pull-right nmg_z" src="./bootstrap/images/{{$e->xiaopro}}" alt="">
 			</div>
-			<div class="col-md-6 nmgs">
-				<img src="./bootstrap/images/{{$e->sppro}}" width="560px" height="280" alt="">
-				<ul class="pull-left nmg_w">
-					<li class="li_o h4"><b>{{$e->sptitle}}</b></li>
-					<li class="li_t">{{$e->spcount}}</li>
-					<li class="li_s">满<span>{{$e->manmany}}</span>赠<span>{{$e->zengmany}}</span></li>
-				</ul>
-				<img class="pull-right nmg_z" src="./bootstrap/images/{{$e->xiaopro}}" alt="">
-			</div>
-			
+			@endforeach
 		</div>
-		@endforeach
+		
 	</section>
 	@include('layouts.foot')
 </div>

@@ -159,9 +159,7 @@
 <script type="text/javascript"></script>
 <script>
 	$('.jrgwc').click(function(){
-		var sp_id = $('input[type=hidden]').val();
-		alert(sp_id);
-		exit;
+		var sp_id = $(this).parent().parent().find('input[type=hidden]').val();
 		$.ajax({
 			type:'get',
 			url:'/jrgwc',
@@ -181,13 +179,13 @@
 	})
 
 	$('.shoucang').click(function(){
-		var sp_id = $('input[type=hidden]').val();
+		var sp_id = $(this).parent().parent().find('input[type=hidden]').val();
 		$.ajax({
 			type:'get',
 			url:'/jrsc',
 			data:{'sp_id':sp_id},
 			success:function(msg){
-				if(msg)
+				if(msg == 1)
 				{
 					alert('添加收藏成功');
 				}

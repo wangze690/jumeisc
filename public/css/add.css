@@ -1,7 +1,10 @@
+.form-horizontal{
+	margin-bottom:50px; 
+}
 textarea{
-	width: 300px;
-	height: 160px;
-	margin-left:100px;
+	width: 350px;
+	height: 80px;
+	margin-left:10px;
 }
 .address-item {
         border:solid 1px #ddd;
@@ -9,10 +12,20 @@ textarea{
 .dizhi{
 	width: 740px;
 	height: 300px;
-	border: 1px solid #999;
 	margin-left:-90px; 
 }
 .row div{
-	height: 30px;
+	height: 40px;
+	text-align: center;
+	line-height: 35px;
 
+}
+.btn{
+	margin-top:10px;
+	margin-left: 10px;
+}
+.control-label{
+	width: 90px;
+	margin-left: -50px;
+	line-height: 30px;
 }

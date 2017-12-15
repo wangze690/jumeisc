@@ -8,15 +8,15 @@
 	<div class="right" style="margin-top:50px;">
 	<form class="form-horizontal" action="/user" method="post" enctype="multipart/form-data">
 	  <div class="form-group">
-	    <label for="inputPassword3" class="col-sm-2 control-label">name</label>
-	    <div class="col-sm-5">
-	      <input type="text" class="form-control" id="inputPassword3" placeholder="name" name="username">
-	    </div>
-	  </div>
-	  <div class="form-group">
 	    <label for="inputPassword3" class="col-sm-2 control-label">phone</label>
 	    <div class="col-sm-5">
 	      <input type="text" class="form-control" id="inputPassword3" placeholder="phone" name="phone">
+	    </div>
+	  </div>
+	 <div class="form-group" style="margin-top:20px; ">
+	    <label for="inputPassword3" class="col-sm-2 control-label">profile</label>
+	    <input type="file" class="inputPassword3" name="touxiang">
+	      <input type="text" class="form-control" id="inputPassword3" placeholder="name" name="username">
 	    </div>
 	  </div>
 	 <div class="form-group">
@@ -46,7 +46,7 @@
 	  {{csrf_field()}}
 	  <div class="form-group">
 	    <div class="col-sm-offset col-sm-8">
-	      <button type="submit" class="btn btn-info">Sign in</button>
+	      <button type="submit" class="btn btn-info">提 交</button>
 	    </div>
 	  </div>
 	</form>

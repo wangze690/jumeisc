@@ -50,7 +50,7 @@ class FlgliController extends Controller
         $data = $request->except(['_token']);
         //判断是否食顶级分类
         if($data['pid'] == 0){
-            $data['path'] = '2';  
+            $data['path'] = '3';  
         }
         else{
             //读取父级分类的信息
@@ -85,7 +85,10 @@ class FlgliController extends Controller
      */
     public function edit($id)
     {
-        //
+        $ak = DB::table('nav')->where('id',$id)->first();
+        return view('admin.flgli.edit',[
+            'ak'=>$ak
+            ]);
     }
 
     /**
@@ -97,7 +100,13 @@ class FlgliController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $xiugai = $request->only('navname','pid','path','url');
+        if(DB::table('nav')->where('id',$id)->update($xiugai))
+        {
+            return redirect('/flgli')->with('msg','修改成功');
+        }else{
+            return back()->with('msg','修改成功');
+        }
     }
 
     /**

@@ -16,27 +16,25 @@
 	  <div class="form-group">
 	    <label for="inputPassword3" class="col-sm-2 control-label">name</label>
 	    <div class="col-sm-5">
-	      <input type="text" class="form-control" id="inputPassword3" value="{{$user->username}}" name="username">
+	      <input type="text" class="form-control" id="inputPassword3" value="{{$user->phone}}" name="phone">
 	    </div>
 	  </div>
-	   <div class="form-group">
-	    <label for="inputPassword3" class="col-sm-2 control-label">email</label>
-	    <div class="col-sm-5">
-	      <input type="text" class="form-control" id="inputPassword3" value="{{$user->email}}" name="email">
-	    </div>
-	  </div>
-	  <div class="form-group">
-	    <label for="inputPassword3" class="col-sm-2 control-label">photo</label>
-	    <div class="col-sm-5">
-	      <img src="{{$user->profile}}" alt="">
-	      <input type="file" class="form-control" id="inputPassword3" name="profile">
-	    </div>
-	  </div>
+	  
+	     <div class="form-group">
+        <img src="{{$user->touxiang}}" alt="" width="200" style="margin-left:-500px; ">
+        <br>
+        <label for="inputPassword3" class="col-sm-2 control-label">头像</label>
+        <div class="col-sm-5">
+        <input type="file" class="form-control" name="touxiang">
+        </div>
+    </div>
+	  
+                
 	  {{method_field('PUT')}}
 	  {{csrf_field()}}
 	  <div class="form-group">
 	    <div class="col-sm-offset col-sm-8">
-	      <button type="submit" class="btn btn-info">Sign in</button>
+	      <button type="submit" class="btn btn-info">提 交</button>
 	    </div>
 	  </div>
 

@@ -16,6 +16,24 @@ Route::get('/', function () {
 });
 
 
+//登录路由
+Route::get('/admin/login','LoginController@login');
+Route::post('/admin/login','LoginController@quert');
+
+Route::group(['middleware'=>'login'],function(){
+//后台管理路由
+Route::get('/admin','AdminController@index');
+//用户管理路由
+Route::resource('user','UserController');
+//留言管理路由
+Route::resource('article','ArticleController');
+
+Route::resource('cate','CateController');
+});
+
+Route::get('/denglu','UserController@logout');
+
+
 
 Route::get('/liebiao','LiebiaoController@liebiao');
 
@@ -27,23 +45,29 @@ Route::post('/denglu','QiantaiController@postdenglu');
 //前台注册
 Route::get('/zhuce','QiantaiController@zhuce');
 Route::post('/zhuce','QiantaiController@getzhuce');
-
+//个人中心
 Route::get('/grzx','QiantaiController@grzx');
+//收货地址
 Route::get('/grzxs','QiantaiController@grzxs');
-Route::post('/grzxs', 'QiantaiController@addres');
+Route::post('/grzxss', 'QiantaiController@addres');
 Route::get('/getarea', 'QiantaiController@getArea');
+Route::get('/delete', 'QiantaiController@delete');
 
-	//首页路由
+//首页路由
 Route::get('/jumei','IndexController@index');
+
 	//购物车路由
 Route::get('/cart','CartController@cart');
+
+
+
 Route::get('/cart/delete','CartController@delete');
 Route::post('/dingdan','CartController@dingdan');
 //个人中心路由
 Route::get('/jumei/person{id}','PersonController@person');
 Route::post('/jumei/person{id}','PersonController@creat');
-
-
+//轮播管理路由
+Route::resource('/lunbo','LunboController');
 
 
 
@@ -72,14 +96,8 @@ Route::get('/baoshi','BaoshiController@baoshi');
 //列表gougo
 Route::get('/gougo','LiebiaoController@gougo');
 //收藏
-
 Route::get('/shoucang','ShoucangController@shoucang');
-
-
-//session
-Route::get('/qcsession','SessionController@qcsession');
-
-
+Route::post('/qcshoucang/{id}','ShoucangController@delete');
 
 
 //后台管理路由
@@ -94,3 +112,5 @@ Route::resource('sizemana','SizemanaController');
 Route::resource('cartmana','CartmanaController');
 //分类管理
 Route::resource('flgli','FlgliController');
+//商品管理
+Route::resource('spgli','SpgliController');

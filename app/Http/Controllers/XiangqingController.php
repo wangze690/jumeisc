@@ -96,9 +96,9 @@ class XiangqingController extends Controller
             'user_id' => $user_id,
             'addDate' => $addDate
         ];
-        if(emtyp($user_id))
+        if(empty($user_id))
         {
-
+           
         }
         else
         {

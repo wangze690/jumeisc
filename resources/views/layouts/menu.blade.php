@@ -12,7 +12,7 @@
 			</div>
 			<div class="div3">
 				<li><a class="a" href="/user/create">添加用户</a></li>
-				<li><a class="a" href="/user">管理用户</a></li>
+				<li><a class="a" href="/user">用户列表</a></li>
 			   
 			</div>
 			<div class="div2">
@@ -39,6 +39,21 @@
 						
 				</ul>
 			</div>
+
+			<div class="div2">
+				<div class="spgl"></div>
+				商品管理
+			</div>
+			<div class="div3">
+				<ul>
+					<li><a class="a" href="/spgli/create"
+						onClick="openurl('classQuery.html');">添加商品</a></li>
+					<li><a class="a" href="/spgli"
+						onClick="">商品列表</a></li>
+						
+				</ul>
+			</div>
+
 			<div class="div2">
 				<div class="yhgl"></div>
 				尺码管理
@@ -64,17 +79,15 @@
 			</div>
 			<div class="div2">
 				<div class="pjgl"></div>
-				公告管理
+				轮播管理
 			</div>
 			<div class="div3">
 				<ul>
-					<li><a class="a" href="javascript:void(0);"
-						onClick="openurl('afficheQuery.html');">查看公告</a></li>
-					<li><a class="a" href="javascript:void(0);"
-						onClick="openurl('afficheAdd.html');">添加公告</a></li>
+					<li><a class="a" href="/lunbo/create">添加内容</a></li>
+					<li><a class="a" href="/lunbo"></a>轮播列表</li>
 				</ul>
 			</div>
-			<a class="a1" href="login.html"><div class="div2">
+			<a class="a1" href="/admin/login"><div class="div2">
 					<div class="tcht"></div>
 					退出后台
 				</div></a>

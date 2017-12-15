@@ -4,7 +4,7 @@
 	<div class="col-md-8 dao">
 		<ul class="nav nav-pills">
 			@foreach($nav as $k=>$v)
-			<li role="presentation"><a href="#">{{$v->navname}}</a></li>
+			<li role="presentation"><a href="{{$v->url}}">{{$v->navname}}</a></li>
 			@endforeach
 		</ul>
 	</div>

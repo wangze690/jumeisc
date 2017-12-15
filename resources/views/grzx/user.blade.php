@@ -45,7 +45,7 @@
 		        <h2>我的聚美优品<b></b></h2>
 		       	<li><span class="glyphicon glyphicon-list" aria-hidden="true"></span>我的订单</li>
 		        <li><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>我的心愿单</li>
-		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>我的收藏</li>
+		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span><a href="/shoucang">我的收藏</a></li>
 		        <li><span class="glyphicon glyphicon-road" aria-hidden="true"></span>我的会员等级</li>
 		        <li><span class="glyphicon glyphicon-tag" aria-hidden="true"></span>我的现金劵</li>
 		        <li><span class="glyphicon glyphicon-yen" aria-hidden="true"></span>我的红包</li>
@@ -55,8 +55,13 @@
 		        <h2>管理个人账户<b></b></h2>
 		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>我的现金劵</li>
 		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>我的红包</li>
-		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>我的金币</li>
+<<<<<<< HEAD
+		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>管理收货地址</li>
 		        <li><span class="glyphicon glyphicon-user" aria-hidden="true"></span>设置账户信息</li>
+=======
+		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>我的金币</li>
+		        <li><span class="glyphicon glyphicon-user" aria-hidden="true"></span><a href="/grzx">设置账户信息</a></li>
+>>>>>>> eaff5f0c46583c638b9c7583b9e54f2d3051768e
 		        <h2>售后服务<b></b></h2>
 		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>我的现金劵</li>
 		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>我的红包</li>
@@ -74,13 +79,13 @@
 				<form id="settings-form" method="post" action="/i/account/settings">
 		        <input type="hidden" name="jm_form_hash" id="jm_form_hash" value="506b56ea">
 				<div class="avatar_change">
-					<img src="./img/0.png" alt="大头像">
+					<img src="{{$userinfos->touxiang}}" alt="大头像">
 					<a href="#" class="changeavatar">修改头像</a>
 				</div>
 
 				<div class="input_container">
 					<label for="settings-username"><span class="spark">*</span>用户名</label>
-					<input required="" type="text" size="30" name="username" id="settings-username" class="t_input" value="赵晶晶asc">
+					<input required="" type="text" size="30" name="username" id="settings-username" class="t_input" value="{{$userinfos->name}}">
 					<!-- <span class="valueMissing">请填写您的用户名</span>
 					<span class="patternMismatch">应为4-16个中英文字符，不能以数字开头</span>
 					<span class="customError">应为4-16个中英文字符，不能以数字开头</span>  -->
@@ -89,43 +94,46 @@
 				<dl class="formlist">
 					<dt>Email</dt>
 					<dd>
-		            				<span class="data">您还未绑定邮箱</span>
+        				<span class="data">{{$userinfos->email}}</span>
 						<a href="#" class="btn_mid_pink">立即绑定</a>
-		                			</dd>
+            		</dd>
 				</dl>
 
 				<dl class="formlist">
 					<dt>手机号</dt>
 					<dd>
-		            				<span class="data">176****0324</span>
-						<a href="/i/account/mobile_bind" target="_blank">修改</a>
-							<span class="hint">已验证</span>
-		            			</dd>
+	    				<span class="data">{{$userinfos->phone}}</span>
+					<a href="/i/account/mobile_bind" target="_blank">修改</a>
+				<span class="hint">已验证</span>
+	    			</dd>
 				</dl>
 
 				<div class="input_container">
 					<label>性别</label>
+					@if($userinfos->sex == 0)
 					<label class="radio">
 						<span class="radio_ui">
-							<input name="gender" type="radio" id="gender_f" autocomplete="off" value="2" checked="checked">
+							<input name="gender" type="radio" id="gender_f" autocomplete="off" value="0" checked="checked">
 							<b></b>
 						</span>
 						女
 					</label>
+					@else
 					<label class="radio">
 						<span class="radio_ui">
-							<input name="gender" type="radio" id="gender_m" autocomplete="off" value="1">
+							<input name="gender" type="radio" id="gender_m" autocomplete="off" value="1" checked="checked">
 							<b></b>
 						</span>
 						男
 					</label>
+					@endif
 				</div>
 				<div class="input_container">
 					<label><span class="spark">*</span>生日</label>
 		            <span class="select_ui">
 	            	<select class="form-control">
 	                            <option value=""></option>
-	                            <option selected="selected" value="2010">2010</option>
+	                            <option selected="selected" value="2010">{{$userinfos->shengr}}</option>
 	                            <option value="2009">2009</option>
 	                            <option value="2008">2008</option>
 	                            <option value="2007">2007</option>
