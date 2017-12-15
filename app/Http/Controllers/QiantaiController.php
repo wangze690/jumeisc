@@ -58,7 +58,28 @@ class QiantaiController extends Controller
        
     	return view('grzx.user',['userinfos'=>$userinfos,'nav'=>$nav]);
     }
-
+    public function update(Request $request)
+    {
+        $info = $request->except('_token');
+        //文件上传
+      if($request->hasFile('touxiang'))
+      {
+        //获取文件后缀
+       $str = $request->file('touxiang')->extension();
+       //创建一个新的名称
+       $name = uniqid('img').'.'.$str;
+       //文件夹路径
+       $path = './uploade'.date('Y-m-d');
+       //移动文件
+       $request->file('touxiang')->move($path,$name);
+       //获取文件的路径
+       $info['touxiang'] = trim($path.'/'.$name,'.');
+      }
+        if(DB::table('userinfos')->update($info))
+        {
+            return back()->with('msg','更新成功');
+        }
+    }
 
 
 
@@ -92,7 +113,6 @@ class QiantaiController extends Controller
             
         }
        
-
     }
     public function getArea(Request $request)
     {

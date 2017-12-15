@@ -32,7 +32,7 @@
 		<div class="col-md-4 nav">
 			<div class="notice">
 				<div class="pull-left">
-					<img src="./img/0.png" alt="" style="width: 48px;height: 48px;">
+					<img src="/images/{{$userinfos->touxiang}}" alt="" style="width: 48px;height: 48px;">
 	        	</div>
 	        	<div class="pull-right">
 	        		<p style="line-height: 20px;color: #"><a href="#">那个女孩</a></p>
@@ -71,16 +71,16 @@
 		<div class="col-md-9">
 			<h1>设置账户信息</h1>
 			<div class="container center">
-				<form id="settings-form" method="post" action="/i/account/settings">
-		        <input type="hidden" name="jm_form_hash" id="jm_form_hash" value="506b56ea">
+			<form id="settings-form" method="post" action="/grzx" enctype="multipart/form-data">
+		        
 				<div class="avatar_change">
-					<img src="{{$userinfos->touxiang}}" alt="大头像">
-					<a href="#" class="changeavatar">修改头像</a>
+					<img src="/images/{{$userinfos->touxiang}}" alt="大头像">
+					<input type="file" name="touxiang">
 				</div>
 
 				<div class="input_container">
 					<label for="settings-username"><span class="spark">*</span>用户名</label>
-					<input required="" type="text" size="30" name="username" id="settings-username" class="t_input" value="{{$userinfos->name}}">
+					<input required="" type="text" size="30" name="name" id="settings-username" class="t_input" value="{{$userinfos->name}}">
 					<!-- <span class="valueMissing">请填写您的用户名</span>
 					<span class="patternMismatch">应为4-16个中英文字符，不能以数字开头</span>
 					<span class="customError">应为4-16个中英文字符，不能以数字开头</span>  -->
@@ -89,7 +89,8 @@
 				<dl class="formlist">
 					<dt>Email</dt>
 					<dd>
-        				<span class="data">{{$userinfos->email}}</span>
+        				<span class="data">{{$userinfos->email}}
+        				</span>
             		</dd>
 				</dl>
 
@@ -107,7 +108,7 @@
 					@if($userinfos->sex == 0)
 					<label class="radio">
 						<span class="radio_ui">
-							<input name="gender" type="radio" id="gender_f" autocomplete="off" value="0" checked="checked">
+							<input type="radio" id="gender_f" autocomplete="off" value="0" checked="checked">
 							<b></b>
 						</span>
 						女
@@ -115,7 +116,7 @@
 					@else
 					<label class="radio">
 						<span class="radio_ui">
-							<input name="gender" type="radio" id="gender_m" autocomplete="off" value="1" checked="checked">
+							<input type="radio" id="gender_m" autocomplete="off" value="1" checked="checked">
 							<b></b>
 						</span>
 						男
@@ -132,14 +133,14 @@
 				<label>隐私</label>
 				<label class="checkbox">
 					<span class="checkbox_ui">
-	                    <input type="checkbox" value="1" id="hide_privacy" name="hide_privacy" checked="checked">
+	                    <input type="checkbox" value="1" id="hide_privacy" checked="checked">
 						<b></b>
 					</span>
 					不显示我的年龄
 				</label>
 				<label class="checkbox">
 					<span class="checkbox_ui">
-	                    <input type="checkbox" value="1" id="show_my_products" name="show_my_products" checked="checked">
+	                    <input type="checkbox" value="1" id="show_my_products" checked="checked">
 						<b></b>
 					</span>
 					在口碑中心显示我的美妆
@@ -148,12 +149,13 @@
 				<div class="input_container selectwidth">
 				<label for="skin_type"><span class="spark">*</span>你的皮肤属于</label>
 	            <span class="select_ui">
+	            <input type="hidden" value="{{$userinfos->pifu}}" name="pifu">
 	            	<select class="form-control">
 	                            <option value=""></option>
 	                            <option value="油性皮肤">油性皮肤</option>
 	                            <option value="干性皮肤">干性皮肤</option>
 	                            <option value="中性皮肤">中性皮肤</option>
-	                            <option selected="selected" value="混合性皮肤">{{$userinfos->pifu}}</option>
+	                            <option selected="selected" value="混合性皮肤"  name="pifu">{{$userinfos->pifu}}</option>
 	                            <option value="敏感型皮肤">敏感型皮肤</option>
 	                            <option value="敏感油性皮肤">敏感油性皮肤</option>
 	                            <option value="敏感干性皮肤">敏感干性皮肤</option>
@@ -167,10 +169,11 @@
 			<div class="input_container selectwidth">
 				<label for="hair_type"><span class="spark">*</span>你的发质属于</label>
 	            <span class="select_ui">
+	            <input type="hidden" value="{{$userinfos->fazhi}}" name="fazhi">
 	            	<select class="form-control">
 	                            <option value=""></option>
 	                            <option value="油性发质">油性发质</option>
-	                            <option selected="selected" value="干性发质">{{$userinfos->fazhi}}</option>
+	                            <option selected="selected" value="干性发质" name="fazhi">{{$userinfos->fazhi}}</option>
 	                            <option value="中性发质">中性发质</option>
 	                            <option value="混合性发质">混合性发质</option>
 	                            <option value="受损发质">受损发质</option>
@@ -184,10 +187,11 @@
 				<label for="purchasing_power"><span class="spark">*</span>美容品年消费</label>
 
 	        <span class="select_ui">
+	         <input type="hidden" value="{{$userinfos->meir}}" name="meir">
 	        	<select class="form-control">
 	                            <option value=""></option>
 	                            <option value="0-499">0-499</option>
-	                            <option selected="selected" value="500-999">{{$userinfos->meir}}</option>
+	                            <option selected="selected" value="500-999" name="meir">{{$userinfos->meir}}</option>
 	                            <option value="1000-2999">1000-2999</option>
 	                            <option value="3000-4999">3000-4999</option>
 	                            <option value="5000-6999">5000-6999</option>
@@ -200,12 +204,13 @@
 				</div>
 				<div class="input_container">
 					<label for="comment">美丽宣言</label>
-					<textarea rows="8" cols="50" id="comment" name="comment">{{$userinfos->neir}}</textarea>
+					<textarea rows="8" cols="50" id="comment" name="neir">{{$userinfos->neir}}</textarea>
 					<!-- <p class="comment_tip">您已输入<span class="dg dg1">0</span>个字符，<span class="tip_text2">还能输入</span><span class="dg dg2">200</span>个字符</p> -->
 				    <div style="margin-left: 150px;margin-top: 8px;color: #ed145b;">美丽宣言为个人设置信息,小美不会为您自动填写哦!</div>
 				</div>
+				{{csrf_field()}}
 				<div class="container act">
-					<button type="button" class="btn btn-info">保存修改</button>
+					<button type="submit" class="btn btn-info">保存修改</button>
 				</div>
 					
 				</form>
