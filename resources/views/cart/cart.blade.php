@@ -203,7 +203,6 @@
 		data:{'cid':cid},
 		success:function(data)
 		{
-
 			if(data == '1')
 			{
 				tr.fadeOut(1000);

@@ -35,7 +35,9 @@
 					</li>
 					<li id="chue">
 						<!-- <span id="phone">15047446816</span> -->
-						<input type="text" name="phone" class="input-sm">
+						@foreach($phone as $k => $v)
+						<input type="text" name="phone" class="input-sm" value="{{$v->phone}}">
+						@endforeach
 						&nbsp;&nbsp;&nbsp;
 						<a href="#" style="color:#ed145b;">修改</a>
 					</li>

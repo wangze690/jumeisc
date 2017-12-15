@@ -1,4 +1,3 @@
-
 <?php
 
 /*
@@ -15,6 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
 
 //登录路由
 Route::get('/admin/login','LoginController@login');
@@ -53,8 +53,12 @@ Route::get('/delete', 'QiantaiController@delete');
 
 //首页路由
 Route::get('/jumei','IndexController@index');
-//购物车路由
-Route::get('/cart{id}','CartController@cart');
+
+	//购物车路由
+Route::get('/cart','CartController@cart');
+
+
+
 Route::get('/cart/delete','CartController@delete');
 Route::post('/dingdan','CartController@dingdan');
 //个人中心路由
@@ -78,6 +82,7 @@ Route::get('liebiaotwo','LiebiaoController@liebiaotwo');
 Route::get('liebiaosan','LiebiaoController@liebiaosan');
 
 //详情
+Route::get('/xiangqing','XiangqingController@xiangqing');
 Route::get('/xiangqing/{id}','XiangqingController@xiangqing');
 Route::get('/jrgwc/','XiangqingController@jrgwc');
 Route::get('/jrsc','XiangqingController@jrsc');
@@ -85,12 +90,24 @@ Route::get('/jrsc','XiangqingController@jrsc');
 Route::get('/liebiaotwo','LiebiaoController@liebiaotwo');
 //列表(保湿)
 Route::get('/baoshi','BaoshiController@baoshi');
+
 //列表gougo
 Route::get('/gougo','LiebiaoController@gougo');
 //收藏
 Route::get('/shoucang','ShoucangController@shoucang');
 Route::post('/qcshoucang/{id}','ShoucangController@delete');
 
+
+//后台管理路由
+Route::get('/admin','AdminController@index');
+
+Route::resource('/user','UserController');
+
+
+// 我的尺码路由
+Route::resource('sizemana','SizemanaController');
+// 购物车后台
+Route::resource('cartmana','CartmanaController');
 //分类管理
 Route::resource('flgli','FlgliController');
 //商品管理

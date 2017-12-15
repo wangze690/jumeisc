@@ -56,28 +56,24 @@
 
 			<div class="div2">
 				<div class="yhgl"></div>
-				用户管理
+				尺码管理
 			</div>
 			<div class="div3">
 				<ul>
-					<li><a class="a" href="javascript:void(0);"
-						onClick="openurl('studentQuery.html');">学生管理</a></li>
-					<li><a class="a" href="javascript:void(0);"
-						onClick="openurl('teacherQuery.html');">老师管理</a></li>
+					<li><a class="a" href="/sizemana/create">尺码添加</a></li>
+					<li><a class="a" href="/sizemana">尺码管理</a></li>
 				</ul>
 			</div>
 			
 			<div class="div2">
 				<div class="gggl"></div>
-				评价管理
+				购物车管理
 			</div>
 			<div class="div3">
 
 				<ul>
-					<li><a class="a" href="javascript:void(0);"
-						onClick="openurl('deletecomment.html');">评价删除</a></li>
-					<li><a class="a" href="javascript:void(0);"
-						onClick="openurl('useredit.html');">用户禁言</a></li>
+					<li><a class="a" href="/cartmana/create">添加购物</a></li>
+					<li><a class="a" href="/cartmana">管理购物</a></li>
 				</ul>
 
 			</div>
@@ -91,7 +87,7 @@
 					<li><a class="a" href="/lunbo">轮播列表</a></li>
 				</ul>
 			</div>
-			<a class="a1" href="login.html"><div class="div2">
+			<a class="a1" href="/admin/login"><div class="div2">
 					<div class="tcht"></div>
 					退出后台
 				</div></a>
