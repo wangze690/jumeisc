@@ -93,7 +93,7 @@ class LunboController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $info = $request->only('pid');
+        $info = $request->only('pid','url');
          if($request->hasFile('url'))
           {
             //获取文件后缀
@@ -111,7 +111,7 @@ class LunboController extends Controller
           //将数据插入到数据库中
           if(DB::table('lunbo')->update($info))
           {
-            return redirect('/lunbo')->with('msg','更新成功');
+            return redirect('/lunbo')->with('msg','修改成功');
           }
     }
 

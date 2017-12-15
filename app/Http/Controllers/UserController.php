@@ -62,9 +62,6 @@ class UserController extends Controller
 
       $info =  $request->only('phone','touxiang');
 
-      $info =  $request->only('username','password','email','phone');
-      $info['password'] = encrypt($info['password']);
-
       //文件上传
       if($request->hasFile('touxiang'))
       {
@@ -120,7 +117,7 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $info = $request->only('username','email');
+        $info = $request->only('phone','touxiang');
         //文件上传
       if($request->hasFile('touxiang'))
       {

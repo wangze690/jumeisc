@@ -29,7 +29,7 @@ class QiantaiController extends Controller
             session(['phone'=>$user->phone]);
 
             //登陆成功
-            return redirect('/mzsc')->with('msg','登陆成功');
+            return redirect('/grzxs')->with('msg','登陆成功');
             
         }
         return back()->with('msg','登录失败');
@@ -46,7 +46,7 @@ class QiantaiController extends Controller
    
       //将数据插入到数据库中
         DB::table('users')->insert($userinfo);
-        return view('user.denglu');
+        return redirect('/denglu')->with('msg','注册成功');
     }
 
      public function grzx()
@@ -54,9 +54,8 @@ class QiantaiController extends Controller
         $nav = DB::table('nav')->where('path',2)->get();
         $sid = session('id');
         $userinfos = DB::table('userinfos')->where('user_id',$sid)->first();
-        $shengr = $userinfos->shengr
-        $year = substr(0,3);
-        dd($year);
+        
+       
     	return view('grzx.user',['userinfos'=>$userinfos,'nav'=>$nav]);
     }
 

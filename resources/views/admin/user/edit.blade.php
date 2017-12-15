@@ -27,9 +27,7 @@
         <div class="col-sm-5">
         <input type="file" class="form-control" name="touxiang">
         </div>
-    </div>
-	  
-                
+    </div>         
 	  {{method_field('PUT')}}
 	  {{csrf_field()}}
 	  <div class="form-group">

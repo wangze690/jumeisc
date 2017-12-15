@@ -33,8 +33,6 @@ Route::resource('cate','CateController');
 
 Route::get('/denglu','UserController@logout');
 
-
-
 Route::get('/liebiao','LiebiaoController@liebiao');
 
 Route::get('/mzsc','MzscController@mzsc');

@@ -88,7 +88,7 @@
 			<div class="div3">
 				<ul>
 					<li><a class="a" href="/lunbo/create">添加内容</a></li>
-					<li><a class="a" href="/lunbo"></a>轮播列表</li>
+					<li><a class="a" href="/lunbo">轮播列表</a></li>
 				</ul>
 			</div>
 			<a class="a1" href="login.html"><div class="div2">

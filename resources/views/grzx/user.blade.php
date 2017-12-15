@@ -45,7 +45,7 @@
 		        <h2>我的聚美优品<b></b></h2>
 		       	<li><span class="glyphicon glyphicon-list" aria-hidden="true"></span>我的订单</li>
 		        <li><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>我的心愿单</li>
-		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span><a href="/shoucang">我的收藏</a></li>
+		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>我的收藏</li>
 		        <li><span class="glyphicon glyphicon-road" aria-hidden="true"></span>我的会员等级</li>
 		        <li><span class="glyphicon glyphicon-tag" aria-hidden="true"></span>我的现金劵</li>
 		        <li><span class="glyphicon glyphicon-yen" aria-hidden="true"></span>我的红包</li>
@@ -55,13 +55,8 @@
 		        <h2>管理个人账户<b></b></h2>
 		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>我的现金劵</li>
 		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>我的红包</li>
-<<<<<<< HEAD
 		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>管理收货地址</li>
 		        <li><span class="glyphicon glyphicon-user" aria-hidden="true"></span>设置账户信息</li>
-=======
-		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>我的金币</li>
-		        <li><span class="glyphicon glyphicon-user" aria-hidden="true"></span><a href="/grzx">设置账户信息</a></li>
->>>>>>> eaff5f0c46583c638b9c7583b9e54f2d3051768e
 		        <h2>售后服务<b></b></h2>
 		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>我的现金劵</li>
 		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>我的红包</li>
@@ -95,7 +90,6 @@
 					<dt>Email</dt>
 					<dd>
         				<span class="data">{{$userinfos->email}}</span>
-						<a href="#" class="btn_mid_pink">立即绑定</a>
             		</dd>
 				</dl>
 
@@ -130,147 +124,27 @@
 				</div>
 				<div class="input_container">
 					<label><span class="spark">*</span>生日</label>
-		            <span class="select_ui">
-	            	<select class="form-control">
-	                            <option value=""></option>
-	                            <option selected="selected" value="2010">{{$userinfos->shengr}}</option>
-	                            <option value="2009">2009</option>
-	                            <option value="2008">2008</option>
-	                            <option value="2007">2007</option>
-	                            <option value="2006">2006</option>
-	                            <option value="2005">2005</option>
-	                            <option value="2004">2004</option>
-	                            <option value="2003">2003</option>
-	                            <option value="2002">2002</option>
-	                            <option value="2001">2001</option>
-	                            <option value="2000">2000</option>
-	                            <option value="1999">1999</option>
-	                            <option value="1998">1998</option>
-	                            <option value="1997">1997</option>
-	                            <option value="1996">1996</option>
-	                            <option value="1995">1995</option>
-	                            <option value="1994">1994</option>
-	                            <option value="1993">1993</option>
-	                            <option value="1992">1992</option>
-	                            <option value="1991">1991</option>
-	                            <option value="1990">1990</option>
-	                            <option value="1989">1989</option>
-	                            <option value="1988">1988</option>
-	                            <option value="1987">1987</option>
-	                            <option value="1986">1986</option>
-	                            <option value="1985">1985</option>
-	                            <option value="1984">1984</option>
-	                            <option value="1983">1983</option>
-	                            <option value="1982">1982</option>
-	                            <option value="1981">1981</option>
-	                            <option value="1980">1980</option>
-	                            <option value="1979">1979</option>
-	                            <option value="1978">1978</option>
-	                            <option value="1977">1977</option>
-	                            <option value="1976">1976</option>
-	                            <option value="1975">1975</option>
-	                            <option value="1974">1974</option>
-	                            <option value="1973">1973</option>
-	                            <option value="1972">1972</option>
-	                            <option value="1971">1971</option>
-	                            <option value="1970">1970</option>
-	                            <option value="1969">1969</option>
-	                            <option value="1968">1968</option>
-	                            <option value="1967">1967</option>
-	                            <option value="1966">1966</option>
-	                            <option value="1965">1965</option>
-	                            <option value="1964">1964</option>
-	                            <option value="1963">1963</option>
-	                            <option value="1962">1962</option>
-	                            <option value="1961">1961</option>
-	                            <option value="1960">1960</option>
-	                            <option value="1959">1959</option>
-	                            <option value="1958">1958</option>
-	                            <option value="1957">1957</option>
-	                            <option value="1956">1956</option>
-	                            <option value="1955">1955</option>
-	                            <option value="1954">1954</option>
-	                            <option value="1953">1953</option>
-	                            <option value="1952">1952</option>
-	                            <option value="1951">1951</option>
-	                            <option value="1950">1950</option>
-	                            <option value="1949">1949</option>
-	                        </select></span>
-
-	            <span class="select_ui"><select class="form-control">
-	                            <option value=""></option>
-	                            <option value="1">1</option>
-	                            <option selected="selected" value="2">2</option>
-	                            <option value="3">3</option>
-	                            <option value="4">4</option>
-	                            <option value="5">5</option>
-	                            <option value="6">6</option>
-	                            <option value="7">7</option>
-	                            <option value="8">8</option>
-	                            <option value="9">9</option>
-	                            <option value="10">10</option>
-	                            <option value="11">11</option>
-	                            <option value="12">12</option>
-	                        </select></span>
-
-	            <span class="select_ui">
-	            			<select class="form-control">
-	                            <option value=""></option>
-	                            <option value="1">1</option>
-	                            <option selected="selected" value="2">2</option>
-	                            <option value="3">3</option>
-	                            <option value="4">4</option>
-	                            <option value="5">5</option>
-	                            <option value="6">6</option>
-	                            <option value="7">7</option>
-	                            <option value="8">8</option>
-	                            <option value="9">9</option>
-	                            <option value="10">10</option>
-	                            <option value="11">11</option>
-	                            <option value="12">12</option>
-	                            <option value="13">13</option>
-	                            <option value="14">14</option>
-	                            <option value="15">15</option>
-	                            <option value="16">16</option>
-	                            <option value="17">17</option>
-	                            <option value="18">18</option>
-	                            <option value="19">19</option>
-	                            <option value="20">20</option>
-	                            <option value="21">21</option>
-	                            <option value="22">22</option>
-	                            <option value="23">23</option>
-	                            <option value="24">24</option>
-	                            <option value="25">25</option>
-	                            <option value="26">26</option>
-	                            <option value="27">27</option>
-	                            <option value="28">28</option>
-	                            <option value="29">29</option>
-	                            <option value="30">30</option>
-	                            <option value="31">31</option>
-	                        </select></span>
-				<span class="otherError">请填写您的生日</span>
-				<div class="act">
-					<span class="status_red">准确填写生日，有机会获得更多惊喜哦！</span>
-				</div>
+				<span class="otherError" style="margin-top:20px;">{{$userinfos->shengr}} </span>
+				
 			</div>
 					
-					<div class="input_container">
-						<label>隐私</label>
-						<label class="checkbox">
-							<span class="checkbox_ui">
-			                    <input type="checkbox" value="1" id="hide_privacy" name="hide_privacy" checked="checked">
-								<b></b>
-							</span>
-							不显示我的年龄
-						</label>
-						<label class="checkbox">
-							<span class="checkbox_ui">
-			                    <input type="checkbox" value="1" id="show_my_products" name="show_my_products" checked="checked">
-								<b></b>
-							</span>
-							在口碑中心显示我的美妆
-						</label>
-					</div>
+			<div class="input_container">
+				<label>隐私</label>
+				<label class="checkbox">
+					<span class="checkbox_ui">
+	                    <input type="checkbox" value="1" id="hide_privacy" name="hide_privacy" checked="checked">
+						<b></b>
+					</span>
+					不显示我的年龄
+				</label>
+				<label class="checkbox">
+					<span class="checkbox_ui">
+	                    <input type="checkbox" value="1" id="show_my_products" name="show_my_products" checked="checked">
+						<b></b>
+					</span>
+					在口碑中心显示我的美妆
+				</label>
+			</div>
 				<div class="input_container selectwidth">
 				<label for="skin_type"><span class="spark">*</span>你的皮肤属于</label>
 	            <span class="select_ui">
@@ -279,7 +153,7 @@
 	                            <option value="油性皮肤">油性皮肤</option>
 	                            <option value="干性皮肤">干性皮肤</option>
 	                            <option value="中性皮肤">中性皮肤</option>
-	                            <option selected="selected" value="混合性皮肤">混合性皮肤</option>
+	                            <option selected="selected" value="混合性皮肤">{{$userinfos->pifu}}</option>
 	                            <option value="敏感型皮肤">敏感型皮肤</option>
 	                            <option value="敏感油性皮肤">敏感油性皮肤</option>
 	                            <option value="敏感干性皮肤">敏感干性皮肤</option>
@@ -296,7 +170,7 @@
 	            	<select class="form-control">
 	                            <option value=""></option>
 	                            <option value="油性发质">油性发质</option>
-	                            <option selected="selected" value="干性发质">干性发质</option>
+	                            <option selected="selected" value="干性发质">{{$userinfos->fazhi}}</option>
 	                            <option value="中性发质">中性发质</option>
 	                            <option value="混合性发质">混合性发质</option>
 	                            <option value="受损发质">受损发质</option>
@@ -313,7 +187,7 @@
 	        	<select class="form-control">
 	                            <option value=""></option>
 	                            <option value="0-499">0-499</option>
-	                            <option selected="selected" value="500-999">500-999</option>
+	                            <option selected="selected" value="500-999">{{$userinfos->meir}}</option>
 	                            <option value="1000-2999">1000-2999</option>
 	                            <option value="3000-4999">3000-4999</option>
 	                            <option value="5000-6999">5000-6999</option>
@@ -326,12 +200,12 @@
 				</div>
 				<div class="input_container">
 					<label for="comment">美丽宣言</label>
-					<textarea rows="8" cols="50" id="comment" name="comment"></textarea>
+					<textarea rows="8" cols="50" id="comment" name="comment">{{$userinfos->neir}}</textarea>
 					<!-- <p class="comment_tip">您已输入<span class="dg dg1">0</span>个字符，<span class="tip_text2">还能输入</span><span class="dg dg2">200</span>个字符</p> -->
 				    <div style="margin-left: 150px;margin-top: 8px;color: #ed145b;">美丽宣言为个人设置信息,小美不会为您自动填写哦!</div>
 				</div>
 				<div class="container act">
-					<button type="button" class="btn btn-primary">保存修改</button>
+					<button type="button" class="btn btn-info">保存修改</button>
 				</div>
 					
 				</form>
