@@ -46,7 +46,7 @@
 	  <div class="form-group">
 	    <label for="inputPassword3" class="col-sm-2 control-label">商品图片</label>
 	    <div class="col-sm-5">
-	      <img src="{{$mk->profile}}" alt="">
+	      <img src="{{$mk->profile}}" width="100px" height="80px" alt="">
 	      <input type="file" class="form-control" id="inputPassword3" name="profile">
 	    </div>
 	  </div>
@@ -65,14 +65,14 @@
 	  <div class="form-group">
 	    <label for="inputPassword3" class="col-sm-2 control-label">商品大图</label>
 	    <div class="col-sm-5">
-	      <img src="{{$mk->sppro}}" alt="">
+	      <img src="{{$mk->sppro}}" width="100px" height="80px" alt="">
 	      <input type="file" class="form-control" id="inputPassword3" name="sppro">
 	    </div>
 	  </div>
 	  <div class="form-group">
 	    <label for="inputPassword3" class="col-sm-2 control-label">商品小图</label>
 	    <div class="col-sm-5">
-	      <img src="{{$mk->xiaopro}}" alt="">
+	      <img src="{{$mk->xiaopro}}" width="100px" height="80px" alt="">
 	      <input type="file" class="form-control" id="inputPassword3" name="xiaopro">
 	    </div>
 	  </div>
