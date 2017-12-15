@@ -60,27 +60,26 @@ Route::get('liebiaotwo','LiebiaoController@liebiaotwo');
 Route::get('liebiaosan','LiebiaoController@liebiaosan');
 
 //详情
-<<<<<<< HEAD
 Route::get('/xiangqing','XiangqingController@xiangqing');
-=======
 Route::get('/xiangqing/{id}','XiangqingController@xiangqing');
 Route::get('/jrgwc/','XiangqingController@jrgwc');
 Route::get('/jrsc','XiangqingController@jrsc');
->>>>>>> cc94208ad2fc94710c675bad232032b157205ade
 //列表二
 Route::get('/liebiaotwo','LiebiaoController@liebiaotwo');
 //列表(保湿)
 Route::get('/baoshi','BaoshiController@baoshi');
-<<<<<<< HEAD
-=======
+
 //列表gougo
 Route::get('/gougo','LiebiaoController@gougo');
 //收藏
-Route::get('shoucang','ShoucangController@shoucang');
-//session
-Route::get('qcsession','SessionController@qcsession');
 
->>>>>>> cc94208ad2fc94710c675bad232032b157205ade
+Route::get('/shoucang','ShoucangController@shoucang');
+
+
+//session
+Route::get('/qcsession','SessionController@qcsession');
+
+
 
 
 //后台管理路由
@@ -88,7 +87,10 @@ Route::get('/admin','AdminController@index');
 
 Route::resource('/user','UserController');
 
+
 // 我的尺码路由
 Route::resource('sizemana','SizemanaController');
 // 购物车后台
 Route::resource('cartmana','CartmanaController');
+//分类管理
+Route::resource('flgli','FlgliController');
