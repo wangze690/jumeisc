@@ -53,19 +53,6 @@
 						
 				</ul>
 			</div>
-
-			<div class="div2">
-				<div class="yhgl"></div>
-				用户管理
-			</div>
-			<div class="div3">
-				<ul>
-					<li><a class="a" href="javascript:void(0);"
-						onClick="openurl('studentQuery.html');">学生管理</a></li>
-					<li><a class="a" href="javascript:void(0);"
-						onClick="openurl('teacherQuery.html');">老师管理</a></li>
-				</ul>
-			</div>
 			
 			<div class="div2">
 				<div class="gggl"></div>
@@ -74,23 +61,23 @@
 			<div class="div3">
 
 				<ul>
-					<li><a class="a" href="javascript:void(0);"
-						onClick="openurl('deletecomment.html');">评价删除</a></li>
-					<li><a class="a" href="javascript:void(0);"
-						onClick="openurl('useredit.html');">用户禁言</a></li>
+					<li><a class="a" href="/pjgl/create"
+						onClick="openurl('deletecomment.html');">添加评论</a></li>
+					<li><a class="a" href="/pjgl"
+						onClick="openurl('useredit.html');">评论列表</a></li>
 				</ul>
 
 			</div>
 			<div class="div2">
 				<div class="pjgl"></div>
-				公告管理
+				详情管理
 			</div>
 			<div class="div3">
 				<ul>
-					<li><a class="a" href="javascript:void(0);"
-						onClick="openurl('afficheQuery.html');">查看公告</a></li>
-					<li><a class="a" href="javascript:void(0);"
-						onClick="openurl('afficheAdd.html');">添加公告</a></li>
+					<li><a class="a" href="/xqgl/create"
+						onClick="openurl('afficheQuery.html');">详情添加</a></li>
+					<li><a class="a" href="/xqgl"
+						onClick="openurl('afficheAdd.html');">详情列表</a></li>
 				</ul>
 			</div>
 			<a class="a1" href="login.html"><div class="div2">
