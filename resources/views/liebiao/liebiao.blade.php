@@ -24,7 +24,7 @@
 		<img src="./bootstrap/images/17.jpg" width="1899" alt="">
 	</div>
 	<div class="dinner">
-		<div class="container">
+		<div class="container" style="margin-top: 20px;">
 			@foreach($biao as $o=>$p)
 			<div class="col-md-4 mb">
 				<div class="bk">

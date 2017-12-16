@@ -323,8 +323,8 @@
 			<div class="col-md-6 nmg">
 				<img src="./bootstrap/images/{{$e->sppro}}" width="560px" height="280" alt="">
 				<ul class="pull-left nmg_w">
-					<li class="li_o h4"><b>{{$e->sptitle}}</b></li>
-					<li class="li_t">{{$e->spcount}}</li>
+					<li class="li_o h4"><b>{{$e->shoptitle}}</b></li>
+					<li class="li_t">{{$e->shopcons}}</li>
 					<li class="li_s">满<span>{{$e->manmany}}</span>赠<span>{{$e->zengmany}}</span></li>
 				</ul>
 				<img class="pull-right nmg_z" src="./bootstrap/images/{{$e->xiaopro}}" alt="">

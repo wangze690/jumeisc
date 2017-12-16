@@ -29,7 +29,7 @@ class QiantaiController extends Controller
             session(['phone'=>$user->phone]);
 
             //登陆成功
-            return redirect('/mzsc')->with('msg','登陆成功');
+            return redirect('/grzxs')->with('msg','登陆成功');
             
         }
         return back()->with('msg','登录失败');
@@ -46,24 +46,59 @@ class QiantaiController extends Controller
    
       //将数据插入到数据库中
         DB::table('users')->insert($userinfo);
-        return view('user.denglu');
+        return redirect('/denglu')->with('msg','注册成功');
     }
 
      public function grzx()
     {
         $nav = DB::table('nav')->where('path',2)->get();
-
-    	return view('grzx.user',['nav'=>$nav]);
+        $sid = session('id');
+        $userinfos = DB::table('userinfos')->where('user_id',$sid)->first();
+        
+       
+    	return view('grzx.user',['userinfos'=>$userinfos,'nav'=>$nav]);
     }
+    public function update(Request $request)
+    {
+        $info = $request->except('_token');
+        //文件上传
+      if($request->hasFile('touxiang'))
+      {
+        //获取文件后缀
+       $str = $request->file('touxiang')->extension();
+       //创建一个新的名称
+       $name = uniqid('img').'.'.$str;
+       //文件夹路径
+       $path = './uploade'.date('Y-m-d');
+       //移动文件
+       $request->file('touxiang')->move($path,$name);
+       //获取文件的路径
+       $info['touxiang'] = trim($path.'/'.$name,'.');
+      }
+        if(DB::table('userinfos')->update($info))
+        {
+            return back()->with('msg','更新成功');
+        }
+    }
+
+
+
 
     public function grzxs(Request $request)
     {
         $nav = DB::table('nav')->where('path',2)->get();
 
+        $shouhuodz = DB::table('shouhuodz')->where('user_id', session('id'))->get();
 
-        return view('grzx.add',['nav'=>$nav]);
+        foreach ($shouhuodz as $key => &$value){
+            $value->pname = DB::table('areas')->where('id',$value->province)->value('area_name');
+            $value->cname = DB::table('areas')->where('id',$value->city)->value('area_name');
+            $value->xname = DB::table('areas')->where('id',$value->xian)->value('area_name');
+
+        }
+        return view('grzx.add',['shouhuodz'=>$shouhuodz,'nav'=>$nav]);
     }
-    
+
      public function addres(Request $request)
     {
         // dd($request->all());
@@ -73,20 +108,11 @@ class QiantaiController extends Controller
         $data['user_id'] = session('id');
         //插入
         if(DB::table('shouhuodz')->insert($data)) {
-            return back()->with('msg','地址添加成功');
+            return redirect('/grzxs');
         }else{
-            return back()->with('msg','添加失败!!');
+            
         }
-        //读取收货地址
-        $shouhuodz = DB::table('shouhuodz')->where('user_id', session('id'))->get();
-
-        foreach ($shouhuodz as $key => &$value){
-            $value->pname = DB::table('areas')->where('id',$value->province)->value('area_name');
-            $value->cname = DB::table('areas')->where('id',$value->city)->value('area_name');
-            $value->xname = DB::table('areas')->where('id',$value->xian)->value('area_name');
-        }
-        return view('grzx.add',['shouhuodz'=>$shouhuodz]);
-
+       
     }
     public function getArea(Request $request)
     {
@@ -95,6 +121,18 @@ class QiantaiController extends Controller
         $areas = DB::table('areas')->where('area_parent_id',$pid)->get();
 
         return $areas->toJson();
-
     }
+    public function delete(Request $request)
+    {
+        $id = $request->input('id');
+        if(DB::table('shouhuodz')->where('id',$id)->delete())
+        {
+            echo 1;
+        }
+        else
+        {
+            echo 0;
+        }
+    }
+
 }

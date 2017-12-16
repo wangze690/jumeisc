@@ -25,14 +25,12 @@
 		        </ul>
 			</div>
 			<div class="col-md-2 na_n">
-
-				<div class="na_car">
-					<img src="./bootstrap/images/cart.gif" alt="">
-					<a href="/carts{{session('id')}}">
+				<a href="/cart">
+					<div class="na_car">
+						<img src="./bootstrap/images/cart.gif" alt="">
 						<input type="button" class="btn gw_o" value="去购物车结算">
-					</a>
-				</div>	
-
+					</div>
+				</a>	
 			</div>
 		</div>
 	</div>

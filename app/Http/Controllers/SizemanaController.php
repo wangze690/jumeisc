@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 class SizemanaController extends Controller
 {
@@ -13,7 +14,10 @@ class SizemanaController extends Controller
      */
     public function index()
     {
-        //
+        $size = DB::table('size')->get();
+        // $user = DB::table('users')->paginate(10);
+        
+       return view('admin.size.index',['size'=>$size]);
     }
 
     /**
@@ -23,7 +27,7 @@ class SizemanaController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.size.create');
     }
 
     /**
@@ -34,7 +38,12 @@ class SizemanaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $info =  $request->except('_token');
+      //将数据插入到数据库中
+      if(DB::table('size')->insert($info))
+      {
+        return redirect('/sizemana')->with('msg','更新成功');
+      }
     }
 
     /**
@@ -56,7 +65,8 @@ class SizemanaController extends Controller
      */
     public function edit($id)
     {
-        //
+         $size = DB::table('size')->where('id',$id)->first();
+        return view('admin.size.edit',['size'=>$size]);
     }
 
     /**
@@ -68,7 +78,15 @@ class SizemanaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $info = $request->except('_method','_token');
+      if(DB::table('size')->where('id',$id)->update($info))
+      {
+            return redirect('/sizemana')->with('msg','修改成功');
+      }
+      else
+      {
+            return back()->with('msg','更新失败');
+      }
     }
 
     /**
@@ -79,6 +97,10 @@ class SizemanaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        if(DB::table('size')->where('id',$id)->delete())
+        {
+             return back()->with('msg','删除成功');
+        }
+
     }
 }

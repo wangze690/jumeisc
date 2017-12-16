@@ -12,8 +12,27 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+       $num = $request->input('num',10);
+        $keywords = $request->input('keywords','');
+        //关键字检索
+        if($request->has('keywords')){
+        //列表显示
+        $users = DB::table('users')
+        ->where('phone','like','%'.$keywords.'%')
+                ->paginate($num);
+        }else{
+        //列表显示
+        $users = DB::table('users')->paginate($num);
+
+        }
+        //解析模板
+        return view('admin.user.index',[
+            'users'=>$users,
+            'keywords' => $keywords,
+            'num' => $num
+            ]);
          $user = DB::table('users')->get();
         // $user = DB::table('users')->paginate(10);
         
@@ -40,22 +59,24 @@ class UserController extends Controller
     public function store(Request $request)
     {
         // dd($request->all());
-      $info =  $request->only('username','password','email','phone');
-      $info['password'] = encrypt($info['password']);
+
+      $info =  $request->only('phone','touxiang');
+
       //文件上传
-      if($request->hasFile('profile'))
+      if($request->hasFile('touxiang'))
       {
         //获取文件后缀
-       $str = $request->file('profile')->extension();
+       $str = $request->file('touxiang')->extension();
        //创建一个新的名称
        $name = uniqid('img').'.'.$str;
        //文件夹路径
        $path = './uploade'.date('Y-m-d');
        //移动文件
-       $request->file('profile')->move($path,$name);
+       $request->file('touxiang')->move($path,$name);
        //获取文件的路径
-       $info['profile'] = trim($path.'/'.$name,'.');
+       $info['touxiang'] = trim($path.'/'.$name,'.');
       }
+
       //将数据插入到数据库中
       if(DB::table('users')->insert($info))
       {
@@ -96,22 +117,22 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $info = $request->only('username','email');
+        $info = $request->only('phone','touxiang');
         //文件上传
-      if($request->hasFile('profile'))
+      if($request->hasFile('touxiang'))
       {
         //获取文件后缀
-       $str = $request->file('profile')->extension();
+       $str = $request->file('touxiang')->extension();
        //创建一个新的名称
        $name = uniqid('img').'.'.$str;
        //文件夹路径
        $path = './uploade'.date('Y-m-d');
        //移动文件
-       $request->file('profile')->move($path,$name);
+       $request->file('touxiang')->move($path,$name);
        //获取文件的路径
-       $info['profile'] = trim($path.'/'.$name,'.');
+       $info['touxiang'] = trim($path.'/'.$name,'.');
       }
-      if(DB::table('user')->where('id',$id)->update($info))
+      if(DB::table('users')->where('id',$id)->update($info))
       {
             return redirect('/user')->with('msg','修改成功');
       }
