@@ -32,7 +32,6 @@
 						<input type="button" class="btn gw_o" value="去购物车结算">
 					</div>
 				</a>	
-
 			</div>
 		</div>
 	</div>

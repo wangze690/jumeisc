@@ -109,7 +109,7 @@ class LunboController extends Controller
           }
 
           //将数据插入到数据库中
-          if(DB::table('lunbo')->update($info))
+          if(DB::table('lunbo')->where('id',$id)->update($info))
           {
             return redirect('/lunbo')->with('msg','修改成功');
           }
