@@ -27,6 +27,10 @@ Route::get('/admin','AdminController@index');
 Route::resource('user','UserController');
 //留言管理路由
 Route::resource('article','ArticleController');
+//评价管理
+Route::resource('/pjgl','PingjiaController');
+//详情管理
+Route::resource('/xqgl','XqglController');
 
 Route::resource('cate','CateController');
 });
