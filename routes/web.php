@@ -35,7 +35,7 @@ Route::resource('/xqgl','XqglController');
 Route::resource('cate','CateController');
 });
 
-Route::get('/denglu','UserController@logout');
+Route::get('/logout','UserController@logout');
 
 Route::get('/liebiao','LiebiaoController@liebiao');
 
@@ -70,8 +70,8 @@ Route::resource('/dingdan','DingdanController');
 Route::post('/dingdan/conform','DingdanController@conform');
 
 //个人中心路由
-Route::get('/jumei/person{id}','PersonController@person');
-Route::post('/jumei/person{id}','PersonController@creat');
+Route::get('/jumei/person','PersonController@person');
+Route::post('/jumei/person','PersonController@creat');
 //轮播管理路由
 Route::resource('/lunbo','LunboController');
 
@@ -92,7 +92,7 @@ Route::get('liebiaosan','LiebiaoController@liebiaosan');
 //详情
 Route::get('/xiangqing','XiangqingController@xiangqing');
 Route::get('/xiangqing/{id}','XiangqingController@xiangqing');
-Route::get('/jrgwc/','XiangqingController@jrgwc');
+Route::post('/jrgwc','XiangqingController@jrgwc');
 Route::get('/jrsc','XiangqingController@jrsc');
 //列表二
 Route::get('/liebiaotwo','LiebiaoController@liebiaotwo');

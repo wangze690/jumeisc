@@ -18,10 +18,12 @@ class ShoucangController extends Controller
         $sl = DB::table('shoucang')->where('user_id',$user_id)->count();
 
         $nav = DB::table('nav')->where('path',2)->get();
+        $zhandian = DB::table('zhandian')->where('ztid',1)->first();
         return view('shoucang.shoucang',[
                     'shoucang' => $shoucang,
                     'nav' => $nav,
-                    'sl' => $sl
+                    'sl' => $sl,
+                     'zhandian'=>$zhandian
                     ]);
 
     }

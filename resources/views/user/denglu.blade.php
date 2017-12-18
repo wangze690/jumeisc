@@ -12,6 +12,12 @@
 
 </head>
 <body>
+@if(session('msg'))
+<div class="alert alert-warning alert-dismissible" role="alert ">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    {{session('msg')}}
+</div>
+@endif
 <div class="container" style="height: 85px;">
     	<div class="header_left pull-left">
 	    	<a href="/mzsc"><img src="./img/logo.jpg" alt="" style="margin-top: 10px;"></a>

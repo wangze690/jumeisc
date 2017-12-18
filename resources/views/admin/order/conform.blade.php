@@ -121,7 +121,7 @@
 				<div class="jk" style=" height: 111px; width: 100%; border-bottom: 1px dashed #999;">
 
 					<p class="col-md-5" style="margin-left:-20px; line-height: 100px;">
-						 <img src="/images/{{$s->imgs}}" width="100px" height="80px" alt="" style="margin-left:10px;" >
+						 <img src="/img/{{$s->imgs}}" width="100px" height="80px" alt="" style="margin-left:10px;" >
 						 <span>{{$s->cons}}</span>
 					</p>
 

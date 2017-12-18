@@ -40,7 +40,7 @@
               </div>
         
               <div class="form-group line">
-                    <input type="text" class="form-control" id="yzm" placeholder="短信验证码" name="yzm" onfocus="show_yzm()" onblur="hide_yzm()" style="float:left; width: 140px;margin-bottom: 20px;">
+                  <input type="text" class="form-control" id="yzm" placeholder="短信验证码" name="yzm" onfocus="show_yzm()" onblur="hide_yzm()" style="float:left; width: 140px;margin-bottom: 20px;">
                     <button type="button" class="btn btn-default" id="send" style="float:right;height: 44px;">获取短信验证码</button><br>
                     <span id="y_span" style="float: left;margin: 0 40px;"></span>
                 </div>
@@ -117,11 +117,11 @@ function show_yzm()
   {
     if(preg_user.test(uval.value))
     {
-      document.getElementById("y_span").innerHTML = "<span style='color:green;font-size:12px;'>√</span>";
+      document.getElementById("y_span").innerHTML = "<span style='color:green;font-size:12px;'>验证码不能为空</span>";
     }
     else
     {
-      document.getElementById("y_span").innerHTML = "<span style='color:#999;font-size:12px;'>请输入正确的验证码</span>";
+      document.getElementById("y_span").innerHTML = "<span style='color:#999;font-size:12px;'>√</span>";
     }
   }
 }
@@ -137,7 +137,7 @@ function hide_yzm()
   {
     if(preg_user.test(uval.value))
     {
-      document.getElementById("y_span").innerHTML = "<span style='color:green;font-size:12px;'>√</span>";
+      document.getElementById("y_span").innerHTML = "<span style='color:green;font-size:12px;'>验证码错误</span>";
     }
     else
     {

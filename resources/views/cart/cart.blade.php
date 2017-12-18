@@ -48,7 +48,7 @@
 <!-- 头部开始 -->
 	<div class="col-md-12" style="height:130px; border-bottom: 2px solid #ccc;">
 		<p class="col-sm-2" style="margin-top:30px;margin-left:100px;">
-			<img src="/images/log.png" alt="">
+			<a href="/jumei"><img src="/images/log.png" alt=""></a>
 		</p>
 		<ul class="col-sm-4" style="margin-top: 40px; margin-left:-25px;">
 			<li>400-123-8888</li>
@@ -100,7 +100,7 @@
 
 				</p>
 				<p style="float:left;line-height: 120px; margin-left:30px; width: 120px;">
-					<img src="/images/gowu.jpg" alt="">
+					<img width="50" src="/img/{{$v->imgs}}" alt="">
 				</p>
 				<ul style="float:left;margin-left:-20px;margin-top:40px;" class="col-md-5">
 					<li>{{$v->cons}}</li>

@@ -32,14 +32,14 @@
 					<img src="/images/touxi.png" alt="">
 				</p>
 				<ul class="pull-left" style="margin-top: 15px;margin-left:10px;">
-					<li style="color:#ed145b;">JUM150WEW</li>
+					<li style="color:#ed145b;">{{$ssphone}}</li>
 					<li>普通会员</li>
 				</ul>
 				<p style="float: left;">用户ID:236550520</p>
 			
 				<ul style="margin-left:-7px;margin-top:-10px;">
 					<li><img src="/images/baot.png" alt=""></li>
-					<li style="height:40px;width:160px;background-color: #fff;text-align: center;line-height: 40px;margin-left:7px;border-bottom: 1px solid #ccc;">
+					<li style="height:40px;width:160px;background-color:  #f8f6f4;text-align: center;line-height: 40px;margin-left:7px;border-bottom: 1px solid #ccc;">
 						<img src="/images/tubiao.png" alt="">修改密码
 					</li>
 					<li style="height:40px;width:160px;background-color: #f8f6f4;text-align: center;line-height: 40px;margin-left:7px;border-bottom: 1px solid #ccc;">
@@ -59,6 +59,7 @@
 					</li>
 					<li style="height:40px;width:160px;background-color: #f8f6f4;text-align: center;line-height: 40px;margin-left:7px;border-bottom: 1px solid #ccc;">
 						<img src="/images/tubiao.png" alt=""><a href="/jumei/sizelist">我的尺码</a>
+
 					</li>					
 				</ul>
 				<ul style="margin-left:-7px;margin-top:-10px;">

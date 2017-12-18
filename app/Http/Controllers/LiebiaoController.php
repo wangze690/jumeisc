@@ -12,9 +12,11 @@ class LiebiaoController extends Controller
 	{
 		$nav = DB::table('nav')->where('path',2)->get();
 		$biao = DB::table('shop')->where('pid',10)->get();
+      $zhandian = DB::table('zhandian')->where('ztid',1)->first();
 		return view('liebiao.liebiao',[
 			'nav'=>$nav,
-			'biao'=>$biao
+			'biao'=>$biao,
+          'zhandian'=>$zhandian
 
 
 			]);
@@ -26,13 +28,15 @@ class LiebiaoController extends Controller
    		$sp_2 = DB::table('shop')->where('pid',21)->get();
    		$sp_3 = DB::table('shop')->where('pid',22)->get();
          $nav = DB::table('nav')->where('path',2)->get();
+         $zhandian = DB::table('zhandian')->first();
 
    		return view('liebiao.liebiaotwo',[
 
    				'sp_1' => $sp_1,
    				'sp_2' => $sp_2,
    				'sp_3' => $sp_3,
-               'nav'=>$nav
+               'nav'=>$nav,
+               'zhandian' => $zhandian
    				]);
    	}
    	public function liebiaosan()
@@ -60,9 +64,11 @@ class LiebiaoController extends Controller
    	{
          $nav = DB::table('nav')->where('path',2)->get();
          $pinpai = DB::table('pinpai')->where('ztid',1)->get();
+         $zhandian = DB::table('zhandian')->first();
    		return view('liebiao.gougo',[
             'nav'=>$nav,
-            'pinpai'=>$pinpai
+            'pinpai'=>$pinpai,
+            'zhandian' => $zhandian
             ]);
    	}
 }

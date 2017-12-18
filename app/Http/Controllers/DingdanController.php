@@ -41,6 +41,7 @@ class DingdanController extends Controller
        $data['status'] = 1;
        $data['bm'] = time().rand(100000,999999);
        $id =DB::table('dingdans')->insertGetId($data);
+       
        foreach($request->data as $k=>$v){
             $tmp = [
             'dingdan_id'=> $id,

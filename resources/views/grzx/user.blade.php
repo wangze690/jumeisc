@@ -51,7 +51,7 @@
 		        <h2>我的聚美优品<b></b></h2>
 		       	<li><span class="glyphicon glyphicon-list" aria-hidden="true"></span>我的订单</li>
 		        <li><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>我的心愿单</li>
-		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>我的收藏</li>
+		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span><a href="/shoucang">我的收藏</a></li>
 		        <li><span class="glyphicon glyphicon-road" aria-hidden="true"></span>我的会员等级</li>
 		        <li><span class="glyphicon glyphicon-tag" aria-hidden="true"></span>我的现金劵</li>
 		        <li><span class="glyphicon glyphicon-yen" aria-hidden="true"></span>我的红包</li>
@@ -61,7 +61,8 @@
 		        <h2>管理个人账户<b></b></h2>
 		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>我的现金劵</li>
 		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>我的红包</li>
-		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>管理收货地址</li>
+		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span><a href="/grzxs
+		   		">管理收货地址</a></li>
 		        <li><span class="glyphicon glyphicon-user" aria-hidden="true"></span>设置账户信息</li>
 		        <h2>售后服务<b></b></h2>
 		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>我的现金劵</li>
@@ -80,7 +81,9 @@
 			<form id="settings-form" method="post" action="/grzx/{{$userinfos->id}}" enctype="multipart/form-data">
 		        
 				<div class="avatar_change">
-					<img src="{{$userinfos->touxiang}}" alt="大头像">
+
+					<img src="{{$userinfos->touxiang}}" height="50" width="50" alt="大头像">
+
 					<input type="file" name="touxiang">
 				</div>
 
@@ -104,7 +107,7 @@
 					<dt>手机号</dt>
 					<dd>
 	    				<span class="data">{{$userinfos->phone}}</span>
-					<a href="/i/account/mobile_bind" target="_blank">修改</a>
+					<a href="#" target="_blank">修改</a>
 				<span class="hint">已验证</span>
 	    			</dd>
 				</dl>
@@ -218,7 +221,6 @@
 				<div class="container act">
 					<button type="submit" class="btn btn-info">保存修改</button>
 				</div>
-					
 				</form>
 			</div>
 		</div>	

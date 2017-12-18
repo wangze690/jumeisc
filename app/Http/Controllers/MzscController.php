@@ -14,6 +14,9 @@ class MzscController extends Controller
         foreach ($cbnav as $s => $t) {
             $t->two = DB::table('nav')->where('pid',$t->id)->get();
         }
+
+    	 $zhandian = DB::table('zhandian')->where('ztid',1)->first();
+
     	$pro = DB::table('shopspnr')->where('spid',2)->get();
     	$pro_one = DB::table('shopspnr')->where('spid',3)->get();
     	$pro_two = DB::table('shopspnr')->where('spid',4)->get();
@@ -24,7 +27,8 @@ class MzscController extends Controller
     		'pro'=>$pro,
     		'pro_one'=>$pro_one,
     		'pro_two'=>$pro_two,
-    		'senr'=>$senr
+    		'senr'=>$senr,
+            'zhandian'=>$zhandian
     		]);
     }
 }

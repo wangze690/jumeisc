@@ -10,9 +10,16 @@ class PersonController extends Controller
     public function person()
     {
         $ssid = session('id');
+        $ssphone = session('phone');
     	$phone = DB::table('users')->where('id',$ssid)->get();
+        $zhandian = DB::table('zhandian')->where('ztid',1)->first();
         $nav = DB::table('nav')->where('path',2)->get();
-    	return view('person.person',['nav'=>$nav,'phone'=>$phone]);
+    	return view('person.person',[
+            'nav'=>$nav,
+            'phone'=>$phone,
+            'zhandian'=>$zhandian,
+            'ssphone'=>$ssphone
+            ]);
     }
 
 

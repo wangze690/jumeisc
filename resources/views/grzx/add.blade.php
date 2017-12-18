@@ -40,7 +40,7 @@
 		        <h2>我的聚美优品<b></b></h2>
 		       	<li><span class="glyphicon glyphicon-list" aria-hidden="true"></span>我的订单</li>
 		        <li><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>我的心愿单</li>
-		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span><a href="/shoucang">我的收藏</a></li>
+		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>我的收藏</li>
 		        <li><span class="glyphicon glyphicon-road" aria-hidden="true"></span>我的会员等级</li>
 		        <li><span class="glyphicon glyphicon-tag" aria-hidden="true"></span>我的现金劵</li>
 		        <li><span class="glyphicon glyphicon-yen" aria-hidden="true"></span>我的红包</li>
@@ -50,8 +50,9 @@
 		        <h2>管理个人账户<b></b></h2>
 		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>我的现金劵</li>
 		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>我的红包</li>
-		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>我的金币</li>
-		        <li><span class="glyphicon glyphicon-user" aria-hidden="true"></span><a href="/grzx">设置账户信息</a></li>
+		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+		        <a href="/grzxs">管理收货地址</a></li>
+		        <li><span class="glyphicon glyphicon-user" aria-hidden="true"></span>设置账户信息</li>
 		        <h2>售后服务<b></b></h2>
 		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>我的现金劵</li>
 		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>我的红包</li>
@@ -87,18 +88,18 @@
 		                 	<label for="inputPassword3" class="col-sm-2 control-label">* 收货地址</label>
 		                    <div class='col-md-4'>
 	                        <select name="province" id="" class="form-control ">
-	                            <option value="">请选择</option>
+	                            <option value="">省/直辖市</option>
 	                        </select>
 	                      </div>
 
 	                    <div class='col-md-3'>
 	                        <select name="city" id="" class="form-control ">
-	                            <option value="">请选择</option>
+	                            <option value="">市</option>
 	                        </select>
 	                    </div>
 	                    <div class='col-md-3'>
 	                        <select name="xian" id="" class="form-control ">
-	                            <option value="">请选择</option>
+	                            <option value="">区/县</option>
 	                        </select>
 	                    </div>
 		            </div>      
@@ -164,7 +165,7 @@ function init() {
 init();
 
 $('select[name=province]').change(function(){
-    $('select[name=city]').html('<option value="">请选择</option>')
+    $('select[name=city]').html('<option value="">市</option>')
     //获取当前省的id
     var id = $(this).val();
     //发送ajax获取当前省所对应的市的信息
@@ -184,7 +185,7 @@ $('select[name=province]').change(function(){
 });
 
 $('select[name=city]').change(function(){
-    $('select[name=xian]').html('<option value="">请选择</option>')
+    $('select[name=xian]').html('<option value="">区/县</option>')
     //获取当前省的id
     var id = $(this).val();
     //发送ajax获取当前省所对应的市的信息

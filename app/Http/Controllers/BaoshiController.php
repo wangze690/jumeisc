@@ -16,6 +16,7 @@ class BaoshiController extends Controller
     	$gongxiao = DB::table('gongxiao')->where('ztid',1)->get();
     	$jiage = DB::table('jiage')->where('ztid',1)->get();
     	$shop = DB::table('shop')->where('pid',23)->get();
+        $zhandian = DB::table('zhandian')->first();
 
     	return view('baoshi.baoshi',[
 
@@ -24,7 +25,8 @@ class BaoshiController extends Controller
     				'fenlei' =>$fenlei,
     				'gongxiao' => $gongxiao,
     				'jiage' => $jiage,
-    				'shop' => $shop
+    				'shop' => $shop,
+                    'zhandian' => $zhandian
     				]);
     }
 
