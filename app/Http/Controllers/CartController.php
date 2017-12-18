@@ -18,10 +18,6 @@ class CartController extends Controller
     	}
     	return view('cart.cart',['carts'=>$carts,'nums'=>$nums]);
     }
-    public function dingdan(Request $request)
-    {
-    	dd($request->all());
-    }
     public function delete(Request $request)
     {
     	$id = $request->input('cid');

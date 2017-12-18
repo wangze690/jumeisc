@@ -37,6 +37,12 @@
 	      <input type="text" class="form-control" id="inputPassword3" placeholder="content" name="content">
 	    </div>
 	  </div>
+	  <div class="form-group">
+	    <label for="inputPassword3" class="col-sm-2 control-label">状态</label>
+	    <div class="col-sm-5">
+	      <input type="text" class="form-control" id="inputPassword3" placeholder="ztid" name="ztid">
+	    </div>
+	  </div>
 	  {{csrf_field()}}
 	  <div class="form-group">
 	    <div class="col-sm-offset col-sm-8">

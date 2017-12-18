@@ -99,7 +99,7 @@
 					<dt>手机号</dt>
 					<dd>
 	    				<span class="data">{{$userinfos->phone}}</span>
-					<a href="/i/account/mobile_bind" target="_blank">修改</a>
+					<a href="#" target="_blank">修改</a>
 				<span class="hint">已验证</span>
 	    			</dd>
 				</dl>
@@ -213,7 +213,6 @@
 				<div class="container act">
 					<button type="submit" class="btn btn-info">保存修改</button>
 				</div>
-					
 				</form>
 			</div>
 		</div>	

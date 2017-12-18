@@ -103,7 +103,7 @@
 			</div>
 			
 			<div class="fhzy">
-				<a href="#"><img src="./bootstrap/images/souye.png" alt=""></a>
+				<a href="/mzsc"><img src="./bootstrap/images/souye.png" alt=""></a>
 			</div>
 		</section>
 		<!-- 主体结束 -->

@@ -10,6 +10,7 @@ class IndexController extends Controller
 {
      public function index()
     {
+        $zhandian = DB::table('zhandian')->where('ztid',1)->first();
     	$nav = DB::table('nav')->where('path',2)->get();
     	$shop1 = DB::table('shop')->where('pid',1)->get();
     	$shop2 = DB::table('shop')->where('pid',2)->get();
@@ -24,6 +25,7 @@ class IndexController extends Controller
     		'shop2'=>$shop2,
     		'shop3'=>$shop3,
     		'shop4'=>$shop4,
+            'zhandian'=>$zhandian,
             'atr'=>$imgs
     		]);
     }

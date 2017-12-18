@@ -25,9 +25,9 @@
 	<div class="shousuo">
 		<div class="container">
 			<div class="col-md-3 na_w">
-				
+				<a href="/jumei">
 				<img src="/img/1.jpg" alt="">
-			
+				</a>
 			</div>
 			<div class="col-md-7 na_s"></div>
 			<div class="col-md-2 na_n">
