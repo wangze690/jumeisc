@@ -93,10 +93,11 @@
 				</ul>
 			</div>
 		@foreach($carts as $k => $v)
-		<form action="/dingdan" method="post">
+		<form action="/dingdan/conform" method="post">
 			<div class="col-sm-12 goods" style="height:120px;border: 1px solid #ccc;">
 				<p style="float:left;line-height: 120px;">
-					<input type="checkbox" name="id" value="{{$v->id}}">
+					<input type="checkbox" name="data[{{$v->id}}][id]" value="{{$v->id}}">
+
 				</p>
 				<p style="float:left;line-height: 120px; margin-left:30px; width: 120px;">
 					<img src="/images/gowu.jpg" alt="">
@@ -115,7 +116,7 @@
 							<button class="btn-info jian" style="float: left;" type="button">
 								-
 							</button>
-								<input name="num[]" type="text" value="{{$v->num}}" style="width: 20px; border: 0px;">
+								<input name="data[{{$v->id}}][num]" type="text" value="{{$v->num}}" style="width: 20px; border: 0px;">
 							<button class="btn-info jia" style="float: right;" type="button">
 								+
 							</button>

@@ -12,17 +12,17 @@ class SizeController extends Controller
     {
     	
     	$shop1 = DB::table('shop')->where('pid',1)->get();
-
     	$shop2 = DB::table('shop')->where('pid',2)->get();
     	$shop3 = DB::table('shop')->where('pid',3)->get();
     	$shop4 = DB::table('shop')->where('pid',4)->get();
-
+        $zhandian = DB::table('zhandian')->where('ztid',1)->first();
     	return view('index.index',[
 
     		'shop1'=>$shop1,
     		'shop2'=>$shop2,
     		'shop3'=>$shop3,
-    		'shop4'=>$shop4
+    		'shop4'=>$shop4,
+            'zhandian'=>$zhandian
     		]);
     }
     public function cart()
@@ -77,7 +77,8 @@ class SizeController extends Controller
     		}
     	 }
     	$nav = DB::table('nav')->where('path',2)->get();
-    	return view('size.sizelist',['nav'=>$nav,'size'=>$size]);
+         $zhandian = DB::table('zhandian')->where('ztid',1)->first();
+    	return view('size.sizelist',['nav'=>$nav,'size'=>$size,'zhandian'=>$zhandian]);
     }
     public function sizeadd(Request $request)
     {
