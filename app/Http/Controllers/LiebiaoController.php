@@ -12,9 +12,11 @@ class LiebiaoController extends Controller
 	{
 		$nav = DB::table('nav')->where('path',2)->get();
 		$biao = DB::table('shop')->where('pid',10)->get();
+      $zhandian = DB::table('zhandian')->where('ztid',1)->first();
 		return view('liebiao.liebiao',[
 			'nav'=>$nav,
-			'biao'=>$biao
+			'biao'=>$biao,
+          'zhandian'=>$zhandian
 
 
 			]);

@@ -15,6 +15,7 @@
 			<td style="border: 1px solid #999;">域名</td>
 			<td style="border: 1px solid #999;">电话</td>
 			<td style="border: 1px solid #999;">描述</td>
+			<td style="border: 1px solid #999;">状态</td>
 			<td style="border: 1px solid #999;">操作</td>
 		</tr>
 	</thead>
@@ -26,6 +27,7 @@
 			<td style="border: 1px solid #999;">{{$v->yuming}}</td>
 			<td style="border: 1px solid #999;">{{$v->tel}}</td>
 			<td style="border: 1px solid #999;">{{$v->content}}</td>
+			<td style="border: 1px solid #999;">{{$v->ztid}}</td>
 			<td>
 			<a href="/zhandian/{{$v->id}}/edit" class="btn-info btn-sm pull-right">修改</a>
 			<form action="/zhandian/{{$v->id}}" method="post" class="del">

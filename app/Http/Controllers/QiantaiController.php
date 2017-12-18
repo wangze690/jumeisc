@@ -96,7 +96,8 @@ class QiantaiController extends Controller
             $value->xname = DB::table('areas')->where('id',$value->xian)->value('area_name');
 
         }
-        return view('grzx.add',['shouhuodz'=>$shouhuodz,'nav'=>$nav]);
+        $zhandian = DB::table('zhandian')->where('ztid',1)->first();
+        return view('grzx.add',['shouhuodz'=>$shouhuodz,'nav'=>$nav,'zhandian'=>$zhandian]);
     }
 
      public function addres(Request $request)

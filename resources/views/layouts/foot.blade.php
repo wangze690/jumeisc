@@ -111,7 +111,7 @@
 		<div class="butt_but">
 			<div class="container ola">
 				<div class="clearfix"></div>
-				<p>COPYRIGHT © 2010-2017 北京创锐文化传媒有限公司 JUMEI.COM 保留一切权利。 客服热线：400-123-8888 </p>
+				<p>COPYRIGHT © 2010-2017 北京创锐文化传媒有限公司 JUMEI.COM 保留一切权利。 客服热线：{{$zhandian->tel}} </p>
 				<p>京公网安备 11010102001226 | 京ICP证111033号 | 食品流通许可证 SP1101051110165515（1-1） | 营业执照</p>
 			</div>
 			<div class="container">

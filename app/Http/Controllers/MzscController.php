@@ -11,7 +11,7 @@ class MzscController extends Controller
     {
     	$nav = DB::table('nav')->where('path',2)->get();
     	$cbnav = DB::table('nav')->where(['path'=>3,'pid'=>0])->get();
-    	
+    	 $zhandian = DB::table('zhandian')->where('ztid',1)->first();
     	// dd($cbnav);
     	$pro = DB::table('shopspnr')->where('spid',2)->get();
     	$pro_one = DB::table('shopspnr')->where('spid',3)->get();
@@ -23,7 +23,8 @@ class MzscController extends Controller
     		'pro'=>$pro,
     		'pro_one'=>$pro_one,
     		'pro_two'=>$pro_two,
-    		'senr'=>$senr
+    		'senr'=>$senr,
+            'zhandian'=>$zhandian
     		]);
     }
 }
