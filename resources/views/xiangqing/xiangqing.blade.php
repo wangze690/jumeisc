@@ -14,6 +14,12 @@
 <body>
 <!-- 头部开始 -->
 @include('layouts.toubu')
+@if(session('msg'))
+<div class="alert alert-warning alert-dismissible" role="alert ">
+  	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	{{session('msg')}}
+</div>
+@endif
 <!-- 主体内容开始 -->
 <section>
 	<div class="shousuo">
@@ -79,7 +85,15 @@
 						<p>包邮政策:本商品满299元或2件包邮</p>
 						<p>服务政策:本商品支持7天拆封无条件退货</p>
 					</div>
-					<input type="submit" class="btn btn-danger btn-lg button_1" value="加入购物车 >" name="anniu">
+					<form action="/jrgwc" method="post" enctype="multipart/form-data">
+					<input type="hidden" name="good_id" value="{{$lb->id}}">
+					<input type="hidden" name="imgs" value="{{$lb->profile}}">
+					<input type="hidden" name="cons" value="{{$lb->shopcons}}">
+					<input type="hidden" name="goods_xj" value="{{$lb->shopxj}}">
+					<input type="hidden" name="goods_yj" value="{{$lb->shopyj}}">
+					 {{csrf_field()}}
+					<input type="submit" class="btn btn-danger btn-lg button_1" value="加入购物车 >">
+					</form>
 				</div>
 			</div>
 
@@ -295,33 +309,8 @@
 <!-- 侧边条开始 -->
 
 <!-- 侧边条结束 -->
-<input type="hidden" class="sp_id" value="{{$lb->id}}">
+
 
 </body>
-<script type="text/javascript"></script>
-<script>
-	$(function(){
-		$('input[name=anniu]').click(function(){
-			var sp_id = $('.sp_id').val();
-			$.ajax({
-				type:'get',
-				url:'/jrgwc',
-				data:{'sp_id':sp_id},
-				success:function(mess){
-					
-					if(mess == 1)
-					{
-						alert('加入购物车成功');
-					}
-					else
-					{
-						var ppp=confirm("您还未登录,请先登录");
-						location.href="/denglu";
-					}
-					
-				}
-			})
-		})
-	})
-</script>
+
 </html>

@@ -157,10 +157,10 @@ class UserController extends Controller
 
     }
 
-    public function logout(Request $request)
+    public function logout()
     {
       //清除session
-      $request->session()->flush();
-      return back();
+      session()->forget('id');
+      return redirect('/jumei');
     }
 }

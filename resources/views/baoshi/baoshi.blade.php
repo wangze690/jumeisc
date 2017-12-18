@@ -17,6 +17,14 @@
 <body>
 	<div class="alls">
 	@include('layouts.toubu')
+	
+	@if(session('msg'))
+	<div class="alert alert-warning alert-dismissible" role="alert ">
+	  	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		{{session('msg')}}
+	</div>
+	@endif
+
 	@include('layouts.sousuo')
 	@include('layouts.nav')
 		<section>
@@ -106,8 +114,16 @@
 							<p><font color="#ed145b" size="5">￥{{$v->shopxj}}</font> <s>￥{{$v->shopyj}}</s></p>
 							<p>月销83</p>
 							<div>
-								<span>
-									<button class="btn button_1 jrgwc">加入购物车</button>
+								<span class="pull-left">
+									<form action="/jrgwc" method="post" enctype="multipart/form-data">
+									<input type="hidden" name="good_id" value="{{$v->id}}">
+									<input type="hidden" name="imgs" value="{{$v->profile}}">
+									<input type="hidden" name="cons" value="{{$v->shopcons}}">
+									<input type="hidden" name="goods_xj" value="{{$v->shopxj}}">
+									<input type="hidden" name="goods_yj" value="{{$v->shopyj}}">
+									{{csrf_field()}}
+									<input type="submit" class="btn button_1 jrgwc" value="加入购物车">
+									</form>
 								</span>
 								<span>
 									<button class="btn button_2 shoucang">收藏</button>
@@ -158,44 +174,24 @@
 </body>
 <script type="text/javascript"></script>
 <script>
-	$('.jrgwc').click(function(){
-		var sp_id = $(this).parent().parent().find('input[type=hidden]').val();
-		$.ajax({
-			type:'get',
-			url:'/jrgwc',
-			data:{'sp_id':sp_id},
-			success:function(mess){	
-				if(mess == 1)
-				{
-					alert('加入购物车成功');
-				}
-				else
-				{
-					var ppp=confirm("您还未登录,请先登录");
-					location.href="/denglu";
-				}	
+$('.shoucang').click(function(){
+	var sp_id = $(this).parent().parent().find('input[type=hidden]').val();
+	$.ajax({
+		type:'get',
+		url:'/jrsc',
+		data:{'sp_id':sp_id},
+		success:function(msg){
+			if(msg == 1)
+			{
+				alert('添加收藏成功');
 			}
-		})
-	})
-
-	$('.shoucang').click(function(){
-		var sp_id = $(this).parent().parent().find('input[type=hidden]').val();
-		$.ajax({
-			type:'get',
-			url:'/jrsc',
-			data:{'sp_id':sp_id},
-			success:function(msg){
-				if(msg == 1)
-				{
-					alert('添加收藏成功');
-				}
-				else
-				{
-					var ppp=confirm("您还未登录,请先登录");
-					location.href="/denglu";
-				}
+			else
+			{
+				var ppp=confirm("您还未登录,请先登录");
+				location.href="/denglu";
 			}
-		})
+		}
 	})
+})
 </script>
 </html>
