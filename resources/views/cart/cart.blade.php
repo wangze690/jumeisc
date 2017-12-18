@@ -96,7 +96,7 @@
 		<form action="/dingdan" method="post">
 			<div class="col-sm-12 goods" style="height:120px;border: 1px solid #ccc;">
 				<p style="float:left;line-height: 120px;">
-					<input type="checkbox" name="id[]" value="{{$v->id}}">
+					<input type="checkbox" name="id" value="{{$v->id}}">
 				</p>
 				<p style="float:left;line-height: 120px; margin-left:30px; width: 120px;">
 					<img src="/images/gowu.jpg" alt="">

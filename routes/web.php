@@ -27,13 +27,15 @@ Route::get('/admin','AdminController@index');
 Route::resource('user','UserController');
 //留言管理路由
 Route::resource('article','ArticleController');
+//评价管理
+Route::resource('/pjgl','PingjiaController');
+//详情管理
+Route::resource('/xqgl','XqglController');
 
 Route::resource('cate','CateController');
 });
 
 Route::get('/denglu','UserController@logout');
-
-
 
 Route::get('/liebiao','LiebiaoController@liebiao');
 
@@ -47,6 +49,7 @@ Route::get('/zhuce','QiantaiController@zhuce');
 Route::post('/zhuce','QiantaiController@getzhuce');
 //个人中心
 Route::get('/grzx','QiantaiController@grzx');
+Route::post('/grzx','QiantaiController@update');
 //收货地址
 Route::get('/grzxs','QiantaiController@grzxs');
 Route::post('/grzxss', 'QiantaiController@addres');

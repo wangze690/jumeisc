@@ -70,13 +70,24 @@
 				购物车管理
 			</div>
 			<div class="div3">
-
 				<ul>
 					<li><a class="a" href="/cartmana/create">添加购物</a></li>
 					<li><a class="a" href="/cartmana">管理购物</a></li>
 				</ul>
-
 			</div>
+
+			<div class="div2">
+				<div class="pjgl"></div>
+				详情管理
+			</div>
+			<div class="div3">
+				<ul>
+					<li><a class="a" href="/xqgl/create">详情添加</a></li>
+					<li><a class="a" href="/xqgl"
+						onClick="openurl('afficheAdd.html');">详情列表</a></li>
+				</ul>
+			</div>
+			
 			<div class="div2">
 				<div class="gggl"></div>
 				站点管理
@@ -96,9 +107,10 @@
 			<div class="div3">
 				<ul>
 					<li><a class="a" href="/lunbo/create">添加内容</a></li>
-					<li><a class="a" href="/lunbo"></a>轮播列表</li>
+					<li><a class="a" href="/lunbo">轮播列表</a></li>
 				</ul>
 			</div>
+			
 			<a class="a1" href="/admin/login"><div class="div2">
 					<div class="tcht"></div>
 					退出后台

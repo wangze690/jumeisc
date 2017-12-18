@@ -20,7 +20,7 @@
 		<div class="container">
 			<div class="col-md-3 na_w">
 				
-				<img src="/img/{{$xq_1->img}}" alt="">
+				<img src="/img/1.jpg" alt="">
 			
 			</div>
 			<div class="col-md-7 na_s"></div>
@@ -55,12 +55,12 @@
 						<div class="col-md-5"></div>
 						<div class="col-md-7">
 							<div class="col-md-8 section_6">
-								<img src="/img/{{$xq_2->img}}">
+								<img height="50" width="100" src="{{$xiangqing->from_1}}">
 							</div>
 							<div class="col-md-4">
 								<div class="section_7"></div>
-								<p>{{$xq_1->chuchan}}</p>
-								<p>Japan</p>
+								<p style="width: 100px;">{{$xiangqing->from_2}}</p>
+								<p style="width: 100px;">{{$xiangqing->from_3}}</p>
 							</div>
 						</div>
 					</div>
@@ -71,8 +71,8 @@
 					</div>
 
 					<div class="col-md-12 section_9">
-						<span class="glyphicon glyphicon-user col-md-6" aria-hidden="true">&nbsp;<font color="red">{{$xq_1->goumai}}</font>人以购买</span>
-						<span class="glyphicon glyphicon-comment col-md-6" aria-hidden="true">&nbsp;{{$xq_1->pinglun_r}}分({{$xq_1->pinglun_t}}条评论)</span>
+						<span class="glyphicon glyphicon-user col-md-6" aria-hidden="true">&nbsp;<font color="red">123</font>人以购买</span>
+						<span class="glyphicon glyphicon-comment col-md-6" aria-hidden="true">&nbsp;4.5分(11条评论)</span>
 					</div>
 
 					<div class="col-md-12 section_10">
@@ -131,59 +131,25 @@
 			    		<p class="text-center">商品信息</p>
 			    		<hr />
 			    	</div>
-
-		    		<div class="col-md-12">
-		    			<div class="col-md-6">
-		    				<p><b>商品名称:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{$xq_1->sp_mc}}{{$xq_1->sp_gg}}</p>
-		    				<p><b>商品型号:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{$xq_1->sp_xh}}</p>
-		    				<p><b>品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;牌:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{$xq_1->pinpai}}</p>
-		    				<p><b>分&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;类:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{$xq_1->fenlei}}</p>
-		    				<p><b>功&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;效:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{$xq_1->gongxiao}}</p>
-		    				<p><b>特别说明:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{$xq_1->shuoming}}</p>
-		    			</div>
-		    			<div class="col-md-6 text-center">
-		    				<img src="/img/{{$xq_4->img}}">
-		    			</div>
-		    		</div>
-			    	<img class="img_2" src="/img/{{$xq_16->img}}">
-
+		    		<div class="col-md-12">{!!$xiangqing->xinxi!!}</div>
+			    	
 			    	<div class="col-md-12 section_15 section_16" >
 			    		<p class="text-center">商品详情</p>
 			    		<hr />
 			    	</div>
-
-			    	<img src="/img/{{$xq_5->img}}" class="img_3">
-
+			    	<div class="col-md-12">{!!$xiangqing->xiangqing!!}</div>
+			    	
 			    	<div class="col-md-12 section_15 section_16">
 			    		<p class="text-center">使用方法</p>
 			    		<hr />
 			    	</div>
-
-			    	<ol class="col-md-12 ol_1">
-			    		<li>{{$xq_1->syff_1}}</li>
-			    		<li>{{$xq_1->syff_2}}</li>
-			    		<li>{{$xq_1->syff_3}}</li>
-			    		<li>{{$xq_1->syff_4}}</li>
-			    	</ol>
+			    	<div class="col-md-12">{!!$xiangqing->fangfa!!}</div>
 
 			    	<div class="col-md-12 section_15 section_16">
 			    		<p class="text-center">商品实拍</p>
 			    		<hr />
 			    	</div>
-
-			    	<div class="col-md-10 section_18">
-				    	<img src="/img/{{$xq_6->img}}" class="img_14">
-				    	<img src="/img/{{$xq_7->img}}" class="img_15">
-				    	<img src="/img/{{$xq_8->img}}" class="img_4">
-				    	<img src="/img/{{$xq_9->img}}" class="img_5">
-				    	<img src="/img/{{$xq_10->img}}" class="img_6">
-				    	<img src="/img/{{$xq_11->img}}" class="img_7">
-				    	<img src="/img/{{$xq_12->img}}" class="img_8">
-				    	<img src="/img/{{$xq_13->img}}" class="img_9">
-				    	<img src="/img/{{$xq_14->img}}" class="img_5">
-				    	<img src="/img/{{$xq_15->img}}" class="img_10">
-				    	<img src="/img/{{$xq_18->img}}" class="img_16">
-			    	</div>
+			    	<div class="col-md-12">{!!$xiangqing->shipai!!}</div>
 
 			    	<div class="col-md-12 section_15 section_16">
 			    		<p class="text-center">用户口碑</p>
@@ -206,14 +172,14 @@
 			    		</div>
 			    		<div class="col-md-3"></div>
 			    	</div>
-
+			    	@foreach($pingjia as $k=>$v)
 			    	<div class="col-md-12 center">
 			    		<div class="col-md-1"></div>
 			    		<div class="col-md-10 section_19">
-			    			<img src="/img/23.jpg">
+			    			<img height="50" width="50" src="{{$v->toutu}}">
 			    			<div class="section_20">
 			    				<div class="section_21">
-			    					<p class="p_7">七***钱</p>
+			    					<p style="width: 100px;" class="p_7">{{$v->username}}</p>
 			    					<img class="img_11" src="/img/24.jpg">
 			    					<img src="/img/25.jpg" class="img_12">
 			    					<p class="p_8">未知年龄,未知肤质,未知发质</p>
@@ -226,23 +192,22 @@
 			    					</div>
 			    					<img src="/img/26.jpg" class="img_13">
 			    				</div>
-
 			    				<div>
-			    					<p class="p_9"><b>好用平价</b></p>
-			    					<p class="p_10">这个眼唇卸妆液</p>
+			    					<p class="p_9"><b>{{$v->title}}</b></p>
+			    					<p class="p_10">{{$v->cons}}</p>
 			    					<p>1768阅读 | <font color="#ec199d">13</font>回复 | <font color="#ec199d">1</font>有用</p>
 			    				</div>
 			    			</div>
 			    		</div>
 			    		<div class="col-md-1"></div>
+			    		
 			    	</div>
-
+			    	@endforeach
 			    	<div class="col-md-12 section_15 section_16">
 			    		<p class="text-center">关于聚美极速免税店</p>
 			    		<hr />
 			    	</div>
-
-			    	<img class="img_17" src="/img/{{$xq_17->img}}">
+			    	<div class="col-md-12">{!!$xiangqing->jisu!!}</div>
 
 			    	<div class="col-md-12 section_15 section_16">
 			    		<p class="text-center">如何联系聚美极速免税店进行售后服务</p>
