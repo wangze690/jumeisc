@@ -32,7 +32,7 @@
 		<div class="col-md-4 nav">
 			<div class="notice">
 				<div class="pull-left">
-					<img src="/images/{{$userinfos->touxiang}}" alt="" style="width: 48px;height: 48px;">
+					<img src="{{$userinfos->touxiang}}" alt="" style="width: 48px;height: 48px;">
 	        	</div>
 	        	<div class="pull-right">
 	        		<p style="line-height: 20px;color: #"><a href="#">那个女孩</a></p>
@@ -55,7 +55,8 @@
 		        <h2>管理个人账户<b></b></h2>
 		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>我的现金劵</li>
 		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>我的红包</li>
-		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>管理收货地址</li>
+		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+		        <a href="/grzxs">管理收货地址</a></li>
 		        <li><span class="glyphicon glyphicon-user" aria-hidden="true"></span>设置账户信息</li>
 		        <h2>售后服务<b></b></h2>
 		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>我的现金劵</li>
@@ -74,7 +75,7 @@
 			<form id="settings-form" method="post" action="/grzx/{{$userinfos->id}}" enctype="multipart/form-data">
 		        
 				<div class="avatar_change">
-					<img src="/images/{{$userinfos->touxiang}}" alt="大头像">
+					<img src="{{$userinfos->touxiang}}" alt="大头像">
 					<input type="file" name="touxiang">
 				</div>
 
@@ -98,7 +99,7 @@
 					<dt>手机号</dt>
 					<dd>
 	    				<span class="data">{{$userinfos->phone}}</span>
-					<a href="/i/account/mobile_bind" target="_blank">修改</a>
+					<a href="#" target="_blank">修改</a>
 				<span class="hint">已验证</span>
 	    			</dd>
 				</dl>
@@ -212,7 +213,6 @@
 				<div class="container act">
 					<button type="submit" class="btn btn-info">保存修改</button>
 				</div>
-					
 				</form>
 			</div>
 		</div>	
