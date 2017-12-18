@@ -64,6 +64,17 @@
 					<li><a class="a" href="/sizemana">尺码管理</a></li>
 				</ul>
 			</div>
+
+			<div class="div2">
+				<div class="yhgl"></div>
+				评价管理
+			</div>
+			<div class="div3">
+				<ul>
+					<li><a class="a" href="/pjgl/create">评价添加</a></li>
+					<li><a class="a" href="/pjgl">评价管理</a></li>
+				</ul>
+			</div>
 			
 			<div class="div2">
 				<div class="gggl"></div>
