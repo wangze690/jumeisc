@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+Route::get('/dingdan/pay', 'DingdanController@pay');
 //登录路由
 Route::get('/admin/login','LoginController@login');
 Route::post('/admin/login','LoginController@quert');
@@ -49,7 +49,7 @@ Route::get('/zhuce','QiantaiController@zhuce');
 Route::post('/zhuce','QiantaiController@getzhuce');
 //个人中心
 Route::get('/grzx','QiantaiController@grzx');
-Route::post('/grzx','QiantaiController@update');
+Route::post('/grzx/{id}','QiantaiController@update');
 //收货地址
 Route::get('/grzxs','QiantaiController@grzxs');
 Route::post('/grzxss', 'QiantaiController@addres');
@@ -65,7 +65,10 @@ Route::get('/cart','CartController@cart');
 
 
 Route::get('/cart/delete','CartController@delete');
-Route::post('/dingdan','CartController@dingdan');
+Route::resource('/dingdan','DingdanController');
+
+Route::post('/dingdan/conform','DingdanController@conform');
+
 //个人中心路由
 Route::get('/jumei/person{id}','PersonController@person');
 Route::post('/jumei/person{id}','PersonController@creat');
@@ -117,5 +120,6 @@ Route::resource('cartmana','CartmanaController');
 Route::resource('flgli','FlgliController');
 //商品管理
 Route::resource('spgli','SpgliController');
+
 // 站点管理
 Route::resource('zhandian','ZhandianController');

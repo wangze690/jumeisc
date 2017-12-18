@@ -25,6 +25,7 @@
 		        </ul>
 			</div>
 			<div class="col-md-2 na_n">
+
 				<a href="/cart">
 					<div class="na_car">
 						<img src="./bootstrap/images/cart.gif" alt="">

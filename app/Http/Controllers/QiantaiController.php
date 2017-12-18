@@ -58,7 +58,7 @@ class QiantaiController extends Controller
        
     	return view('grzx.user',['userinfos'=>$userinfos,'nav'=>$nav]);
     }
-    public function update(Request $request)
+    public function update(Request $request,$id)
     {
         $info = $request->except('_token');
         //文件上传
@@ -75,7 +75,7 @@ class QiantaiController extends Controller
        //获取文件的路径
        $info['touxiang'] = trim($path.'/'.$name,'.');
       }
-        if(DB::table('userinfos')->update($info))
+        if(DB::table('userinfos')->where('id',$id)->update($info))
         {
             return back()->with('msg','更新成功');
         }

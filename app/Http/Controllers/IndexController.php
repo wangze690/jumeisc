@@ -16,6 +16,7 @@ class IndexController extends Controller
     	$shop2 = DB::table('shop')->where('pid',2)->get();
     	$shop3 = DB::table('shop')->where('pid',3)->get();
     	$shop4 = DB::table('shop')->where('pid',4)->get();
+        $imgs = DB::table('lunbo')->where('pid',1)->get();
 
 
     	return view('index.index',[
@@ -24,7 +25,11 @@ class IndexController extends Controller
     		'shop2'=>$shop2,
     		'shop3'=>$shop3,
     		'shop4'=>$shop4,
+<<<<<<< HEAD
             'zhandian'=>$zhandian
+=======
+            'atr'=>$imgs
+>>>>>>> c4963adb6a3232f42a63b17942a0a2afaa8e1ce5
     		]);
     }
 }

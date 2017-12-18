@@ -72,7 +72,7 @@
 		<div class="col-md-9">
 			<h1>设置账户信息</h1>
 			<div class="container center">
-			<form id="settings-form" method="post" action="/grzx" enctype="multipart/form-data">
+			<form id="settings-form" method="post" action="/grzx/{{$userinfos->id}}" enctype="multipart/form-data">
 		        
 				<div class="avatar_change">
 					<img src="/images/{{$userinfos->touxiang}}" alt="大头像">
