@@ -13,9 +13,12 @@ class SpgliController extends Controller
      */
     public function index()
     {
-        $spsp = DB::table('shop')->get();
+       
+
+        $spsp = DB::table('shop')->paginate(10);
         return view('admin.spgli.index',[
-            'spsp'=>$spsp
+            'spsp'=>$spsp,
+            
             ]);
     }
 

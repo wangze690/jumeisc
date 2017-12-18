@@ -38,7 +38,7 @@ class LiebiaoController extends Controller
    	public function liebiaosan()
    	{
    		$shop = DB::table('shop')->where('pid','6')->get();
-         $shops = DB::table('shop')->where('pid','7')->get();
+         $shops = DB::table('shop')->where('pid','13')->get();
          $shopd = DB::table('shop')->where('pid','8')->get();
          $shopf = DB::table('shop')->where('pid','9')->get();
          $shopg = DB::table('shop')->where('pid','11')->get();

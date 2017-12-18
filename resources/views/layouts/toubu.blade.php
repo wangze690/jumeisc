@@ -17,7 +17,7 @@
         <ul>
             <li class="pull-left"><a href="">正品保证</a></li>
             <li class="pull-left"><a href="/dingdan">订单查询</a></li>
-            <li class="pull-left"><i class="glyphicon glyphicon-heart"></i>&nbsp;<a href="">收藏的品牌</a></li>
+            <li class="pull-left"><i class="glyphicon glyphicon-heart"></i>&nbsp;<a href="/jumei/person{id}">收藏的品牌</a></li>
             <li class="pull-left"><a href="">我的聚美</a></li>
             <li class="pull-left"><a href="">手机聚美</a></li>
             <li class="pull-left"><a href="">更多</a></li>

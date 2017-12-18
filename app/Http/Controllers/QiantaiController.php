@@ -77,7 +77,7 @@ class QiantaiController extends Controller
       }
         if(DB::table('userinfos')->where('id',$id)->update($info))
         {
-            return back()->with('msg','更新成功');
+            return back()->with('msg','修改成功');
         }
     }
 
@@ -90,7 +90,7 @@ class QiantaiController extends Controller
 
         $shouhuodz = DB::table('shouhuodz')->where('user_id', session('id'))->get();
 
-        foreach ($shouhuodz as $key => &$value){
+        foreach ($shouhuodz as $key => $value){
             $value->pname = DB::table('areas')->where('id',$value->province)->value('area_name');
             $value->cname = DB::table('areas')->where('id',$value->city)->value('area_name');
             $value->xname = DB::table('areas')->where('id',$value->xian)->value('area_name');

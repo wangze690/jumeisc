@@ -65,18 +65,14 @@
 					
 					
 					<dl class="uzi">
+
 						<dt>{{$v->navname}}</dt>
-						<dd class="pull-left"><a href="#">欧莱雅</a></dd>
-						<dd class="pull-left"><a href="#">菲诗小铺</a></dd>
-						<dd class="pull-left"><a href="#">雅诗兰黛</a></dd>
-						<dd class="pull-left"><a href="#">兰蔻</a></dd>
-						<dd class="pull-left"><a href="#">韩束</a></dd>
-						<dd class="pull-left"><a href="#">倩碧</a></dd>
-						<dd class="pull-left"><a href="#">雅顿</a></dd>
-						<dd class="pull-left"><a href="#">佰草集</a></dd>
+						@foreach($v->two as $q=>$z)
+						<dd class="pull-left"><a href="#">{{$z->navname}}</a></dd>
+						@endforeach
 					</dl>
 					
-					<div class="cen_xs">
+					<!-- <div class="cen_xs">
 						<div class="col-md-9 cen_xs_o">
 							<h5 class="text-center"><b>国际品牌</b></h5>
 							<ul>
@@ -181,7 +177,7 @@
 							<div style="width: 650px; border-top:1px dashed #eee; margin-left: 10px;"></div>
 						</div>
 						<div class="col-md-3 cen_xs_t"></div>
-					</div>
+					</div> -->
 				</div>
 				<div class="clearfix"></div>
 				@endforeach	

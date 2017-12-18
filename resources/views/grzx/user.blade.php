@@ -23,6 +23,12 @@
 	@include('layouts.nav')
 	
 	<!-- 导航开始 -->
+	@if(session('msg'))
+		<div class="alert alert-warning alert-dismissible" role="alert ">
+		  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		{{session('msg')}}
+		</div>
+	 @endif
 	
 	<!-- 导航结束 -->
 @section('content')	
@@ -32,7 +38,7 @@
 		<div class="col-md-4 nav">
 			<div class="notice">
 				<div class="pull-left">
-					<img src="/images/{{$userinfos->touxiang}}" alt="" style="width: 48px;height: 48px;">
+					<img src="{{$userinfos->touxiang}}" alt="" style="width: 48px;height: 48px;">
 	        	</div>
 	        	<div class="pull-right">
 	        		<p style="line-height: 20px;color: #"><a href="#">那个女孩</a></p>
@@ -74,7 +80,7 @@
 			<form id="settings-form" method="post" action="/grzx/{{$userinfos->id}}" enctype="multipart/form-data">
 		        
 				<div class="avatar_change">
-					<img src="/images/{{$userinfos->touxiang}}" alt="大头像">
+					<img src="{{$userinfos->touxiang}}" alt="大头像">
 					<input type="file" name="touxiang">
 				</div>
 

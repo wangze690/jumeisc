@@ -58,7 +58,7 @@
 						<img src="/images/tubiao.png" alt="">我的订单
 					</li>
 					<li style="height:40px;width:160px;background-color: #f8f6f4;text-align: center;line-height: 40px;margin-left:7px;border-bottom: 1px solid #ccc;">
-						<img src="/images/tubiao.png" alt="">我的订单
+						<img src="/images/tubiao.png" alt=""><a href="/jumei/sizelist">我的尺码</a>
 					</li>					
 				</ul>
 				<ul style="margin-left:-7px;margin-top:-10px;">

@@ -42,7 +42,7 @@
               <div class="form-group line">
                     <input type="text" class="form-control" id="yzm" placeholder="短信验证码" name="yzm" onfocus="show_yzm()" onblur="hide_yzm()" style="float:left; width: 140px;margin-bottom: 20px;">
                     <button type="button" class="btn btn-default" id="send" style="float:right;height: 44px;">获取短信验证码</button><br>
-                    <span id="y_span" style="float: left;margin: 0 40px; margin-top:-20px; "></span>
+                    <span id="y_span" style="float: left;margin: 0 40px;"></span>
                 </div>
               <div class="form-group line">
                 <input type="password" class="form-control" placeholder="密码" id="pass" onfocus="show_pass()" onBlur="hide_pass()" name="pwds"><span id="p_span"></span>
@@ -141,7 +141,7 @@ function hide_yzm()
     }
     else
     {
-      document.getElementById("y_span").innerHTML = "<span style='color:#999;font-size:12px;'>请输入正确的验证码</span>";
+      document.getElementById("y_span").innerHTML = "<span style='color:#999;font-size:12px;'>√</span>";
     }
   }
 }

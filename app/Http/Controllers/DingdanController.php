@@ -144,6 +144,6 @@ class DingdanController extends Controller
             # code...
         }
         //支付
-        echo ($tootle),'元,';
+        return view('admin.order.zhifu',['tootle'=>$tootle]);
     }
 }

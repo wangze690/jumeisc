@@ -11,17 +11,18 @@ class FlgliController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-       $xinxi =  DB::select("select id,navname,pid,concat(path,'_',id) as paths from nav order by paths=2");
+        
+
+       $xinxi =  DB::select("select id,navname,pid,concat(path,'_',id) as paths from nav order by paths");
        foreach ($xinxi as $key => $value) {
            $count = count(explode('_',$value->paths))-2;
 
             $value->navname =str_repeat('|----', $count).$value->navname;
        }
-
        return view('admin.flgli.index',[
-        'xinxi' => $xinxi
+        'xinxi' => $xinxi,
         ]);
     }
 

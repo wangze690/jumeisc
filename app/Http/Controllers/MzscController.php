@@ -11,8 +11,9 @@ class MzscController extends Controller
     {
     	$nav = DB::table('nav')->where('path',2)->get();
     	$cbnav = DB::table('nav')->where(['path'=>3,'pid'=>0])->get();
-    	
-    	// dd($cbnav);
+        foreach ($cbnav as $s => $t) {
+            $t->two = DB::table('nav')->where('pid',$t->id)->get();
+        }
     	$pro = DB::table('shopspnr')->where('spid',2)->get();
     	$pro_one = DB::table('shopspnr')->where('spid',3)->get();
     	$pro_two = DB::table('shopspnr')->where('spid',4)->get();

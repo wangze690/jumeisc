@@ -16,7 +16,7 @@
 			<td style="border: 1px solid #999;">商品现价</td>
 			<td style="border: 1px solid #999;">商品原价</td>
 			<td style="border: 1px solid #999;">商品图片</td>
-			<td style="border: 1px solid #999;">操作</td>
+			<td style="border: 1px solid #999; width: 150px;">操作</td>
 		</tr>
 	</thead>
 	<tbody>
@@ -27,19 +27,22 @@
 			<td style="border: 1px solid #999;">{{$v->shopcons}}</td>
 			<td style="border: 1px solid #999;">{{$v->shopxj}}</td>
 			<td style="border: 1px solid #999;">{{$v->shopyj}}</td>
-			<td style="border: 1px solid #999;"><img src="{{$v->profile}}" width="100" height="80" alt=""></td>
+			<td style="border: 1px solid #999;"><img src="/images/{{$v->profile}}" width="100" height="80" alt=""></td>
 			<td style="border: 1px solid #999;">
-			<a href="/spgli/{{$v->id}}/edit" class="btn-info btn-sm pull-right">修改</a>
+			<a href="/spgli/{{$v->id}}/edit" class="btn-info btn-sm pull-left">修改</a>
 			<form action="/spgli/{{$v->id}}" method="post" class="del">
 			{{method_field('DELETE')}}
 			{{csrf_field()}}
-			<button class="btn-danger btn-xs pull-right">删除</button>
+			<button class="btn-danger btn-sm pull-right">删除</button>
 			</form>
 			</td>
 		</tr>
 		@endforeach
 	</tbody>
 	</table>
+	<div>
+		{{$spsp->links()}}
+	</div>
 </div>
 @endsection
 @section('js')

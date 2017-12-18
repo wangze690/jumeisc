@@ -27,10 +27,10 @@
 		<div class="col-md-4 nav">
 			<div class="notice">
 				<div class="pull-left">
-					<img src="./img/0.png" alt="" style="width: 48px;height: 48px;">
+					<img src="/images/touxi.png" alt="" style="width: 48px;height: 48px;">
 	        	</div>
 	        	<div class="pull-right">
-	        		<p style="line-height: 20px;color: #"><a href="#">那个女孩</a></p>
+	        		<p style="line-height: 20px;color: #"><a href="#">赵晶晶</a></p>
 	        		<p><a href="#">普通用户</a></p>
 	        	</div>
 	        	<p class="uid">用户ID: 191393426</p>
