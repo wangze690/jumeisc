@@ -55,7 +55,8 @@
 		        <h2>管理个人账户<b></b></h2>
 		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>我的现金劵</li>
 		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>我的红包</li>
-		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>管理收货地址</li>
+		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>	<a href="/grzx/add">管理收货地址</a>
+		        </li>
 		        <li><span class="glyphicon glyphicon-user" aria-hidden="true"></span>设置账户信息</li>
 		        <h2>售后服务<b></b></h2>
 		        <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>我的现金劵</li>
