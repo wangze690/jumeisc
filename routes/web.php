@@ -117,3 +117,5 @@ Route::resource('cartmana','CartmanaController');
 Route::resource('flgli','FlgliController');
 //商品管理
 Route::resource('spgli','SpgliController');
+// 站点管理
+Route::resource('zhandian','ZhandianController');

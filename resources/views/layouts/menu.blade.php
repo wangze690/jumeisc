@@ -89,6 +89,18 @@
 			</div>
 			
 			<div class="div2">
+				<div class="gggl"></div>
+				站点管理
+			</div>
+			<div class="div3">
+
+				<ul>
+					<li><a class="a" href="/zhandian/create">添加站点</a></li>
+					<li><a class="a" href="/zhandian">管理站点</a></li>
+				</ul>
+
+			</div>
+			<div class="div2">
 				<div class="pjgl"></div>
 				轮播管理
 			</div>
