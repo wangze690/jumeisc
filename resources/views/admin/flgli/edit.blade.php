@@ -14,31 +14,31 @@
 	<div class="right" style="margin-top:50px;">
 			<form class="form-horizontal" action="/flgli/{{$ak->id}}" method="post" enctype="multipart/form-data">
 	  <div class="form-group">
-	    <label for="inputPassword3" class="col-sm-2 control-label">name</label>
+	    <label for="inputPassword3" class="col-sm-2 control-label">名称</label>
 	    <div class="col-sm-5">
 	      <input type="text" class="form-control" id="inputPassword3" value="{{$ak->navname}}" name="navname">
 	    </div>
 	  </div>
 	   <div class="form-group">
-	    <label for="inputPassword3" class="col-sm-2 control-label">pid</label>
+	    <label for="inputPassword3" class="col-sm-2 control-label">位置</label>
 	    <div class="col-sm-5">
 	      <input type="text" class="form-control" id="inputPassword3" value="{{$ak->pid}}" name="pid">
 	    </div>
 	  </div>
 	  <div class="form-group">
-	    <label for="inputPassword3" class="col-sm-2 control-label">path</label>
+	    <label for="inputPassword3" class="col-sm-2 control-label">级别</label>
 	    <div class="col-sm-5">
 	      <input type="text" class="form-control" id="inputPassword3" value="{{$ak->path}}" name="path">
 	    </div>
 	  </div>
 	  <div class="form-group">
-	    <label for="inputPassword3" class="col-sm-2 control-label">ztid</label>
+	    <label for="inputPassword3" class="col-sm-2 control-label">状态</label>
 	    <div class="col-sm-5">
 	      <input type="text" class="form-control" id="inputPassword3" value="{{$ak->ztid}}" name="ztid">
 	    </div>
 	  </div>
 	  <div class="form-group">
-	    <label for="inputPassword3" class="col-sm-2 control-label">url</label>
+	    <label for="inputPassword3" class="col-sm-2 control-label">路径</label>
 	    <div class="col-sm-5">
 	      <img src="" alt="">
 	      <input type="text" class="form-control" value="{{$ak->url}}" id="inputPassword3" name="url">

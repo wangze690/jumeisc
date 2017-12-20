@@ -217,10 +217,14 @@ float:left;
 			<h1 style="font-size:50px;margin-top:45px;">后台管理系统</h1>
 		</div>
 		@show
+		@if(session('id'))
 		<div class="fr top-link">
 			<a href="admin_list.html" target="mainCont" title="DeathGhost"><i
-				class="adminIcon"></i><span>管理员：DeathGhost</span></a> 
+				class="adminIcon"></i><span>{{session('username')}}</span></a> 
 		</div>
+		@else
+
+		@endif
 	</div>
 
 	@include('layouts.menu')
